@@ -6,6 +6,7 @@ import Carousel from '../components/Carousel'
 import ThemeToggle from '../components/ThemeToggle'
 import Toolbar from '../components/Toolbar'
 import Label from '../components/Label'
+import HomeLink from '../components/HomeLink'
 import { useShowcase } from '../hooks/useShowcase'
 import { useSession } from '../hooks/useSession'
 import { saveEntry, saveShowcase } from '../lib/data'
@@ -84,12 +85,11 @@ export default function GalleryPage({ slug, navigate, themeMode, onToggleTheme }
     <>
       {open === null && (
         <div className="corner-note">
-          <a className="label label--link" href="/" onClick={(e) => { e.preventDefault(); navigate('/') }}>
-            {showcase.title}
-          </a>
+          <Label>{showcase.title}</Label>
           {due && <Label className="label--muted label--keep">{due}</Label>}
         </div>
       )}
+      {open === null && <HomeLink navigate={navigate} />}
       {open === null && (
         <Toolbar>
           <ThemeToggle mode={themeMode} onToggle={onToggleTheme} />
