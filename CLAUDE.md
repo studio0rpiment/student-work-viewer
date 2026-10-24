@@ -13,6 +13,12 @@ Live at https://gwdesign.kevinpatton.site (Vercel project `student-work-viewer`,
 
 Courses are defined in `src/site.ts` (slug, code, title, term, description, links). A showcase belongs to a course by its `term` in Supabase; add a `course` column if two courses ever share a term.
 
+## Written assignments (text showcases)
+
+Text work lives in `src/content/`, not Supabase. `index.ts` holds each assignment's slug, title, term, due date, brief (condensed from Lecture Materials F26 in Notion) and layout. Its entries are a `<slug>.entries.json` file extracted from the students' Drive submissions. There are four layouts (`questions`, `path`, `prompts`, `levels`), rendered in `src/pages/WritingPage.tsx`, and writings appear on the course page sorted by due date alongside the showcases.
+
+Use first names only. Keep students' own words and fix only extraction artefacts. Model output that students pasted in is prefixed `Pasted:` and shown muted as the assistant's words. Students may ask not to be shown.
+
 ## Assessments live in a second app
 
 Forms and assessments are a separate Next.js app: `~/__DEV/assesment-form` (repo `studio0rpiment/assessment-forms`, Vercel `assessment-forms`). Questions are markdown files in its `forms/`, and responses go to Notion. That app serves everything under `/classes/experimental-tools-f26` (its `lib/base.ts`), and this repo's `vercel.json` forwards `…/midterm` plus its `_next` and `api` paths to it. Students only see this domain.
