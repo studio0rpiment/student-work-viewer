@@ -44,6 +44,15 @@ export default function HomePage({ course, navigate, themeMode, onToggleTheme }:
           <h1 className="home__h1">
             {course.title} {course.term}
           </h1>
+          {course.description && (
+            <details className="course-desc">
+              <summary className="label label--link">
+                <span className="tri" aria-hidden="true" />
+                course description
+              </summary>
+              <p>{course.description}</p>
+            </details>
+          )}
         </header>
         <ul className="home__list">
           {error && <Label className="label--muted">{error}</Label>}

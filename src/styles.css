@@ -224,6 +224,34 @@ button {
 }
 .home__title { display: flex; flex-direction: column; gap: 0.5rem; }
 .home__label-h1 { margin: 0; font-weight: 400; } /* the classes page heading is just a label */
+/* Course description: a small disclosure under the course title. The triangle is
+   the hand-drawn one from hand-icons, used as a mask so it takes the text colour;
+   it points right while closed and down when open. */
+.course-desc summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  list-style: none;
+}
+.course-desc summary::-webkit-details-marker { display: none; }
+.course-desc .tri {
+  width: 0.6rem;
+  height: 0.6rem;
+  background: currentColor;
+  mask: url(/icons/triangle.svg) center / contain no-repeat;
+  rotate: 90deg;
+  transition: rotate 0.15s;
+}
+.course-desc[open] .tri { rotate: 180deg; }
+.course-desc[open] summary { color: var(--line); }
+.course-desc p {
+  margin: 0.75rem 0 0;
+  max-width: 38rem;
+  font-size: 0.75rem;
+  line-height: 1.7;
+  color: var(--muted);
+}
 .home__h1 {
   font-size: 1.4rem;
   font-weight: 500;
