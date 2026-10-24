@@ -13,6 +13,7 @@ import { saveEntry, saveShowcase } from '../lib/data'
 import { APP_NAME, courseForTerm } from '../site'
 import { TILE, formatDue, toSlides, type Rotation, type Slide } from '../types'
 import type { ThemeMode } from '../themes'
+import Loading from '../components/Loading'
 
 interface Props {
   slug: string
@@ -74,7 +75,7 @@ export default function GalleryPage({ slug, navigate, themeMode, onToggleTheme }
     if (state.status === 'ready') document.title = `${state.data.showcase.title} — ${APP_NAME}`
   }, [state])
 
-  if (state.status === 'loading') return null
+  if (state.status === 'loading') return <Loading />
   if (state.status === 'missing') return <Notice>no showcase at /{slug}</Notice>
   if (state.status === 'error') return <Notice>{state.message}</Notice>
 

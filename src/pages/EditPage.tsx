@@ -11,6 +11,7 @@ import { useShowcase } from '../hooks/useShowcase'
 import { addEntry, deleteShowcase, listShowcases, removeEntry, reorderEntries, saveEntry, saveShowcase } from '../lib/data'
 import { supabase } from '../lib/supabase'
 import type { Entry, Showcase } from '../types'
+import Loading from '../components/Loading'
 
 interface Props {
   slug: string
@@ -38,7 +39,7 @@ export default function EditPage({ slug, navigate }: Props) {
   }, [session])
 
   if (!supabase) return <Notice>no database configured — add VITE_SUPABASE_URL and VITE_SUPABASE_ANON_KEY</Notice>
-  if (!ready || state.status === 'loading') return null
+  if (!ready || state.status === 'loading') return <Loading />
   if (!session) return <SignIn />
   if (state.status === 'missing') return <Notice>no showcase at /{slug}</Notice>
   if (state.status === 'error') return <Notice>{state.message}</Notice>

@@ -3,11 +3,22 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Student Work Viewer</title>
+    <title>👓</title>
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Inline so the loader is right before any CSS or JS arrives; React replaces #root's contents on mount. -->
+    <style>
+      html, body { margin: 0; background: #111613; }
+    </style>
   </head>
   <body>
-    <div id="root" data-pair-gallery></div>
+    <div id="root" data-pair-gallery><div class="loading" role="status" aria-label="loading"><span aria-hidden="true">👓</span></div></div>
+    <style>
+      /* Rotating glasses, light on dark: the emoji is drawn in greyscale and inverted. */
+      .loading { position: fixed; inset: 0; display: grid; place-items: center; background: #111613; }
+      .loading span { font-size: 2rem; line-height: 1; filter: grayscale(1) invert(1); animation: loading-spin 1.6s linear infinite; }
+      @keyframes loading-spin { to { rotate: 360deg; } }
+      @media (prefers-reduced-motion: reduce) { .loading span { animation: none; } }
+    </style>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
