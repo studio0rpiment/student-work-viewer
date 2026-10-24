@@ -7,6 +7,8 @@ import NewPage from './pages/NewPage'
 import { useRoute } from './hooks/useRoute'
 import { useTheme } from './hooks/useTheme'
 import { findCourse } from './site'
+import { findWriting } from './content'
+import WritingPage from './pages/WritingPage'
 
 export default function App() {
   const { route, navigate } = useRoute()
@@ -19,8 +21,11 @@ export default function App() {
       return <EditPage slug={route.slug} navigate={navigate} />
     case 'new':
       return <NewPage navigate={navigate} />
-    case 'gallery':
+    case 'gallery': {
+      const writing = findWriting(route.slug)
+      if (writing) return <WritingPage writing={writing} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />
       return <GalleryPage slug={route.slug} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />
+    }
     case 'course': {
       const course = findCourse(route.course)
       if (course) return <HomePage course={course} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />

@@ -224,18 +224,19 @@ button {
 }
 .home__title { display: flex; flex-direction: column; gap: 0.5rem; }
 .home__label-h1 { margin: 0; font-weight: 400; } /* the classes page heading is just a label */
-/* Course description: a small disclosure under the course title. The triangle is
-   the hand-drawn one from hand-icons, used as a mask so it takes the text colour;
-   it points right while closed and down when open. */
-.course-desc summary {
+/* Disclosure: a small "click to open" with the hand-drawn triangle from hand-icons,
+   used as a mask so it takes the text colour; it points right while closed and
+   down when open. Used for the course description, briefs and long texts. */
+.disclose summary {
   display: inline-flex;
   align-items: center;
   gap: 0.4rem;
   cursor: pointer;
   list-style: none;
 }
-.course-desc summary::-webkit-details-marker { display: none; }
-.course-desc .tri {
+.disclose summary::-webkit-details-marker { display: none; }
+.tri {
+  flex: none;
   width: 0.6rem;
   height: 0.6rem;
   background: currentColor;
@@ -243,15 +244,11 @@ button {
   rotate: 90deg;
   transition: rotate 0.15s;
 }
-.course-desc[open] .tri { rotate: 180deg; }
-.course-desc[open] summary { color: var(--line); }
-.course-desc p {
-  margin: 0.75rem 0 0;
-  max-width: 38rem;
-  font-size: 0.75rem;
-  line-height: 1.7;
-  color: var(--muted);
-}
+.disclose[open] > summary .tri { rotate: 180deg; }
+.disclose[open] > summary { color: var(--line); }
+.disclose__body { margin-top: 0.75rem; max-width: 38rem; font-size: 0.75rem; line-height: 1.7; color: var(--muted); }
+.disclose__body p { margin: 0 0 0.6rem; }
+.course-desc p { margin: 0; }
 .home__h1 {
   font-size: 1.4rem;
   font-weight: 500;
@@ -483,3 +480,87 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
   translate: -50% -50%;
 }
 .carousel__frame { container-type: size; }
+
+
+/* ---- writing (text showcases) ---- */
+/* Written assignments laid out to be compared across the class: no panels,
+   dashed outlines, names in the student label style. */
+.writing { padding: 5rem 2rem 6rem; max-width: 110rem; margin: 0 auto; }
+.writing__head { display: flex; flex-direction: column; gap: 0.5rem; max-width: 48rem; margin: 0 auto 3rem; }
+.writing__summary { margin: 0; color: var(--muted); }
+.brief .disclose__body { color: var(--line); font-size: 0.8rem; }
+.brief ul { margin: 0 0 0.6rem; padding-left: 1.1rem; }
+.brief li { margin-bottom: 0.3rem; }
+.brief blockquote { margin: 0.75rem 0; padding-left: 0.9rem; border-left: 1px solid var(--line); }
+.writing__section { margin-top: 3.5rem; }
+.writing__h2 {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: var(--muted);
+  margin: 0 0 1rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px dashed var(--muted);
+}
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(17rem, 1fr)); gap: 1rem; }
+.cards--4 { grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr)); }
+.card-text {
+  border: 1px dashed var(--muted);
+  padding: 0.9rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  line-height: 1.6;
+}
+.card-text:hover { border-style: solid; }
+.card-text p { margin: 0; }
+.column { display: flex; flex-direction: column; gap: 1rem; }
+
+.long summary { list-style: none; cursor: pointer; display: flex; flex-direction: column; gap: 0.5rem; }
+.long summary::-webkit-details-marker { display: none; }
+.long[open] summary { display: none; }
+.long p { margin: 0 0 0.5rem; }
+
+/* Embeddings: near pairs sit close, far pairs pushed to opposite edges. */
+.embed { display: flex; flex-direction: column; gap: 0.6rem; }
+.embed__near { display: flex; align-items: baseline; gap: 0.35rem; }
+.embed__near span:not(.label) { border: 1px solid var(--line); padding: 0.05rem 0.4rem; }
+.embed__near .label { margin-left: 0.5rem; }
+.embed__far { display: flex; align-items: baseline; justify-content: space-between; gap: 0.5rem; }
+.embed__far span:not(.label) { border: 1px dashed var(--muted); padding: 0.05rem 0.4rem; }
+.embed__far .label { flex: 1; text-align: center; border-bottom: 1px dashed var(--muted); line-height: 0.1; }
+.embed__rel { color: var(--muted); }
+
+/* Anatomy: each student's trace as a vertical path of stops. */
+.paths { display: grid; grid-template-columns: repeat(auto-fill, minmax(19rem, 1fr)); gap: 2.5rem 2rem; }
+.path { display: flex; flex-direction: column; gap: 0.75rem; }
+.path__title { margin: 0.3rem 0 0; color: var(--muted); }
+.path__stops { list-style: none; margin: 0; padding: 0 0 0 1.1rem; border-left: 1px dashed var(--muted); display: flex; flex-direction: column; gap: 1.1rem; }
+.path__stops li { position: relative; display: flex; flex-direction: column; gap: 0.25rem; }
+.path__stops p { margin: 0; }
+.path__dot { position: absolute; left: calc(-1.1rem - 4px); top: 0.35rem; width: 7px; height: 7px; border: 1px solid var(--line); background: var(--bg); }
+.path__echo .path__dot { background: var(--line); }
+.path__label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* Four Prompts */
+.switch { display: flex; gap: 0.75rem; align-items: baseline; margin-bottom: 2rem; }
+.switch .is-active { color: var(--line); border-bottom: 1px solid var(--line); }
+.pair { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 3.5rem; }
+.pair__prompt { margin: 0; font-size: 0.95rem; max-width: 52rem; }
+.pushback, .verdict { display: flex; flex-direction: column; gap: 0.25rem; padding-top: 0.5rem; border-top: 1px dashed var(--muted); }
+.verdict { border-top: 0; padding: 0.5rem 0 0 0.9rem; border-left: 1px solid var(--line); max-width: 52rem; }
+.verdict p, .pushback p { margin: 0; }
+
+/* Five Levels: a staircase — each level's column starts a step lower. */
+.stairs { display: grid; grid-template-columns: repeat(5, minmax(14rem, 1fr)); gap: 1rem; overflow-x: auto; padding-bottom: 1rem; }
+.stair { display: flex; flex-direction: column; gap: 0.75rem; padding-top: calc(var(--step) * 2.5rem); }
+.stair__case { margin: 0; font-size: 0.85rem; }
+.stair__foot { display: flex; justify-content: space-between; align-items: baseline; gap: 0.5rem; margin-top: auto; }
+@media (max-width: 900px) { .stair { padding-top: 0; } }
+/* Model output the students pasted in: their sources, not their words. */
+.pasted { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 0.75rem; border-left: 1px dashed var(--muted); color: var(--muted); font-size: 0.75rem; }
+.pasted p { margin: 0; }
+/* Writing pages are long reads: the course link and toolbar scroll away with the page. */
+.writing-page { position: relative; }
+.writing-page .home-link, .writing-page .toolbar { position: absolute; }

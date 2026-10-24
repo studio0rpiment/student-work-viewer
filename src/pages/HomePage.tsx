@@ -1,10 +1,12 @@
 import { useEffect, useState } from 'react'
+import Disclose from '../components/Disclose'
 import Label from '../components/Label'
 import ThemeToggle from '../components/ThemeToggle'
 import Toolbar from '../components/Toolbar'
 import { listShowcases } from '../lib/data'
 import { APP_NAME, coursePath, type Course } from '../site'
 import { formatDue, type Showcase } from '../types'
+import { WRITINGS } from '../content'
 import type { ThemeMode } from '../themes'
 
 interface Props {
@@ -25,7 +27,16 @@ export default function HomePage({ course, navigate, themeMode, onToggleTheme }:
   useEffect(() => {
     document.title = `${course.title} ${course.term} — ${APP_NAME}`
     listShowcases()
-      .then((all) => setShowcases(all.filter((s) => s.term.toLowerCase() === course.term.toLowerCase())))
+      .then((all) => {
+        const term = (t: string) => t.toLowerCase() === course.term.toLowerCase()
+        // Written assignments sit in the same list, ordered with the showcases by due date.
+        const writings = WRITINGS.filter((w) => term(w.term)).map(
+          (w) => ({ id: w.slug, slug: w.slug, title: w.title, due_date: w.due_date, term: w.term }) as Showcase,
+        )
+        const items = [...all.filter((s) => term(s.term)), ...writings]
+        items.sort((a, b) => (a.due_date ?? '').localeCompare(b.due_date ?? ''))
+        setShowcases(items)
+      })
       .catch((e: Error) => setError(e.message))
   }, [course])
 
@@ -45,13 +56,9 @@ export default function HomePage({ course, navigate, themeMode, onToggleTheme }:
             {course.title} {course.term}
           </h1>
           {course.description && (
-            <details className="course-desc">
-              <summary className="label label--link">
-                <span className="tri" aria-hidden="true" />
-                course description
-              </summary>
+            <Disclose label="course description" className="course-desc">
               <p>{course.description}</p>
-            </details>
+            </Disclose>
           )}
         </header>
         <ul className="home__list">

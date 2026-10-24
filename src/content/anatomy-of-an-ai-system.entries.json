@@ -1,0 +1,291 @@
+[
+  {
+    "name": "Abigail",
+    "title": null,
+    "stops": [
+      {
+        "kind": "labour",
+        "label": "Mining labour",
+        "caption": "Mining laborers must extract minerals and rare earth metals, yet it’s very costly and polluting to the environment and to their physical health. While the mining laborers are constantly exposed to toxic chemicals and gases, this activity also consume vast amount of water and generate large amounts of CO2 emissions."
+      },
+      {
+        "kind": "material",
+        "label": "Lithium Extraction",
+        "caption": "The Salar, located in southwest Bolivia is very rich in lithium, including Atacama regions in Chile and Argentina. Lithium is extracted to produce lithium-Ion batteries to power mobile connected devices. Therefore, this soft-silvery metal is known as ‘grey gold’. But all these lithium-Ion batteries have a limited lifespan, which are thrown away as waste, once its consumed."
+      },
+      {
+        "kind": "computing",
+        "label": "Data Preparation & Labeling",
+        "caption": "Training datasets for a machine learning model can come from both human and non-human labour. Human labour includes making judgements about a given piece of unlabeled data in order for the model to learn the underlying patterns. Some of the other common types of data labeling are computer vision, natural language processing, and audio processing, which would also require human labour. https://aws.amazon.com/what-is/data-labeling/"
+      }
+    ],
+    "response": "AI systems were more focused on training its model or system to process and understand information and data to function like a human. Many might think that an AI system is purely digital and “a model that processes information”, but a lot of that comes from human labor. In order to recognize and learn these underlying data patterns, the system mainly uses human labour through human judgements on a given piece of unlabeled data. But in an advanced society like today, more and more data centers are built to process and store more information. Besides data centers, human labour such as mining, assemblers, smelters, refiners, or ocean transport are needed to extract and transport the minerals to physically create an AI system. So, an AI system is not just known as a model that processes information, but a physical infrastructure that results in serious health risks and environmental issues such as pollution, consumption of land, deforestation, oil spills, and many more."
+  },
+  {
+    "name": "Allie",
+    "title": null,
+    "stops": [
+      {
+        "kind": "computing",
+        "label": "Home Wifi Routers",
+        "caption": "The home wifi router connects the Amazon Echo to the internet and larger network infrastructures, allowing it to send and receive data. This makes the router an important link between a physical household device and the computing systems that power its AI functions."
+      },
+      {
+        "kind": "labour",
+        "label": "Drivers for Transportation",
+        "caption": "Transportation drivers are part of the human labor supporting the infrastructure behind the Amazon Echo. Drivers transport products, and components, between manufacturers, warehouses, distribution centers, and consumers. Although the Amazon Echo is a piece of automated technology, its existence and function depends on the labor of workers to physically move materials and products."
+      },
+      {
+        "kind": "material",
+        "label": "Waste (such as Carbon Dioxide from transportation)",
+        "caption": "Carbon dioxide emitted from transportation of materials represents one of the environmental costs connected to the Amazon Echo. These emissions extend the impact of the Echo beyond its electronics and software, showing that AI systems depend on physical resources and negatively affect environmental systems throughout its supply chains."
+      }
+    ],
+    "response": "Tracing the path of an AI system in this instance causes us to reinterpret our understanding of the system because it reveals that the AI is not just a software model that processes information. The Amazon Echo depends on a much larger physical infrastructure to function than it would initially seem. The home wifi router connects the Echo to larger network infrastructures that process data, while transportation drivers move products, components, and materials needed to create and distribute these technologies. However the transportation produces carbon dioxide and other harmful wastes that impact the environment. This shows that AI has consequences beyond that of the digital world. The simple AI system is only one part of a larger systems, which operations depend on physical materials, and human labor at multiple stages. Therefore, describing an AI system as a physical infrastructure gives a more complete picture of what makes the technology functional and what impacts it creates."
+  },
+  {
+    "name": "Arisha",
+    "title": null,
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Lithium mining and extraction",
+        "caption": "We begin with the Amazon Echo Dot, which consists of the electronic components that make up the circuit board of the product. These components and their manifestation can be traced back to lithium mining and extraction in areas rich with the mineral, such as Salar de Uyuni in Bolivia, and the Aracama regions in Chile and Argentina.\n\nTrying to identify who exactly does the mining? In the case of Bolivia, it’s Bolivian workers employed by the corporation, Yacimientos de Litio Bolivianos (YLB), a state-owned operation (https://www.theguardian.com/global-development/2025/sep/03/lithium-mining-bolivia-salt-flats-indigenous-environment-ecosystem)"
+      },
+      {
+        "kind": "computing",
+        "label": "Home WiFi Router, ISP, IXP and Submarine Cable Infrastructure",
+        "caption": "Following the outlined path, the Echo Dot connects to a home’s WIFI Router, which enables it to enter the internet. Now, when you enter a voice request into the Echo, it has to travel through your Internet Service Provider (IPS), Internet Exchange Points (IXP), and the Submarine Cable Infrastructure\n\nWhat’s SCI? (https://www.fsisac.com/subsea-cable-infrastructure) → basically this long network of heavily padded wires that rest at the bottom of the ocean; they’re what carry 95% of all international internet data, financial transaction, and voice communications"
+      },
+      {
+        "kind": "computing",
+        "label": "Amazon Web Services (AWS) and Alexa Voice Services (AVS)",
+        "caption": "Eventually, your voice command makes its way to Amazon Web Services (AWS) and then to Alexa Voice Services (AVS), where your speech is transformed into text. Your voice inputs are made into data that can be fed into their AI training datasets, to help further improve their AI systems, and by virtue, the product, so it goes back into a loop."
+      },
+      {
+        "kind": "other",
+        "label": "Distribution of products",
+        "caption": "Going further along the red line, the distribution of products eventually illustrates how their economic value finds a way back to the owner of the company, those who lie at the top of Amazon.\n\nSimply put, “These processes create new accumulations of wealth and power, which are concentrated in a very thin social layer.” (https://anatomyof.ai/, Section IX)"
+      }
+    ],
+    "response": "Tracing the path helps contextualize all these technologies, their environment, and what exactly enables their existence in the first place. To understand anything, you first have to actualize that it’s built on physical human labor (as well as its exploitation). Without these human infrastructures that help support the mining of natural resources, maintenance of data centers, and physical distribution of parts- it would cease to exist. With such often use of AI systems in our tangible reality being, “I ask it a question and it spits out a response”, diagrams like these help explicitly outline that it works in tandem with large networks of labor, hardware, and data to execute the task. All these processes also exist in a greater economic system, one that further enforces a capitalistic system in which the end product is ultimately deriving a greater profit for the slim elite class, which then loops back into shaping the physical reality of those who execute the labor."
+  },
+  {
+    "name": "Ava",
+    "title": null,
+    "stops": [
+      {
+        "kind": "labour",
+        "label": "Miners",
+        "caption": "At the beginning of the system are the miners who extract the raw materials needed for production. Their labor is often physically demanding and poorly compensated, with risks including unsafe working conditions, environmental hazards, forced labor, and child labor. In regions affected by conflict minerals, mining can also contribute to exploitation, violence, and broader social and economic instability."
+      },
+      {
+        "kind": "material",
+        "label": "Submarine cable infrastructure",
+        "caption": "The second stage is submarine cable infrastructure, where some of the mined materials are transformed into physical systems that connect people and information across the globe. Iron ore is needed for the steel wires, copper for the tube, silica for the optical fibres, gold for the coating, etc. Cable production and installation can contribute to resource consumption, habitat disruption, and environmental impacts throughout the infrastructure’s lifecycle."
+      },
+      {
+        "kind": "computing",
+        "label": "Amazon Web Services",
+        "caption": "The third stop is Amazon Web Services, where physical cable infrastructure becomes part of a larger computing, data, and network system. AWS operates data centers that rely on servers, physical storage, networking equipment, and continuous electricity to process and transmit data. These systems require significant material and energy inputs."
+      }
+    ],
+    "response": "How we conceptualize an AI system changes by tracing it along this system's map because it grounds the AI into its human labor and physical processes. No part of the system is actually “up in the cloud space” as they like to advertise that it is. The parts of the diagram are also really far apart. Even though the materials extracted by miners are directly transformed into the wire systems used in later stages, the miners are alienated from the products of their labor. This separation of goods and labor also diminishes the value of the miners' work, because they are removed from the manufacturing process that changes the resource into product. In a way these types of arrangements image the physical infrastructure in an inhibitory way because it decreases the workers compensation, value, and bargaining power. The information processing side comes in later with the Amazon Web Services. It serves as a reminder that everything around us is a result of work and action taken by humans, and symptoms of designed systems."
+  },
+  {
+    "name": "Daon",
+    "title": "The Circular Structure of AVS Technology within Amazon Data Centers and the Loop of Low-Wage Data Labor",
+    "stops": [
+      {
+        "kind": "material",
+        "label": "High-Value Submarine Cable",
+        "caption": "Submarine cables are required for the internet infrastructure network to run. These submarine fiber-optical cables are filled with various materials, including rare metals, to protect them from underwater pressure and external attacks. The consumption of these rare minerals has increased tenfold in the 21st century alongside advanced AI and digital development compared to 20th-century extraction levels."
+      },
+      {
+        "kind": "labour",
+        "label": "Underrated Hidden Labours",
+        "caption": "For voice recognition AI technology such as Alexa to be distributed to homes through Amazon Echo and properly perform its functions, dataset construction is required. To build a sufficient amount of actionable data, a vast amount of data labeling labor is needed, and a large portion of the data contribution process relies on low-wage labor. This stands in stark contrast to the wealth accumulated by large-capital corporations that utilize technologies based on Amazon data centers."
+      },
+      {
+        "kind": "computing",
+        "label": "Circular Network Infrastructure",
+        "caption": "The datasets built from voice data contributors become part of Amazon data centers through AVS. The extracted data is used for voice recognition AI such as Alexa, while information gathered from users cycles back into the data centers. This circular structure impacts the search and content usage of everyday internet users who do not even use AI. Even non-AI users within the network infrastructure are indirectly affected."
+      }
+    ],
+    "response": "When I first encountered AI, I thought of it simply as a device for processing input information on the surface, aimed at data collection and processing or personal privacy. However, looking closely at the structure inherent within the AI system map, it was not merely an information-processing machine. What I had overlooked was that creating AI requires hardware and software to support it, which in turn requires rare physical resources such as lithium and cobalt, and behind them exist human resources mining those materials. This goes beyond the process of manufacturing hardware alone, supported by a complex logistics process transporting raw materials from extraction sites to semiconductor foundries and back to data centers. For AI to appear to work seamlessly, workers in low-wage countries label data and perform content moderation. Operating AI also demands extensive network infrastructure sustained by continuous, often invisible labor and resources. Even at the end of their lifecycle, discarded digital assets rely on complex structures, including informal labor networks for e-waste recycling.\n\nTherefore, AI does not stop at writing and processing information, but operates on a massive circular structure consuming vast amounts of material and human resources – from mining to manufacturing, transportation, labeling, network construction, disposal, and recycling. While we easily use AI by paying a subscription fee of just tens of dollars, comparing that to the actual cost required to run the entire circular system clearly revealed how absurd a value of tens or hundreds of dollars is, and how deeply labor exploitation is concealed."
+  },
+  {
+    "name": "Jack",
+    "title": null,
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Mineral Extraction-Lithium",
+        "caption": "The map traces technology from the initial point of elements-> mines-> smelters-> component manufacturers. This emphasizes on the fact that digital devices depend on planetary resources long before they reach the consumers. Mining also creates environmental consequences such as soil and water contamination, especially during the lithium extraction process where brine processing operations require excess amount of water, land, and energy which leads to environmental presaures."
+      },
+      {
+        "kind": "labour",
+        "label": "Underground Mining",
+        "caption": "The material extraction procedure depends on workers who physically enter and work within the mines. The map clearly identifies the underground miners and the hazards, including explosions, flooding, cave-ins, toxic gases, and other dangerous and even life-threatening conditions. This environmental hazard is also closely inseparable from the much larger system of financial exploitation of this labor. This reveals the human work hidden behind the Echo's apparently immaterial technology, where misconduct is not foreseen."
+      },
+      {
+        "kind": "computing",
+        "label": "Amazon Data Center + Alexa Voice Service",
+        "caption": "The Amazon Echo isn’t the affable machinery that exists within your convenient proximity. When you speak, the information travels through your home Wi-Fi router and broader infrastructure, ultimately reaching the Alexa Voice Service and Amazon’s data centers. AVS then handles speech-to-text, natural-language processing, and text-to-speech, relying heavily on servers, network equipment, cables, and electricity while GPUs, CPUs, and other servers run the workload."
+      }
+    ],
+    "response": "Tracing this path changed how I think about an AI system because I realized it’s not just a model sitting somewhere processing information. Starting with the Amazon Echo, I can trace it back to materials extracted from the Earth, workers who mine and process those materials, and the huge computing infrastructure needed to make the device function. When I say something to Alexa, that voice command doesn't just get processed inside the Echo. It travels through networks to Amazon’s data centers, where Alexa Voice Service processes things like speech-to-text and natural language. So what seems like an invisible digital interaction actually depends on minerals, physical labor, servers, networks, energy, and infrastructure spread across the world. Seeing these connections makes AI feel less like “software” to me and more like a physical system that has to be built, maintained, and powered."
+  },
+  {
+    "name": "Jet",
+    "title": null,
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Material System",
+        "caption": "AI systems necessitate massive structures and material input to maintain themselves at all times. These spaces and costs are taken directly from vulnerable populations that are targeted because they lack the ability and funds necessary to fight back against these massive companies. If implemented, these data centers provide no benefit to the people whose communities they are disrupting. In fact, they actively poison the lands they occupy and push out the people living their before them."
+      },
+      {
+        "kind": "computing",
+        "label": "Computing System",
+        "caption": "AI networks rely upon excessive amount of material cost and human labor to actually process and train the data they use. An LLM has no way of actually identifying information we would consider problematic or not for human use. Instead, workers are forced through hundreds of hours of graphic porn, murder, etc. to prevent users from having the same experience that has become their everyday."
+      },
+      {
+        "kind": "labour",
+        "label": "Human Labor",
+        "caption": "Data preparation for AI technologies is heavily reliant on exploited laborers in the global south, just like the vast majority of industries headed by Western corporations. While these companies espouse ideals of automated systems, they are simply offloading the work onto people they can pay less and force into a different form of slavery."
+      }
+    ],
+    "response": "The way I traced this map was intended to highlight the human impacts AI has on the world that we do not necessarily see. A major feature of the Internet is how interconnected it is with any place on earth a wire or satellite can connect. This means that the production of anything we use online does not have to be produced remotely close to where we are operating it. This becomes a facade through which we view automation as a magical process separate from the human body - when in reality it is entirely reliant on the exploitation of workers. These workers have homes, and the warehouses they work in have taken over communities already lacking in resources. These already insufficient materials are then funneled into the very factories and data centers exploiting the workers' bodies and minds. Their every day is now consumed with an AI system they likely don't even have a material use for."
+  },
+  {
+    "name": "Makda",
+    "title": null,
+    "stops": [
+      {
+        "kind": "other",
+        "label": "Amazon Echo Dot",
+        "caption": "The Amazon Echo Dot links your voice to Amazon's cloud infrastructure, sending audio data to AWS servers for processing every time it's activated. This device is composed of plastics, wiring, and circuitry and when done serving its purpose, it goes on to become a part of a system of abandoned devices."
+      },
+      {
+        "kind": "labour",
+        "label": "Informal Workers / Waste Pickers",
+        "caption": "In Ethiopia, electronic waste flows primarily through Addis Ababa's informal repair and scrap markets. These “Informal Workers/Waste pickers” are there dismantling electronics by hand to sort for reuse and/or resale. They exist outside the formal supply chain (as they are not Amazon employees) yet they are a part of the human labor that makes up the Amazon echo artificial intelligence system.\n\n(outside “research”: https://www.lolinemag.com/articles/why-ethiopia-has-an-electronics-shortage-and-a-growing-e-waste-crisis-at-the-same-time)"
+      },
+      {
+        "kind": "material",
+        "label": "Landfill or Incineration",
+        "caption": "What cannot be reused or resold has to take up space somewhere. E-waste landfills contain toxic and hazardous substances; Incinerators release this particulate matter into air. Here, the Amazon echo meets a timely end in a hole in the ground (https://ewastemonitor.info/wp-content/uploads/2026/09/GEM_2020_def_july1_low-.pdf)."
+      }
+    ],
+    "response": "Before I traced the green line, I would have described the Amazon Echo as a voice assistant, contained within the technical software required to make it function. Identifying the hardware life helped me trace past where I thought the system ended: from how it is used, to how it is abandoned, sorted, and disposed of. It traces its path, its subsequent effects, and more. Identifying the particulate that’s released in the air in incineration and the people sorting through waste bins examples how the physical infrastructure of the device creates a network past AWS. This network is made up of interconnected people, places, and processes that extend the product far past its listed lifecycle. Tracing helps make tangible the real life people behind our devices."
+  },
+  {
+    "name": "Nicole",
+    "title": null,
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Rare Earth Elements",
+        "caption": "The beginning of the map trace starts with Rare Earth Elements, which consists of 17 elements found on the periodic table that are famously used and extracted for the purposes of green technology, technology, industrial processes, and defense and aerospace technology. Rare Earth Elements themselves are not considered rare for their lack of quantity being found in nature, but rather because the process of mining and extraction is extremely difficult and labor-intensive making it a scarce resource."
+      },
+      {
+        "kind": "labour",
+        "label": "Miners",
+        "caption": "In order to extract said resources, two methods are widely used, despite having detrimental consequences in both. One method is where topsoil is removed for chemicals to be added to separate metals. Another method involves drilling holes into the Earth to pump chemicals to extract the metals. The processes for both produce high volumes of toxic waste that is not only hazardous to the environment, but creates dangerous and life-threatening work conditions for mine workers being exposed to these toxins."
+      },
+      {
+        "kind": "computing",
+        "label": "Home WiFi Routers",
+        "caption": "Rare Earth Elements are able to produce one of the most efficient modes of wifi connectivity due to the ions in specific elements that allow absorption and fluorescence transitions over long distances. High capacity fiber-optic lines also aid in long-distance transmissions by carrying internet data."
+      }
+    ],
+    "response": "After tracing this path in the AI System diagram, I was able to see beyond the function of how an AI system is able to work and exist. In order for an AI system to exist, it relies on various other systems of resources that extend past human knowledge and its role in training these AI systems. One of these systems is how Rare Earth Elements are exploited in order to meet the demand of increasing technology advancements. Consequently, as the demand for these Rare Earth Elements increases, so does the demand for cheap labor. Miners who are left responsible for extracting these materials are rendered defenseless to hazardous and often inhuman work conditions as well as income inequality. This results in labor workers and Rare Earth Elements being victims of exploitation and used as tools to drive the supply chain. Because of this, the description of what an AI system is cannot exist without acknowledging the physical, economic, and systematic infrastructures that allow it to be possible.\n\nSources\nhttps://hir.harvard.edu/not-so-green-technology-the-complicated-legacy-of-rare-earth-mining/\nhttps://pmc.ncbi.nlm.nih.gov/articles/PMC11125915/\nhttps://www.metaltechnews.com/story/2021/07/21/tech-metals/rare-earths-enable-record-internet-speeds/622.html\nhttps://www.sciencehistory.org/education/classroom-activities/role-playing-games/case-of-rare-earth-elements/science/"
+  },
+  {
+    "name": "Radhia",
+    "title": "Echo Dot (music/voice request) → internet infrastructure → data",
+    "stops": [
+      {
+        "kind": "labour",
+        "label": "Labor",
+        "caption": "Miners for the material used inside of amazon echo to create it\nFactory workers to assemble the device\nEngineers work the make sure servers are connected and working accurately so issues such as privacy,surveillance, data retention, energy consumption and so on are working according to laws and regulations\nMe (by talking to Alexa) turns that raw material into something usable, in this case any audio request."
+      },
+      {
+        "kind": "material",
+        "label": "Environment",
+        "caption": "All of this needs real electricity, real cooling systems, real physical hardware sitting in real data centers that take up space and energy. The article mentions that amazon is one of the least transparent companies in regards to its energy consumption. The use of minerals in the Amazon echo also affects the environment. The mining of raw materials and possibly the energy output of these materials through the ‘cloud’ could be a possibility. The cloud takes up space just like anything else does on earth through data banks where all of our information is stored. This data can eventually be turned into real sellable items based off of human behavior data."
+      },
+      {
+        "kind": "computing",
+        "label": "Computation",
+        "caption": "The computation is hidden through the network of engineers/technicians and corporate designers, engineers and investors.These are the laborers that keep the computation moving and relevant. The output of computation,aka our data, becomes a new resource that gets extracted and monetized — completing the loop back into more labor and more environmental cost (more servers, more energy, more mining for more devices). In this case servers would use our voice request to match it their database and give us our output. The request doesn't just disappear, It becomes training data. Amazon uses it to learn our preferences, voice patterns, and habits (Scary). The article explains this as \"quantification\". Turning human experience into measurable, sellable data points stored in massive databanks."
+      }
+    ],
+    "response": null
+  },
+  {
+    "name": "Sonia",
+    "title": null,
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Home Wi-Fi Routers",
+        "caption": "Amazon Echo cannot perform its functions without a basic requirement: a Wi-Fi router that is plugged in and connected to the internet. Therefore, the router itself is a visible technological object in the home, while Wi-Fi functions as the invisible infrastructure that enables the device to operate.\n\nIn some cases, if users are located in areas with weak Wi-Fi signals, such as dead zones at home or other indoor spaces, they may need a Wi-Fi repeater as an additional visible device. The repeater connects to the router, receives and rebroadcasts the Wi-Fi signal, and helps extend coverage to eliminate connectivity issues."
+      },
+      {
+        "kind": "labour",
+        "label": "Transporters",
+        "caption": "During the transportation of Amazon Echo products to distributors and assembly facilities, transportation workers represent one form of human labor. Depending on the mode of transportation, these workers may include delivery drivers, truck drivers, train conductors, pilots, or sailors."
+      },
+      {
+        "kind": "computing",
+        "label": "Traffic Light System",
+        "caption": "During the transportation of Amazon Echo products, the traffic light system can be understood as part of the network infrastructure. Its management relies on interconnected hardware and software to regulate vehicle flow across different areas. Traffic signal controllers send and receive data through communication networks or wireless signals, coordinating traffic conditions and supporting the movement of goods."
+      },
+      {
+        "kind": "labour",
+        "label": "Assemblers, Distributors, Dormitory Staffs, Cleaners",
+        "caption": "There are also workers involved in assembling the products at factories managed by the company or its manufacturing partners. If the company provides dormitories as an employee benefit, this can create additional jobs for people who manage and maintain these facilities, such as dormitory staff and cleaners."
+      },
+      {
+        "kind": "material",
+        "label": "Metals, Ores, Trees / Smelters & Refiners",
+        "caption": "To manufacture the Amazon Echo device, various raw materials are required, including metals and ores for the hardware, outer casing, and internal components. Since Amazon generally uses cardboard packaging to deliver its products, trees are also an important source material. Smelters and refiners then process these raw materials into the forms and materials needed for manufacturing."
+      },
+      {
+        "kind": "labour",
+        "label": "Mine Labors / Computing and Data: for Construction at Mines",
+        "caption": "Mines are constructed after analyzing the types of minerals present at a location and determining how to build tunnels that allow workers to operate safely. The construction process requires multiple software tools, such as CAD, for designing the mine structure, as well as data analysis to calculate soil strength and determine the stability of the surrounding ground and foundations."
+      },
+      {
+        "kind": "material",
+        "label": "Elements / Geographers, Chemists, Experts at multiple fields / The Periodic Table of Elements",
+        "caption": "To identify the elements needed for manufacturing, geographers and chemists studied natural materials and identified the chemical elements found in nature. Their discoveries contributed to the development of the periodic table of elements, which organizes and categorizes these elements."
+      }
+    ],
+    "response": "As I traced the journey of the Amazon Echo, from how it is used by customers to how it is transported, produced, and assembled from materials extracted from the natural environment, I began to see that the object is no loger simply an AI system that processes information and generates responses. Instead, it is part of a much larger physical and technological infrastructure.\n\nThe Amazon Echo depends on materials and environmental systems as its original resources. It also requires human labors to extract materials, design and manufacture components, transport and distribute products, construct facilities, and manage and analyze the entire process to ensure stable and reliable production. This creates a network of interconnected industries and workers that support the product throughout its lifecycle.\n\nWhile human labors and machines produce the physical and visible components of the Amazon Echo, computing, data, and network systems provide the invisible information infrastructure that allows it to function."
+  },
+  {
+    "name": "Yingying",
+    "title": null,
+    "stops": [
+      {
+        "kind": "computing",
+        "label": "Computing system",
+        "caption": "The Echo Dot is a physical computer: an ARM processor, flash memory, DRAM, a power-management chip, and Wi-Fi/Bluetooth radios that capture audio and route it to Amazon's servers. Every command travels to remote data centers whose cooling can consume 30–40% of their power, much of it evaporated water — one short AI request can use roughly a 500ml bottle."
+      },
+      {
+        "kind": "labour",
+        "label": "Human labour",
+        "caption": "Behind that cobalt are people, not machines. Amnesty International documented roughly 40,000 children mining in southern DRC, some as young as seven, working up to twelve hours a day for one to two dollars. Using hand tools in unfortified tunnels, without gloves or masks, they inhale cobalt dust that scars lungs; at least 80 died underground in fifteen months (Amnesty, 2016)."
+      },
+      {
+        "kind": "material",
+        "label": "Mines & mineral extraction",
+        "caption": "The Echo's battery and circuitry depend on cobalt, lithium, tin, and tantalum, dug largely from the Democratic Republic of Congo, which supplies over half the world's cobalt. Around a fifth is mined by hand. The ore is trucked to Kolwezi's Musompo market, sold to traders, and shipped to Chinese refiners like Huayou Cobalt before it becomes battery-grade metal."
+      }
+    ],
+    "response": "Before tracing this path, I would have described an AI system mainly as a model that receives information, processes it, and produces an output. Following the Amazon Echo outward changed that description. The Echo depends on processors, memory, communication hardware, manufacturing, assembly workers, mined materials, and refining before any voice command can be processed. The AI is therefore not just the model running somewhere in the cloud. It is also the physical system that makes the model possible.\n\nWhat changed most for me was the system boundary. I normally think about AI starting from the device or the server. This map pushes that boundary much further back, to factories, workers, mines, and the Earth itself. The materials inside a small consumer device come from extraction and refining processes that create waste, pollution, and dangerous working conditions. The people who manufacture and assemble these components are also part of the system, even though they are almost invisible when we use the product.\n\nTracing this path makes AI look less like an abstract technology and more like an industrial infrastructure built from materials, labour, energy, and global supply chains.\n\nAmnesty International. (2016). “This is what we die for”: Human rights abuses in the Democratic Republic of the Congo power the global trade in cobalt. https://www.amnesty.org/en/documents/afr62/3183/2016/en/\n\nCrawford, K., & Joler, V. (2018). Anatomy of an AI system: The Amazon Echo as an anatomical map of human labor, data and planetary resources. https://anatomyof.ai/\n\nInternational Energy Agency. (2025). Energy and AI. https://www.iea.org/reports/energy-and-ai"
+  }
+]

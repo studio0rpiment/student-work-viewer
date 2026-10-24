@@ -1,0 +1,218 @@
+[
+  {
+    "name": "Abigail",
+    "networks": "When I changed the first hidden layer to 2 neurons instead of 4, the output boundary couldn’t recognize the orange on the lower right corner and the output boundary’s line color and thickness were all positive weights (blue).",
+    "tokens": "I changed the sentence by adding “TouchDesigner”. The tokenizer changed by immediately applying the color pattern to those words, while separating and recognizing “Touch” and “Designer” as two different segments.",
+    "embeddings": {
+      "word": "tree",
+      "near": [
+        "trees",
+        "tree"
+      ],
+      "far": [
+        "streets",
+        "street"
+      ],
+      "relationship": "the word tree in all the terms"
+    },
+    "closing": "TensorFlow Playground made its reduction in error visible in real-time."
+  },
+  {
+    "name": "Allie",
+    "networks": "When I changed the noise, the output boundary the more values and points being added, smoothing out the neuron network.",
+    "tokens": "I changed the ‘D’ in the sentence “A command line can connect TouchDesigner tools.” to lowercase. The tokenizer changed the ‘er’ into a separate token.",
+    "embeddings": {
+      "word": "Bend",
+      "near": [
+        "Slope",
+        "Tip"
+      ],
+      "far": [
+        "Sonata",
+        "Asteroid"
+      ],
+      "relationship": null
+    },
+    "closing": "The network is automated to have a set output depending on. Easily able to adjust the nodes in without breaking the system (TensorFlow). Automatically on a set system."
+  },
+  {
+    "name": "Ava",
+    "networks": "When I changed how many neurons there were in the first hidden layer by taking away one, the output boundary shape shifted and became uneven.",
+    "tokens": "I changed how many periods there was after the sentence. The tokenizer changed the token ID, instead of adding on new repeating IDs.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "Fabric",
+        "Ants"
+      ],
+      "far": [
+        "Happy",
+        "Freezing"
+      ],
+      "relationship": "Happy and freezing are likely far apart because they are two states or emotions not commonly felt together. I think happy and cold could be closer, because there are many times/experiences for cold to be a good thing, but freezing is in a sense an extreme state, so people are more likely not to be experiencing them together."
+    },
+    "closing": "The tensor flow playground made the data much more dimensional to me than the video was able to. I know the video was describing a much simpler example, but being able to change the interactive website helped me learn more about how different tweaks affect how the model learns and changes, and where its \"weak spots\" are visually. I think the video explained these uncertainties more mathematically."
+  },
+  {
+    "name": "Daon",
+    "networks": "When I changed 2 hidden layer 5 in the first, 4 in the second, the output boundary took longer, even exceeding 2000 epochs.",
+    "tokens": "I changed “command line” to “commanded line”. The tokenizer changed A Command Line can connected tools. to A commaned line can connect tools.",
+    "embeddings": {
+      "word": "Cheese",
+      "near": [
+        "Sauce",
+        "beef"
+      ],
+      "far": [
+        "Cuisine",
+        "Cider"
+      ],
+      "relationship": "Food"
+    },
+    "closing": "Based on the video, I was thinking Neural networks always required more than 2 hidden layers before the output. As my experimental results showed that Neural networks do not need to meet the number of layers."
+  },
+  {
+    "name": "Jack",
+    "networks": "When I changed the number of neurons in the first hidden layer, the output boundary became more complex and could separate the points differently.",
+    "tokens": "I changed command line to command-line. The tokenizer changed the token boundaries and IDs because it treated the hyphen as part of a different token sequence.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "cat",
+        "dog"
+      ],
+      "far": [
+        "cat",
+        "airplane"
+      ],
+      "relationship": "The nearby terms may be related because they often appear in similar contexts."
+    },
+    "closing": "The TensorFlow Playground made the training process visible and easier to follow. Unlike the 3Blue1Brown video, I could understand the process more tangibly as the loss decreased and the decision boundary changed."
+  },
+  {
+    "name": "Jet",
+    "networks": "When I changed the number of hidden layers, the output boundary solidified at a slower rate.",
+    "tokens": "I changed the capitalization. The tokenizer changed the token ID by a larger value than I expected.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "concept",
+        "experience"
+      ],
+      "far": [
+        "unpaved",
+        "featured"
+      ],
+      "relationship": "peaks & precipitation"
+    },
+    "closing": "TensorFlow presented the data itself in a more visually comprehensible way to the human mind, whereas the 3Blue1Brown video focused more on the AI’s production of the information and its connection within the AI system itself."
+  },
+  {
+    "name": "Makda",
+    "networks": "When I changed the number of neurons to 8, the output boundary was faster at establishing confidence in the network's classification.",
+    "tokens": "I changed the period at the end of the sentence “A command line can connect tools.” into 6 exclamation marks. The tokenizer changed boundaries at the sixth and added a new id for it ([3001]).",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "Commandments",
+        "dating"
+      ],
+      "far": [
+        "homer",
+        "iliad"
+      ],
+      "relationship": "Greek Mythology (am i misunderstanding, like possible relationship between the two distant terms right?)"
+    },
+    "closing": "The video simplified explanations of some things for the sake of time. With my own time and ability to mess with the TensorFlow Playground, I was actually able to see and test things like more neurons meant the network reached confident classification faster. The Playground made the relationship between network size speed something I could learn visually, not just understand through explanation."
+  },
+  {
+    "name": "Nicole",
+    "networks": "When I changed the noise to 10, the output boundary produced a network current prediction that has six negative value dots within the blue positive value gradient.",
+    "tokens": "I changed the sentence “A command line can connect tools!” by adding “WOW,” at the beginning of the sentence. The tokenizer changed the colors of the word WOW by splitting the W as purple and OW as green.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "Animal",
+        "human"
+      ],
+      "far": [
+        "Horses",
+        "insects"
+      ],
+      "relationship": "Insects can impact horse health by spreading pathogens or causing the horse distress."
+    },
+    "closing": "The TensorFlow Playground was able to illustrate how a neural network communicates and processes data that was not displayed as visually in the 3Blue1Brown video."
+  },
+  {
+    "name": "Radhia",
+    "networks": "I added 6 neurons to the first hidden layer and pressed play. The output Added another hidden layer and decreased the neurons for the first hidden layer. The output isn’t too significant in change, but you can see there’s more positive weights than the negative but the negative seem to have more strength. When I changed the amount neurons and hidden layers (Increased both) the output boundary decreased from 0.497 and the strength of the positive and negative weights maintained their strength.",
+    "tokens": "I gradually changed the text and received and more tokens. Not just added words but also symbols increased the tokens. The weight of each token varied though depending on the tokens.",
+    "embeddings": {
+      "word": "happy",
+      "near": [
+        "quiet",
+        "funny"
+      ],
+      "far": [
+        "Couple",
+        "girl"
+      ],
+      "relationship": "I can see the correlation between the nearest points but not so much the furthest. Possibly there are not necessarily happy couples and maybe not many happy girls in those couples specifically. Quiet and funny makes a bit of sense since people tend to say they like a quiet life and laughter is always a good thing as well, both contributing to a person’s happiness."
+    },
+    "closing": "3Blue1Brown explains the mechanism through one example, a single network where it seems fixed instead of something you can control. TensorFlow Playground instead lets you watch training happen live on 2D datasets, where you can actually see the decisions, you make and reshape the output in real time. It also you to train while experimenting. The video teaches why the math should work, while the Playground lets you discover and interact to see when and how it doesn't."
+  },
+  {
+    "name": "Sawyer",
+    "networks": "When I increased the number of neurons, the output boundary became more detailed and seemed to fit around the different points better.",
+    "tokens": "I changed “A command line can connect tools.” to “A command line can connect more tool.” Adding “more” changed the tokens and added different token IDs.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "Ocean",
+        "Sea"
+      ],
+      "far": [
+        "Ocean",
+        "Mathematics"
+      ],
+      "relationship": "Ocean and sea are related because they both describe large bodies of water and are used in similar contexts."
+    },
+    "closing": "The TensorFlow Playground made it easier for me to actually see what happens when you change parts of a neural network. I could mess around with the number of neurons and watch the boundary change while it trained. The 3Blue1Brown video explained the ideas well, but the Playground made it more hands-on and easier to understand."
+  },
+  {
+    "name": "Sonia",
+    "networks": "When I changed the number of neurons in the first hidden layer from 4 to 3, the output boundary changed from horizontal to blue is surrounded by orange at the upper area.",
+    "tokens": "I changed “A command line can connect tools.” to “A command line can’t connect tools.” The tokenizer changed the number of tokens and Token IDs.",
+    "embeddings": {
+      "word": "tree",
+      "near": [
+        "tree",
+        "trees"
+      ],
+      "far": [
+        "tree",
+        "forests"
+      ],
+      "relationship": "tree and fungi. When I typed tree, trees showed up at the sidebar and fungi didn’t show up. However, when I typed trees, fungi showed up at the sidebar. So tree and fungi could have a possible relationship."
+    },
+    "closing": "It uses colors on the scatter chart(not sure if I say it right?) to visualize data, neurons and weight values. Colors from orange to white and to blue are used as representing -1 to 1, and the gradient in between them is also telling the story at the OUTPUT."
+  },
+  {
+    "name": "Yingying",
+    "networks": "When I change the neurons from 4 to 1, the output boundary becomes simpler and less accurate.",
+    "tokens": "I removed the “D” from “TouchDesigner.” The tokenizer separated “esign” and “er” into individual tokens, increasing the total number of tokens from 9 to 10.",
+    "embeddings": {
+      "word": null,
+      "near": [
+        "Guitar",
+        "Piano"
+      ],
+      "far": [
+        "Algebra",
+        "Spain"
+      ],
+      "relationship": "Guitar and piano are both musical instruments."
+    },
+    "closing": "The TensorFlow Playground helped me understand the training process more visually. By changing the number of neurons myself, I could directly see how it affected the output boundary and accuracy."
+  }
+]

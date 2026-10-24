@@ -1,0 +1,312 @@
+[
+  {
+    "name": "Abigail",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Create and edit Google Slides deck",
+        "note": "the user adds Google Slides to Hermes’s Google workspace skill, so the agent can read, create, and edit presentations. Each request starts new, with no memory, saved knowledge, or learning.",
+        "source": "https://github.com/NousResearch/hermes-agent/issues/15600"
+      },
+      {
+        "level": 2,
+        "case": "Proactive check-ins (‘anything you want me to watch this afternoon?’)",
+        "note": "the check-ins rely on stored session history and to-do context. The agent follows fixed rules instead of learning from experience.",
+        "source": "https://github.com/NousResearch/hermes-agent/issues/9645"
+      },
+      {
+        "level": 3,
+        "case": "28 cron jobs, 30+ skills, and a 3am “Dreaming” job that writes tomorrow’s context",
+        "note": "the agent stores past sessions and turns them into lessons that change how it behaves. So, Hermes reads the day’s conversations and extracts decisions, ongoing projects, and mistakes not to repeat into a summary that loads at the start of every session. Every week, it analyzes the user’s corrections to its writing and system to fix the problems.",
+        "source": "https://www.reddit.com/r/hermesagent/comments/1udesr1/ive_been_asked_many_times_what_my_hermes_actually/"
+      },
+      {
+        "level": 4,
+        "case": "Solo-building a job-site app where the agent files its own tasks and deploys",
+        "note": "learns from past sessions, runs continuously with crash recovery, coordinated through a shared Kanban board.",
+        "source": "https://www.reddit.com/r/hermesagent/comments/1u9fa2w/my_hermes_setup_roast_me/"
+      },
+      {
+        "level": 5,
+        "case": "Hermes as my Chief of Staff with sub-agents per project",
+        "note": "the Chief of Staff agents runs 24/7 on a server and oversees a team of project agents, with backup model routing, nightly backups, weekly memory audits, and daily reports.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1496117910287024159-Running-Hermes-as-a-Hardcore-Project-Operating-System.txt"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Ava",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Creating an API key organizer",
+        "note": "“So I got fed up with managing a million API keys in my hermes agent and started bundling related ones into single endpoints. like all finance data through one call instead of five separate keys. it actually works really well for longer sessions where context gets messy.”",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/plugins-skills-and-skins/1502170319215923240-Bundled-API-endpoints-for-agents.txt"
+      },
+      {
+        "level": 2,
+        "case": "Hermes hud is a TUI dashboard that watches your ai agent think",
+        "note": "“Hey Team! Just built something I found useful over the past few days. Hermes hud is a TUI dashboard that watches your ai agent think. it reads from your agent's memory, tracks skills, sessions, corrections, projects, cron jobs, all of it. live.\n\nIt mirrors everything the agent knows about itself. conversations held, mistakes corrected, growth over time. if the data's there it shows up. if not it tells you what's missing.”",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1489107955327570081-HERMES-TUI-Companion.txt"
+      },
+      {
+        "level": 3,
+        "case": "Self Learning Weather Trading Bot",
+        "note": "“I turned $100 into $216 in less than 48 hours with a self-learning weather trading bot\n\nHermes scanning weather markets every 60 mins, comparing data from 3 forecast sources for each location\n\nif it sees an undervalued temperature bucket, it buys and flips for profit. no emotions. no manual trades”",
+        "source": "https://x.com/DeRonin_/status/2045087400607568378"
+      },
+      {
+        "level": 5,
+        "case": "“Flood the zone”",
+        "note": null,
+        "source": null
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Daon",
+    "levels": [],
+    "product": {
+      "name": "Manus",
+      "level": null,
+      "text": "Manus (manus.im) is a commercial product that explicitly markets \"agentic teams\" — it calls this feature Wide Research: a main orchestrator agent that spins up many independent sub-agents in parallel, each with its own VM, tools, and full context window.\n\nPrompt\n\nResearch 50 competitors in the project-management software space and give me a comparison report.\n\nTested up to 250 parallel items; traditional single-agent chat degrades in quality after ~8–10 items due to context-window saturation, while Wide Research scales to hundreds \"in minutes regardless of scale.\"\n\nNovel point on Manus\n\nThe one genuinely distinctive design choice is the hard no-communication rule between sub-agents, stated as a product guarantee, not just an implementation detail: \"Sub-agents never talk to each other. This prevents context pollution and reduces hallucinations.\" Manus treats agent-to-agent silence as a feature for quality control at scale, rather than a limitation to work around — whereas frameworks like Hermes Swarm (from the user-stories research) go the opposite direction and treat peer-to-peer agent messaging as the feature."
+    },
+    "visualize": "Swarm Radar / Spatial Map View\n\nConcept: Treat each agent as a moving dot in a 2D space (like Flightradar24 or a live subway map), not a row in a table.\n\n- Movement: Agents physically travel between \"zones\" representing phases — Research Zone → Writing Zone → Review Zone → Done. Movement is animated, not instant; speed can even reflect how much work remains.\n- Time: A live clock plus trailing \"breadcrumb\" trails showing where each agent has been in the last N minutes — like a comet tail.\n- Novel aspect: Spatial proximity could represent shared context — agents working on related sub-tasks cluster near each other; fully isolated agents (Manus-style, no inter-agent talk) sit far apart with no connecting lines at all, visually reinforcing the \"no communication\" architecture.\n- Useful data: agent_id, current_phase, timestamp_entered_phase, parent/child relationship."
+  },
+  {
+    "name": "Jet",
+    "levels": [],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Makda",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Had the agent whip me up a Matrix-inspired skin",
+        "note": "“I wanted a skin with the classic black and green color scheme so I had the agent whip me up this Matrix inspired theme.”\n\n@.omarlittle",
+        "source": null
+      },
+      {
+        "level": 2,
+        "case": "A clickable 'memory wiki' of everything worked on, plus a 9am priority routine",
+        "note": "“Build a memory wiki — a site with all subjects we've talked about and daily logs. Every morning at 9am ask me what",
+        "source": null
+      },
+      {
+        "level": 3,
+        "case": "Connected an entire business to the agent through one Obsidian vault",
+        "note": "“I connected my entire business to Hermes x Obsidian. Client notes, SOPs, meeting logs, business decisions - all of it. My Hermes agent now runs automations I didn't even know I needed, and my agent self-evolves over",
+        "source": null
+      },
+      {
+        "level": 4,
+        "case": "Kanban multi-agent feature is game-changing",
+        "note": "“WHAT IS THE NEW KANBAN FEATURE BUILT INTO HERMES? (IT'S GAME CHANGING) — image post showing Hermes' new built-in Kanban board where a parent agent posts",
+        "source": null
+      },
+      {
+        "level": 5,
+        "case": "8h/day on Opus: email pipeline with DBOS + Postgres + S3",
+        "note": "“I run it daily for production software development, orchestrating a 3-actor email processing pipeline with DBOS, PostgreSQL, S3, Gmail API. 8+ hours per day on Claude Opus for 3 weeks.”",
+        "source": null
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Mariam",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Google me and ship landing page to VPS.",
+        "note": "The agent searches the web, builds a page, uploads it to a server and texts the user. It acts with tools but doesn't remember anything afterward.",
+        "source": null
+      },
+      {
+        "level": 2,
+        "case": "Bedtime stories for daughter.",
+        "note": "The agent remembers earlier stories and the characters' names across sessions. It keeps memory so each night builds on the last.",
+        "source": null
+      },
+      {
+        "level": 3,
+        "case": "Specialist agent crafting through iteration.",
+        "note": "After 4–10 runs of the same task, the agent starts writing its own skills. It learns from experience instead of only following rules.",
+        "source": null
+      },
+      {
+        "level": 4,
+        "case": "Multi-agent auto-build workflow.",
+        "note": "A planner agent breaks the work into phases, a coder builds, QA tests, and failures loop back for repair. Each agent has its own job under a lead.",
+        "source": null
+      },
+      {
+        "level": 5,
+        "case": "216 in 48h weather trading bot.",
+        "note": "The agent scans markets every hour, compares weather forecasts and adjusts its strategy from the results. It runs and improves without a human stepping in.",
+        "source": null
+      }
+    ],
+    "product": {
+      "name": "Manus Wide Research",
+      "level": null,
+      "text": "Manus, Devin and Hermes all promise agent teams where a lead agent hands work to other agents. They borrow familiar productivity ideas like managers, to-do lists and status reports. What's new is that the workers are copies that run at the same time and can be created in seconds.\n\nTrace One Agent (Manus Wide Research)\n\nYou type one prompt, a lead agent splits it into many small tasks, separate agents work on them at the same time, and the lead merges everything into one report. The user only sees the prompt and the final answer, not the work in between."
+    },
+    "visualize": null
+  },
+  {
+    "name": "Radhia",
+    "levels": [
+      {
+        "level": 4,
+        "case": "Multiple Uses - Multi use",
+        "note": null,
+        "source": "https://www.reddit.com/r/hermesagent/comments/1udesr1/ive_been_asked_many_times_what_my_hermes_actually/"
+      },
+      {
+        "level": 5,
+        "case": "Tiktok Slideshow",
+        "note": null,
+        "source": "https://x.com/cyrilXBT/status/2054611133911417266"
+      },
+      {
+        "level": 3,
+        "case": "Tweets and Creates Video in Persons Voice",
+        "note": null,
+        "source": "https://www.youtube.com/watch?v=HdxtLpL9CC8"
+      },
+      {
+        "level": 2,
+        "case": "Research Stack",
+        "note": null,
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/plugins-skills-and-skins/1501578622350393404-Gigaxity--low-cost-research-stack.txt"
+      },
+      {
+        "level": 1,
+        "case": "Google Slides Support",
+        "note": null,
+        "source": "https://github.com/NousResearch/hermes-agent/issues/15600"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Sawyer",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Forwarded a 50-page Greek PDF over Telegram and got a reviewed PR back",
+        "note": "Hermes reads files, edits code, runs tests, and sends the finished work back.",
+        "source": "https://hermes-agent.nousresearch.com/docs/user-stories"
+      },
+      {
+        "level": 2,
+        "case": "A software consultancy built an internal Slack assistant that knows the company",
+        "note": "Hermes uses stored company knowledge so its answers are specific to the organization.",
+        "source": "https://hermes-agent.nousresearch.com/docs/user-stories"
+      },
+      {
+        "level": 3,
+        "case": "28 cron jobs, 30+ skills, and a 3am “Dreaming” job that writes tomorrow’s context",
+        "note": "Hermes pulls decisions, mistakes, and useful context from past conversations and carries them forward.",
+        "source": "https://hermes-agent.nousresearch.com/docs/user-stories"
+      },
+      {
+        "level": 4,
+        "case": "Agent teams that message each other peer-to-peer and self-schedule wake-ups",
+        "note": "Multiple agents can split up work, communicate directly, and coordinate tasks together.",
+        "source": "https://hermes-agent.nousresearch.com/docs/user-stories"
+      },
+      {
+        "level": 5,
+        "case": "Razorpay gives 220+ employees their own isolated, always-on Hermes agent",
+        "note": "Hermes is running as permanent infrastructure with separate agents working continuously for employees.",
+        "source": "https://hermes-agent.nousresearch.com/docs/user-stories"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Sonia",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Build AI teammates with Zapier Agents",
+        "note": "Zapier Agents allows an AI agent to connect to applications and use them to perform actions. For example, an agent can work with Gmail, Slack, Google Sheets, Salesforce, and other applications.",
+        "source": "https://zapier.com/agents?utm_source=chatgpt.com"
+      },
+      {
+        "level": 2,
+        "case": "Glean",
+        "note": "Glean connects AI to an organization's existing knowledge across Google Drive, Slack, Jira, Confluence, SharePoint, GitHub, Salesforce, and other enterprise systems. Its agents can then use that information to answer questions and perform work.",
+        "source": "https://www.glean.com/?utm_source=chatgpt.com"
+      },
+      {
+        "level": 3,
+        "case": "How I Built a Self-Improving LLM Wiki with Hermes Agent (and Why I’m Not Using Obsidian) | by Jsong | Medium",
+        "note": "a Self-Improving LLM Wiki with Hermes Agent",
+        "source": "https://medium.com/@jsong_49820/how-i-built-a-self-improving-llm-wiki-with-hermes-agent-and-why-im-not-using-obsidian-1e9a7fa438c1"
+      },
+      {
+        "level": 4,
+        "case": "LangSmith",
+        "note": "LangSmith itself is primarily the platform for building, deploying, monitoring, and managing agents.",
+        "source": "https://info.langchain.com/agent-orchestration?utm_campaign=evergreen_agent_orchestration_cv&utm_campaign_id=23859544235&utm_ad_group_id=199518345111&utm_ad_id=809326730159&utm_network=g&utm_term=agent%20orchestration&utm_campaign=evergreen_agents_cv&utm_source=google&utm_medium=cpc&hsa_acc=7906965105&hsa_cam=23859544235&hsa_grp=199518345111&hsa_ad=809326730159&hsa_src=g&hsa_tgt=kwd-2433575808714&hsa_kw=agent%20orchestration&hsa_mt=p&hsa_net=adwords&hsa_ver=3&gad_source=1&gad_campaignid=23859544235&gbraid=0AAAAA-PkiesUXEE0b4lHUDrC5wQxMBQ7W&gclid=Cj0KCQjwuJLWBhD_ARIsAIBcRUzcZhMQI-7F0r4FYKyXsFOJGfxk5Mi1h8mk221Nl-wnTpI8caFqKvcaAr05EALw_wcB"
+      },
+      {
+        "level": 5,
+        "case": "Auth0",
+        "note": "Auth0 makes every login effortless, so fewer customers walk away. It helps stop fraud behind the scenes and keeps users recognized across your sites, apps, and AI-assisted touchpoints.",
+        "source": "https://auth0.com/"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
+    "name": "Yingying",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Forwarded a 50-page Greek PDF over Telegram and got a reviewed PR back",
+        "note": "uses tools to read and modify files and run tests.",
+        "source": null
+      },
+      {
+        "level": 2,
+        "case": "A software consultancy built an internal Slack assistant that knows the company",
+        "note": "uses company knowledge to provide relevant information.",
+        "source": null
+      },
+      {
+        "level": 3,
+        "case": "28 cron jobs, 30+ skills, and a 3am “Dreaming” job that writes tomorrow’s context",
+        "note": "extracts decisions, experiences, and mistakes from previous conversations for future use.",
+        "source": null
+      },
+      {
+        "level": 4,
+        "case": "Agent teams that message each other peer-to-peer and self-schedule wake-ups",
+        "note": "Multiple agents communicate, delegate work, and coordinate tasks.",
+        "source": null
+      },
+      {
+        "level": 5,
+        "case": "Razorpay gives 220+ employees their own isolated, always-on Hermes agent",
+        "note": "Hermes is deployed as an always-on production system for hundreds of employees using isolated infrastructure.",
+        "source": null
+      }
+    ],
+    "product": null,
+    "visualize": null
+  }
+]
