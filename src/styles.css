@@ -223,6 +223,7 @@ button {
   margin: 0 auto;
 }
 .home__title { display: flex; flex-direction: column; gap: 0.5rem; }
+.home__label-h1 { margin: 0; font-weight: 400; } /* the classes page heading is just a label */
 .home__h1 {
   font-size: 1.4rem;
   font-weight: 500;

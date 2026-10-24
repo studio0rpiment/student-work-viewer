@@ -41,7 +41,9 @@ export default function HomePage({ course, navigate, themeMode, onToggleTheme }:
           <Label className="label--muted label--keep">
             {course.code} · {course.term}
           </Label>
-          <h1 className="home__h1">{course.title}</h1>
+          <h1 className="home__h1">
+            {course.title} {course.term}
+          </h1>
         </header>
         <ul className="home__list">
           {error && <Label className="label--muted">{error}</Label>}
