@@ -3,25 +3,33 @@ import Label from '../components/Label'
 import ThemeToggle from '../components/ThemeToggle'
 import Toolbar from '../components/Toolbar'
 import { listShowcases } from '../lib/data'
-import { APP_NAME, COURSE } from '../site'
+import { APP_NAME, coursePath, type Course } from '../site'
 import { formatDue, type Showcase } from '../types'
 import type { ThemeMode } from '../themes'
 
 interface Props {
+  course: Course
   navigate: (path: string) => void
   themeMode: ThemeMode
   onToggleTheme: () => void
 }
 
-/** Front page: course title and the showcases in due-date order (earliest first) — the semester's progression. */
-export default function HomePage({ navigate, themeMode, onToggleTheme }: Props) {
+/**
+ * A course page: code, term and title, then the course's showcases in due-date
+ * order (earliest first) — the semester's progression — then its other links.
+ */
+export default function HomePage({ course, navigate, themeMode, onToggleTheme }: Props) {
   const [showcases, setShowcases] = useState<Showcase[] | null>(null)
   const [error, setError] = useState<string | null>(null)
 
   useEffect(() => {
-    document.title = APP_NAME
-    listShowcases().then(setShowcases).catch((e: Error) => setError(e.message))
-  }, [])
+    document.title = `${course.title} ${course.term} — ${APP_NAME}`
+    listShowcases()
+      .then((all) => setShowcases(all.filter((s) => s.term.toLowerCase() === course.term.toLowerCase())))
+      .catch((e: Error) => setError(e.message))
+  }, [course])
+
+  const base = coursePath(course)
 
   return (
     <>
@@ -30,8 +38,10 @@ export default function HomePage({ navigate, themeMode, onToggleTheme }: Props) 
       </Toolbar>
       <main className="home">
         <header className="home__title">
-          <Label className="label--muted label--keep">{COURSE.code}</Label>
-          <h1 className="home__h1">{COURSE.title}</h1>
+          <Label className="label--muted label--keep">
+            {course.code} · {course.term}
+          </Label>
+          <h1 className="home__h1">{course.title}</h1>
         </header>
         <ul className="home__list">
           {error && <Label className="label--muted">{error}</Label>}
@@ -39,10 +49,10 @@ export default function HomePage({ navigate, themeMode, onToggleTheme }: Props) 
             <li key={s.id}>
               <a
                 className="home__item"
-                href={`/${s.slug}`}
+                href={`${base}/${s.slug}`}
                 onClick={(e) => {
                   e.preventDefault()
-                  navigate(`/${s.slug}`)
+                  navigate(`${base}/${s.slug}`)
                 }}
               >
                 <span className="home__item-title">{s.title}</span>
@@ -50,7 +60,27 @@ export default function HomePage({ navigate, themeMode, onToggleTheme }: Props) 
               </a>
             </li>
           ))}
+          {/* These live in other apps (the forms), so they are full page loads. */}
+          {showcases &&
+            course.links.map((l) => (
+              <li key={l.href}>
+                <a className="home__item" href={l.href}>
+                  <span className="home__item-title">{l.label}</span>
+                  {l.note && <Label className="label--muted label--keep">{l.note}</Label>}
+                </a>
+              </li>
+            ))}
         </ul>
+        <a
+          className="label label--link"
+          href="/classes"
+          onClick={(e) => {
+            e.preventDefault()
+            navigate('/classes')
+          }}
+        >
+          all classes
+        </a>
       </main>
     </>
   )

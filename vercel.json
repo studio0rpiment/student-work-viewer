@@ -1,3 +1,8 @@
 {
-  "rewrites": [{ "source": "/((?!sites/).*)", "destination": "/index.html" }]
+  "rewrites": [
+    { "source": "/classes/experimental-tools-f26/:form(midterm)", "destination": "https://assessment-forms.vercel.app/classes/experimental-tools-f26/:form" },
+    { "source": "/classes/experimental-tools-f26/:form(midterm)/:path*", "destination": "https://assessment-forms.vercel.app/classes/experimental-tools-f26/:form/:path*" },
+    { "source": "/classes/experimental-tools-f26/:dir(_next|api)/:path*", "destination": "https://assessment-forms.vercel.app/classes/experimental-tools-f26/:dir/:path*" },
+    { "source": "/((?!sites/).*)", "destination": "/index.html" }
+  ]
 }

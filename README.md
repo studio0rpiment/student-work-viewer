@@ -1,4 +1,4 @@
-# Pair Gallery
+# Student Work Viewer
 
 Minimal gallery of paired websites (e.g. a student's "slop" build vs. their "mcp+skill" build), rendered live in outlined cards, with a fullscreen carousel. Data lives in Supabase; the app runs read-only from `src/data/students.json` when no database is configured.
 

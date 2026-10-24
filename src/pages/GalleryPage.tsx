@@ -10,7 +10,7 @@ import HomeLink from '../components/HomeLink'
 import { useShowcase } from '../hooks/useShowcase'
 import { useSession } from '../hooks/useSession'
 import { saveEntry, saveShowcase } from '../lib/data'
-import { APP_NAME } from '../site'
+import { APP_NAME, courseForTerm } from '../site'
 import { TILE, formatDue, toSlides, type Rotation, type Slide } from '../types'
 import type { ThemeMode } from '../themes'
 
@@ -89,7 +89,7 @@ export default function GalleryPage({ slug, navigate, themeMode, onToggleTheme }
           {due && <Label className="label--muted label--keep">{due}</Label>}
         </div>
       )}
-      {open === null && <HomeLink navigate={navigate} />}
+      {open === null && <HomeLink course={courseForTerm(showcase.term)} navigate={navigate} />}
       {open === null && (
         <Toolbar>
           <ThemeToggle mode={themeMode} onToggle={onToggleTheme} />

@@ -1,6 +1,6 @@
-# GW IxD Student Work Viewer
+# Student Work Viewer
 
-Status as of 25 September 2026. Repo: `~/__DEV/__website-display`, deployed on Vercel, data in Supabase. Design language: **KP Minimal**.
+Status as of 25 September 2026. Repo: `~/__DEV/__GW_PROJECTS/student-work-viewer` (GitHub `studio0rpiment/student-work-viewer`, Vercel project `student-work-viewer`), deployed on Vercel, data in Supabase. Design language: **KP Minimal**.
 
 ## Purpose
 
