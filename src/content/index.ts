@@ -90,7 +90,7 @@ export const WRITINGS: Writing[] = [
     layout: 'packed',
     brief: [
       { p: 'Variable Machine is a small instrument that runs on your own Mac, at localhost. It lets you change a model rather than only use one: it trains, blends and exports small models on an ordinary Apple Silicon laptop. Every button echoes the real command into a terminal on the same page, so nothing happens that you can’t read.' },
-      { p: 'An exploration in groups: open Variable Machine, try its demos (hand gestures through the camera, speech through the microphone, and the others), and record what it does.' },
+      { p: 'An exploration in groups: open Variable Machine, try its demos (hand gestures through the camera, speech through the microphone, and the others), and record what it does. You can also train it on your own data: record your own examples and the model learns them.' },
     ],
     entries: variableMachine as MediaEntry[],
   },
