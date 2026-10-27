@@ -397,12 +397,20 @@ function Media({ entries }: { entries: MediaEntry[] }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
+  // Images and recordings sit in the grid; a typeface runs as a line of text under them.
   const grid = (items: MediaItem[]) => (
-    <div className="media-tiles">
-      {items.map((i) => (
-        <Tile key={i.src} item={i} onOpen={() => setOpen(i)} />
+    <>
+      <div className="media-tiles">
+        {items.filter((i) => i.kind !== 'font').map((i) => (
+          <Tile key={i.src} item={i} onOpen={() => setOpen(i)} />
+        ))}
+      </div>
+      {items.filter((i) => i.kind === 'font').map((i) => (
+        <button key={i.src} className="media-specimen" style={{ fontFamily: fontFamily(i.src) }} onClick={() => setOpen(i)}>
+          {SPECIMEN}
+        </button>
       ))}
-    </div>
+    </>
   )
 
   return (
