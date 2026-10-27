@@ -79,3 +79,5 @@ export type Writing =
   | (WritingBase & { layout: 'prompts'; entries: PromptsEntry[] })
   | (WritingBase & { layout: 'levels'; entries: LevelsEntry[] })
   | (WritingBase & { layout: 'media'; entries: MediaEntry[] })
+  /** Same data as media, but everything packed together at its own shape, like the knolling page. */
+  | (WritingBase & { layout: 'packed'; entries: MediaEntry[] })

@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Disclose from '../components/Disclose'
 import HomeLink from '../components/HomeLink'
 import Label from '../components/Label'
+import MediaFlow, { type FlowItem } from '../components/MediaFlow'
 import ThemeToggle from '../components/ThemeToggle'
 import Toolbar from '../components/Toolbar'
 import { APP_NAME, courseForTerm } from '../site'
@@ -42,6 +43,7 @@ export default function WritingPage({ writing, navigate, themeMode, onToggleThem
         {writing.layout === 'prompts' && <Prompts entries={writing.entries} />}
         {writing.layout === 'levels' && <Levels entries={writing.entries} />}
         {writing.layout === 'media' && <Media entries={writing.entries} />}
+        {writing.layout === 'packed' && <Packed entries={writing.entries} />}
       </main>
     </div>
   )
@@ -430,6 +432,42 @@ function Media({ entries }: { entries: MediaEntry[] }) {
             </p>
           )}
           {open.caption && <p className="label label--muted">{open.caption} · click or esc to close</p>}
+        </div>
+      )}
+    </>
+  )
+}
+
+/* ---------- Packed: everything together at its own shape, who on hover ---------- */
+
+function Packed({ entries }: { entries: MediaEntry[] }) {
+  const [open, setOpen] = useState<FlowItem | null>(null)
+  const items: FlowItem[] = entries.flatMap((e) => {
+    const group = e.members ? `${e.name} · ${e.members.join(', ')}` : e.name
+    return [
+      ...e.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: group })),
+      ...(e.solo ?? []).flatMap((s) => s.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: s.name }))),
+    ]
+  })
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(null)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  return (
+    <>
+      <MediaFlow items={items} onSelect={setOpen} />
+      {open && (
+        <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
+          {open.kind === 'video' ? (
+            <video src={open.src} muted loop autoPlay playsInline controls />
+          ) : (
+            <img src={open.src} alt={open.who} />
+          )}
+          <p className="label label--muted label--keep">{open.who} · click or esc to close</p>
         </div>
       )}
     </>

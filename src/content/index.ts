@@ -87,7 +87,7 @@ export const WRITINGS: Writing[] = [
     term: 'F26',
     due_date: '2026-10-27',
     summary: 'A model of your own: use, steer and train a small model on your own Mac.',
-    layout: 'media',
+    layout: 'packed',
     brief: [
       { p: 'Variable Machine is a small localhost instrument that trains, blends and exports small models on an ordinary Mac, and echoes every command into a terminal on the same page. In groups, choose one of four worked demos (public data, gallery, gesture, tangible), make it work as it is, then retrain it on your own data for a project you care about.' },
       { h: 'Use, steer, train' },

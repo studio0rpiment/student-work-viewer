@@ -601,3 +601,9 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 .lightbox img[src$=".svg"] { background: #FFF7E6; padding: 1rem; }
 .lightbox__font { font-size: clamp(2rem, 5vw, 4.5rem); line-height: 1.15; max-width: 60rem; overflow-wrap: anywhere; margin: 0; }
 .media-entry .writing__h2 span:not(.label--student) { text-transform: none; }
+/* Packed media (Variable Machine): inside the writing page, no extra outer margin;
+   the group or person shows only on hover. */
+.media-flow { margin: 2.5rem 0 0; }
+.media-flow__tile .tile__img { object-fit: cover; }
+.media-flow__tile .tile__name { opacity: 0; transition: opacity 0.15s; }
+.media-flow__tile:hover .tile__name, .media-flow__tile:focus-within .tile__name { opacity: 1; }
