@@ -361,7 +361,9 @@ function Levels({ entries }: { entries: LevelsEntry[] }) {
 
 /* ---------- Media: drawings, marks, typefaces, recordings, by student or group ---------- */
 
-const SPECIMEN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789'
+/** The typefaces in use. Fonts drawn in capitals only map lowercase to their capitals. */
+const SPECIMEN = 'The quick brown fox jumps over the lazy dog'
+const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz'
 
 /** Each uploaded typeface gets its own family name, loaded from its file. */
 const fontFamily = (src: string) => 'student-' + src.replace(/[^a-z0-9]+/gi, '-')
@@ -427,9 +429,13 @@ function Media({ entries }: { entries: MediaEntry[] }) {
           {open.kind === 'image' && <img src={open.src} alt={open.caption ?? ''} />}
           {open.kind === 'video' && <video src={open.src} muted loop autoPlay playsInline controls />}
           {open.kind === 'font' && (
-            <p className="lightbox__font" style={{ fontFamily: fontFamily(open.src) }}>
-              {SPECIMEN}
-            </p>
+            <div className="lightbox__font" style={{ fontFamily: fontFamily(open.src) }}>
+              <p className="lightbox__font-display">{SPECIMEN}</p>
+              <p className="lightbox__font-text">
+                {SPECIMEN}. {SPECIMEN.toUpperCase()}. {SPECIMEN.toLowerCase()}.
+              </p>
+              <p className="lightbox__font-small">{ALPHABET}</p>
+            </div>
           )}
           {open.caption && <p className="label label--muted">{open.caption} · click or esc to close</p>}
         </div>
