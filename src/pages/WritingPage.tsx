@@ -7,7 +7,7 @@ import Toolbar from '../components/Toolbar'
 import { APP_NAME, courseForTerm } from '../site'
 import { formatDue } from '../types'
 import type { ThemeMode } from '../themes'
-import type { BriefBlock, LevelsEntry, PathEntry, PromptsEntry, QuestionsEntry, Writing } from '../content/types'
+import type { BriefBlock, LevelsEntry, MediaEntry, MediaItem, PathEntry, PromptsEntry, QuestionsEntry, Writing } from '../content/types'
 
 interface Props {
   writing: Writing
@@ -41,6 +41,7 @@ export default function WritingPage({ writing, navigate, themeMode, onToggleThem
         {writing.layout === 'path' && <Paths entries={writing.entries} />}
         {writing.layout === 'prompts' && <Prompts entries={writing.entries} />}
         {writing.layout === 'levels' && <Levels entries={writing.entries} />}
+        {writing.layout === 'media' && <Media entries={writing.entries} />}
       </main>
     </div>
   )
@@ -351,6 +352,85 @@ function Levels({ entries }: { entries: LevelsEntry[] }) {
             ))}
           </div>
         </section>
+      )}
+    </>
+  )
+}
+
+/* ---------- Media: drawings, marks, typefaces, recordings, by student or group ---------- */
+
+const SPECIMEN = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz 0123456789'
+
+/** Each uploaded typeface gets its own family name, loaded from its file. */
+const fontFamily = (src: string) => 'student-' + src.replace(/[^a-z0-9]+/gi, '-')
+
+function Tile({ item, onOpen }: { item: MediaItem; onOpen: () => void }) {
+  return (
+    <figure className="media-tile">
+      <button className="media-tile__frame" onClick={onOpen} aria-label={`open ${item.caption ?? 'image'}`}>
+        {item.kind === 'image' && <img src={item.src} alt={item.caption ?? ''} loading="lazy" />}
+        {item.kind === 'video' && <video src={item.src} muted loop autoPlay playsInline />}
+        {item.kind === 'font' && (
+          <span className="media-tile__font" style={{ fontFamily: fontFamily(item.src) }}>
+            {SPECIMEN}
+          </span>
+        )}
+      </button>
+      {item.caption && <figcaption className="label label--muted">{item.caption}</figcaption>}
+    </figure>
+  )
+}
+
+function Media({ entries }: { entries: MediaEntry[] }) {
+  const [open, setOpen] = useState<MediaItem | null>(null)
+  const all = entries.flatMap((e) => [...e.items, ...(e.solo ?? []).flatMap((s) => s.items)])
+  const fonts = all.filter((i) => i.kind === 'font')
+
+  useEffect(() => {
+    if (!open) return
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(null)
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [open])
+
+  const grid = (items: MediaItem[]) => (
+    <div className="media-tiles">
+      {items.map((i) => (
+        <Tile key={i.src} item={i} onOpen={() => setOpen(i)} />
+      ))}
+    </div>
+  )
+
+  return (
+    <>
+      <style>{fonts.map((f) => `@font-face{font-family:"${fontFamily(f.src)}";src:url("${f.src}");font-display:swap}`).join('')}</style>
+      {entries.map((e) => (
+        <section key={e.name} className="writing__section media-entry">
+          <h2 className="writing__h2">
+            <span className="label--student">{e.name}</span>
+            {e.members && <span> · {e.members.join(', ')}</span>}
+          </h2>
+          {e.note && <p className="label label--muted">{e.note}</p>}
+          {e.items.length > 0 && grid(e.items)}
+          {e.solo?.map((s) => (
+            <div key={s.name} className="media-solo">
+              <Label className="label--student">{s.name}</Label>
+              {s.items.length > 0 ? grid(s.items) : <p className="label label--muted">nothing turned in yet</p>}
+            </div>
+          ))}
+        </section>
+      ))}
+      {open && (
+        <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
+          {open.kind === 'image' && <img src={open.src} alt={open.caption ?? ''} />}
+          {open.kind === 'video' && <video src={open.src} muted loop autoPlay playsInline controls />}
+          {open.kind === 'font' && (
+            <p className="lightbox__font" style={{ fontFamily: fontFamily(open.src) }}>
+              {SPECIMEN}
+            </p>
+          )}
+          {open.caption && <p className="label label--muted">{open.caption} · click or esc to close</p>}
+        </div>
       )}
     </>
   )

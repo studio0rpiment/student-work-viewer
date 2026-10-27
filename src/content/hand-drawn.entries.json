@@ -1,0 +1,522 @@
+[
+ {
+  "name": "Abigail",
+  "items": [
+   {
+    "src": "/work/hand-drawn/abigail/img-2924.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-01.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-02.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-03.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-04.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-05.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-06.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-07.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924-1.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/img-2924.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/abigail/screenshot-2026-10-27-at-4-14-26-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Allie",
+  "items": [
+   {
+    "src": "/work/hand-drawn/allie/img-2276.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-3-45-32-pm-1.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-3-45-32-pm.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-3-45-32-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-3-47-21-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-3-54-05-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/allie/screenshot-2026-10-27-at-4-02-50-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Arisha",
+  "items": [
+   {
+    "src": "/work/hand-drawn/arisha/img-6992.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/img-6993.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/img-6995.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/my-hand-as-drawn.otf",
+    "kind": "font",
+    "caption": "typeface"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/screenshot-2026-10-27-at-3-42-05-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/screenshot-2026-10-27-at-4-03-59-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/screenshot-2026-10-27-at-4-04-28-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/arisha/screenshot-2026-10-27-at-4-17-45-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Ava",
+  "items": [
+   {
+    "src": "/work/hand-drawn/ava/img-6863.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/ava/img-6864.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/ava/img-6864-ink.jpg",
+    "kind": "image",
+    "caption": "ink"
+   },
+   {
+    "src": "/work/hand-drawn/ava/screenshot-2026-10-27-at-4-13-19-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/ava/screenshot-2026-10-27-at-4-16-09-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Jet",
+  "items": [
+   {
+    "src": "/work/hand-drawn/jet/img-3886.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/jet/img-3887.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/jet/img-3888.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/jet/my-hand-as-drawn.otf",
+    "kind": "font",
+    "caption": "typeface"
+   },
+   {
+    "src": "/work/hand-drawn/jet/screenshot-2026-10-27-155439.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/jet/screenshot-2026-10-27-155510.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/jet/screenshot-2026-10-27-160402.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/jet/screenshot-2026-10-27-161815.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Makda",
+  "items": [
+   {
+    "src": "/work/hand-drawn/makda/my-hand-as-drawn.otf",
+    "kind": "font",
+    "caption": "typeface"
+   },
+   {
+    "src": "/work/hand-drawn/makda/screenshot-2026-10-27-at-4-27-34-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/makda/screenshot-2026-10-27-at-4-28-03-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Mariam",
+  "items": [
+   {
+    "src": "/work/hand-drawn/mariam/img-8134.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/img-8135.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/img-8136.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/img-8135-stamp.jpg",
+    "kind": "image",
+    "caption": "stamp"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/img-8134.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/img-8135.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/arabic-engphonetics-as-drawn.otf",
+    "kind": "font",
+    "caption": "typeface"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/screenshot-2026-10-27-at-3-38-38-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/screenshot-2026-10-27-at-3-49-18-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/mariam/screenshot-2026-10-27-at-4-04-42-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Nicole",
+  "items": [
+   {
+    "src": "/work/hand-drawn/nicole/img-3709.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/screenshot-2026-10-27-at-3-47-47-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/screenshot-2026-10-27-at-3-53-53-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/screenshot-2026-10-27-at-4-15-30-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/png-fill-dark-img-3708-512.jpg",
+    "kind": "image",
+    "caption": "icon · fill-dark"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/png-fill-light-img-3708-512.jpg",
+    "kind": "image",
+    "caption": "icon · fill-light"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/png-line-dark-img-3708-512.jpg",
+    "kind": "image",
+    "caption": "icon · line-dark"
+   },
+   {
+    "src": "/work/hand-drawn/nicole/png-line-light-img-3708-512.jpg",
+    "kind": "image",
+    "caption": "icon · line-light"
+   }
+  ]
+ },
+ {
+  "name": "Peyton",
+  "items": [
+   {
+    "src": "/work/hand-drawn/peyton/ladybug-ladybugfont.otf",
+    "kind": "font",
+    "caption": "typeface"
+   },
+   {
+    "src": "/work/hand-drawn/peyton/screenshot-2026-10-27-at-4-13-36-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/peyton/screenshot-2026-10-27-at-4-21-40-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Radhia",
+  "items": [
+   {
+    "src": "/work/hand-drawn/radhia/img-9036-2.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/img-9032-ink.jpg",
+    "kind": "image",
+    "caption": "ink"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/img-9033-ink.jpg",
+    "kind": "image",
+    "caption": "ink"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/img-9032-stamp.jpg",
+    "kind": "image",
+    "caption": "stamp"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/img-9033-stamp.jpg",
+    "kind": "image",
+    "caption": "stamp"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-3-45-57-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-3-46-28-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-3-55-55-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-4-16-05-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-4-16-16-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/radhia/screenshot-2026-10-27-at-4-16-49-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Sawyer",
+  "items": [
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-01.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-02.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-03.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-04.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-05.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-06.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/img-4020-07.svg",
+    "kind": "image",
+    "caption": "mark (SVG)"
+   },
+   {
+    "src": "/work/hand-drawn/sawyer/screenshot-2026-10-27-at-4-37-39-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ },
+ {
+  "name": "Sonia",
+  "items": [
+   {
+    "src": "/work/hand-drawn/sonia/font.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/s-19341314.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/s-19341315.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/hand-writing.jpg",
+    "kind": "image",
+    "caption": "drawing"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/s-19341314-stamp.jpg",
+    "kind": "image",
+    "caption": "stamp"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/s-19341315-stamp.jpg",
+    "kind": "image",
+    "caption": "stamp"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/screenshot-2026-10-27-at-3-39-14-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/screenshot-2026-10-27-at-3-47-11-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   },
+   {
+    "src": "/work/hand-drawn/sonia/screenshot-2026-10-27-at-3-47-39-pm.jpg",
+    "kind": "image",
+    "caption": "in the app"
+   }
+  ]
+ }
+]

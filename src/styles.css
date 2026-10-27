@@ -564,3 +564,40 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 /* Writing pages are long reads: the course link and toolbar scroll away with the page. */
 .writing-page { position: relative; }
 .writing-page .home-link, .writing-page .toolbar { position: absolute; }
+
+/* Media showcases: tiles of drawings, marks, typefaces and recordings. */
+.media-tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr)); gap: 1rem; }
+.media-tile { margin: 0; display: flex; flex-direction: column; gap: 0.35rem; }
+.media-tile__frame {
+  aspect-ratio: 4 / 3;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+  border: 1px dashed var(--muted);
+  padding: 0.5rem;
+}
+.media-tile__frame:hover { border-style: solid; }
+.media-tile__frame img, .media-tile__frame video { max-width: 100%; max-height: 100%; object-fit: contain; }
+/* SVG marks are usually black on transparent; give them a light ground in both themes. */
+.media-tile__frame img[src$=".svg"] { background: #FFF7E6; padding: 0.4rem; }
+.media-tile__font { font-size: 1.5rem; line-height: 1.2; text-align: left; overflow-wrap: anywhere; }
+.media-entry .writing__h2 .label--student { color: var(--line); }
+.media-solo { margin-top: 1.75rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  background: var(--overlay);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  padding: 3rem;
+  cursor: zoom-out;
+}
+.lightbox img, .lightbox video { max-width: 100%; max-height: 85vh; object-fit: contain; }
+.lightbox img[src$=".svg"] { background: #FFF7E6; padding: 1rem; }
+.lightbox__font { font-size: clamp(2rem, 5vw, 4.5rem); line-height: 1.15; max-width: 60rem; overflow-wrap: anywhere; margin: 0; }
+.media-entry .writing__h2 span:not(.label--student) { text-transform: none; }

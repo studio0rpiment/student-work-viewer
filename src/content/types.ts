@@ -57,8 +57,25 @@ export interface LevelsEntry {
   visualize: string | null
 }
 
+/** Visual work: drawings, marks, screenshots, typefaces, screen recordings. */
+export interface MediaItem {
+  src: string
+  kind: 'image' | 'video' | 'font'
+  caption: string | null
+}
+
+/** One student, or one group (with members, and optionally each member's own take). */
+export interface MediaEntry {
+  name: string
+  members?: string[]
+  note?: string
+  items: MediaItem[]
+  solo?: { name: string; items: MediaItem[] }[]
+}
+
 export type Writing =
   | (WritingBase & { layout: 'questions'; entries: QuestionsEntry[] })
   | (WritingBase & { layout: 'path'; entries: PathEntry[] })
   | (WritingBase & { layout: 'prompts'; entries: PromptsEntry[] })
   | (WritingBase & { layout: 'levels'; entries: LevelsEntry[] })
+  | (WritingBase & { layout: 'media'; entries: MediaEntry[] })

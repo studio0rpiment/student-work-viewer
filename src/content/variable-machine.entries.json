@@ -1,0 +1,133 @@
+[
+ {
+  "name": "Group 1",
+  "members": [
+   "Abigail",
+   "Allie",
+   "Jet",
+   "Arisha"
+  ],
+  "items": [
+   {
+    "src": "/work/variable-machine/group-1/heart.jpg",
+    "kind": "image",
+    "caption": "heart"
+   },
+   {
+    "src": "/work/variable-machine/group-1/iloveyou.jpg",
+    "kind": "image",
+    "caption": "I love you"
+   },
+   {
+    "src": "/work/variable-machine/group-1/peace.jpg",
+    "kind": "image",
+    "caption": "peace"
+   },
+   {
+    "src": "/work/variable-machine/group-1/rocknroll.jpg",
+    "kind": "image",
+    "caption": "rock 'n' roll"
+   }
+  ]
+ },
+ {
+  "name": "Group 2",
+  "members": [
+   "Ava",
+   "Peyton",
+   "Makda",
+   "Sawyer"
+  ],
+  "note": "Peyton's screenshot is what the group turned in.",
+  "items": [
+   {
+    "src": "/work/variable-machine/group-2/screenshot-2026-10-27-at-2-24-43-pm.jpg",
+    "kind": "image",
+    "caption": "Peyton"
+   }
+  ]
+ },
+ {
+  "name": "Group 3",
+  "members": [
+   "Mariam",
+   "Radhia",
+   "Sonia",
+   "Nicole"
+  ],
+  "note": "Each worked solo.",
+  "items": [],
+  "solo": [
+   {
+    "name": "Mariam",
+    "items": [
+     {
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-15-pm.jpg",
+      "kind": "image",
+      "caption": "screenshot"
+     },
+     {
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-19-pm.jpg",
+      "kind": "image",
+      "caption": "screenshot"
+     },
+     {
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-53-03-pm.jpg",
+      "kind": "image",
+      "caption": "screenshot"
+     },
+     {
+      "src": "/work/variable-machine/mariam/screen-recording-2026-10-27-at-2-31-05-pm.mp4",
+      "kind": "video",
+      "caption": "screen recording"
+     }
+    ]
+   },
+   {
+    "name": "Radhia",
+    "items": [
+     {
+      "src": "/work/variable-machine/radhia/hand-gestures-test.mp4",
+      "kind": "video",
+      "caption": "screen recording"
+     },
+     {
+      "src": "/work/variable-machine/radhia/speech-test-2.jpg",
+      "kind": "image",
+      "caption": "speech test 2"
+     },
+     {
+      "src": "/work/variable-machine/radhia/speech-test.jpg",
+      "kind": "image",
+      "caption": "speech test"
+     }
+    ]
+   },
+   {
+    "name": "Sonia",
+    "items": [
+     {
+      "src": "/work/variable-machine/sonia/podcast-voice-recording.jpg",
+      "kind": "image",
+      "caption": "podcast voice recording"
+     },
+     {
+      "src": "/work/variable-machine/sonia/recording-hand-gesture.jpg",
+      "kind": "image",
+      "caption": "recording hand gesture"
+     }
+    ]
+   },
+   {
+    "name": "Nicole",
+    "items": [
+     {
+      "src": "/work/variable-machine/nicole/nicolebecerra-variablemachinehandgestures.mp4",
+      "kind": "video",
+      "caption": "screen recording"
+     }
+    ]
+   }
+  ]
+ }
+]

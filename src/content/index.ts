@@ -2,7 +2,9 @@ import networks from './networks-tokens-embeddings.entries.json'
 import anatomy from './anatomy-of-an-ai-system.entries.json'
 import fourPrompts from './four-prompts.entries.json'
 import fiveLevels from './five-levels.entries.json'
-import type { LevelsEntry, PathEntry, PromptsEntry, QuestionsEntry, Writing } from './types'
+import handDrawn from './hand-drawn.entries.json'
+import variableMachine from './variable-machine.entries.json'
+import type { LevelsEntry, MediaEntry, PathEntry, PromptsEntry, QuestionsEntry, Writing } from './types'
 
 /**
  * Written assignments. Briefs are condensed from Lecture Materials F26 in Notion;
@@ -78,6 +80,40 @@ export const WRITINGS: Writing[] = [
       { p: 'Deliverable: one product classified, with a paragraph on the design obligations attaching at its level and whether the product meets them.' },
     ],
     entries: fiveLevels as LevelsEntry[],
+  },
+  {
+    slug: 'variable-machine',
+    title: 'Variable Machine',
+    term: 'F26',
+    due_date: '2026-10-27',
+    summary: 'A model of your own: use, steer and train a small model on your own Mac.',
+    layout: 'media',
+    brief: [
+      { p: 'Variable Machine is a small localhost instrument that trains, blends and exports small models on an ordinary Mac, and echoes every command into a terminal on the same page. In groups, choose one of four worked demos (public data, gallery, gesture, tangible), make it work as it is, then retrain it on your own data for a project you care about.' },
+      { h: 'Use, steer, train' },
+      {
+        list: [
+          'Use: your input goes through a ready-made model and nothing in it changes.',
+          'Steer: your input points the model at the outcome you want, this time.',
+          'Train: your examples change the model. The change stays, and someone else can use it.',
+        ],
+      },
+      { q: 'You can now put a lens into a machine and hand it to someone else. Who should have this model, and who shouldn’t?' },
+    ],
+    entries: variableMachine as MediaEntry[],
+  },
+  {
+    slug: 'hand-drawn',
+    title: 'Hand Drawn: Logo Set or Alphabet',
+    term: 'F26',
+    due_date: '2026-10-27',
+    summary: 'Drawn by hand, photographed, and turned into clean marks or a working typeface.',
+    layout: 'media',
+    brief: [
+      { p: 'Draw by hand, photograph the sheets, and use the Hand Drawn app to turn the drawings into clean SVG marks or a working typeface. There are no models or machine learning in the app.' },
+      { p: 'Make either a logo set or an alphabet.' },
+    ],
+    entries: handDrawn as MediaEntry[],
   },
 ]
 
