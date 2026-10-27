@@ -223,7 +223,7 @@
   "name": "Makda",
   "items": [
    {
-    "src": "/work/hand-drawn/makda/my-hand-as-drawn.otf",
+    "src": "/work/hand-drawn/makda/my-hand-as-drawn-v2.otf",
     "kind": "font",
     "caption": "typeface"
    },
@@ -273,7 +273,7 @@
     "caption": "mark (SVG)"
    },
    {
-    "src": "/work/hand-drawn/mariam/arabic-engphonetics-as-drawn.otf",
+    "src": "/work/hand-drawn/mariam/arabic-engphonetics-as-drawn-v2.otf",
     "kind": "font",
     "caption": "typeface"
    },
