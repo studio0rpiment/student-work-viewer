@@ -86,19 +86,11 @@ export const WRITINGS: Writing[] = [
     title: 'Variable Machine',
     term: 'F26',
     due_date: '2026-10-27',
-    summary: 'A model of your own: use, steer and train a small model on your own Mac.',
+    summary: 'An exploration of Variable Machine, an instrument for changing small models on your own Mac.',
     layout: 'packed',
     brief: [
-      { p: 'Variable Machine is a small localhost instrument that trains, blends and exports small models on an ordinary Mac, and echoes every command into a terminal on the same page. In groups, choose one of four worked demos (public data, gallery, gesture, tangible), make it work as it is, then retrain it on your own data for a project you care about.' },
-      { h: 'Use, steer, train' },
-      {
-        list: [
-          'Use: your input goes through a ready-made model and nothing in it changes.',
-          'Steer: your input points the model at the outcome you want, this time.',
-          'Train: your examples change the model. The change stays, and someone else can use it.',
-        ],
-      },
-      { q: 'You can now put a lens into a machine and hand it to someone else. Who should have this model, and who shouldn’t?' },
+      { p: 'Variable Machine is a small instrument that runs on your own Mac, at localhost. It lets you change a model rather than only use one: it trains, blends and exports small models on an ordinary Apple Silicon laptop. Every button echoes the real command into a terminal on the same page, so nothing happens that you can’t read.' },
+      { p: 'An exploration in groups: open Variable Machine, try its demos (hand gestures through the camera, speech through the microphone, and the others), and record what it does.' },
     ],
     entries: variableMachine as MediaEntry[],
   },
