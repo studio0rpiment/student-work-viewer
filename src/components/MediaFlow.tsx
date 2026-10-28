@@ -21,14 +21,15 @@ interface Props {
 /** A typeface runs as a line of text: twice a tile wide, a short band tall. */
 const TEXT_RATIO = 3.2
 
-const isSvg = (src: string) => src.endsWith('.svg')
+/** SVGs and transparent exports are drawn in the text colour, through a mask. */
+const isMark = (i: MediaItem) => i.src.endsWith('.svg') || !!i.ink
 
 const GAP_REM = 0.3125 // 5px, as on the image showcases
 
 /**
  * Images and videos packed like the knolling page (skyline, see ImageFlow):
  * each at its real aspect ratio, measured when it loads, longest side = `tile`.
- * Videos play muted on a loop. SVGs are drawn in the text colour (as a mask).
+ * Videos play muted on a loop. SVGs and transparent exports are drawn in the text colour.
  * A typeface is a line of text packed with the rest. The `who` shows on hover.
  */
 export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, specimen }: Props) {
@@ -69,7 +70,7 @@ export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, spec
         return (
           <figure
             key={i.src}
-            className={`tile media-flow__tile ${i.kind === 'font' ? 'media-flow__text' : isSvg(i.src) ? 'media-flow__mark' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
+            className={`tile media-flow__tile ${i.kind === 'font' ? 'media-flow__text' : isMark(i) ? 'media-flow__mark' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
             style={rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {}}
           >
             <button type="button" className="tile__pick" onClick={() => onSelect(i)} aria-label={i.who}>
@@ -77,7 +78,7 @@ export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, spec
                 <span className="media-flow__specimen" style={{ fontFamily: fontFamily?.(i.src) }}>
                   {specimen}
                 </span>
-              ) : isSvg(i.src) ? (
+              ) : isMark(i) ? (
                 <>
                   <span className="tile__img media-flow__svg" style={{ maskImage: `url("${i.src}")`, WebkitMaskImage: `url("${i.src}")` }} />
                   <img

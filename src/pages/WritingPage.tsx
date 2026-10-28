@@ -421,10 +421,10 @@ function Media({ entries }: { entries: MediaEntry[] }) {
       ))}
       {open && (
         <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
-          {open.kind === 'image' && open.src.endsWith('.svg') && (
+          {open.kind === 'image' && (open.src.endsWith('.svg') || open.ink) && (
             <span className="lightbox__svg" style={{ maskImage: `url("${open.src}")`, WebkitMaskImage: `url("${open.src}")` }} />
           )}
-          {open.kind === 'image' && !open.src.endsWith('.svg') && <img src={open.src} alt={open.caption ?? ''} />}
+          {open.kind === 'image' && !open.src.endsWith('.svg') && !open.ink && <img src={open.src} alt={open.caption ?? ''} />}
           {open.kind === 'video' && <video src={open.src} muted loop autoPlay playsInline controls />}
           {open.kind === 'font' && (
             <div className="lightbox__font" style={{ fontFamily: fontFamily(open.src) }}>

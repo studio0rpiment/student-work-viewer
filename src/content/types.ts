@@ -62,6 +62,8 @@ export interface MediaItem {
   src: string
   kind: 'image' | 'video' | 'font'
   caption: string | null
+  /** A transparent export (ink, stamp, icon): drawn in the text colour, like an SVG. */
+  ink?: boolean
 }
 
 /** One student, or one group (with members, and optionally each member's own take). */

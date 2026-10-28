@@ -160,7 +160,8 @@
    {
     "src": "/work/hand-drawn/ava/img-6864-ink.png",
     "kind": "image",
-    "caption": "ink"
+    "caption": "ink",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/ava/screenshot-2026-10-27-at-4-13-19-pm.png",
@@ -260,7 +261,8 @@
    {
     "src": "/work/hand-drawn/mariam/img-8135-stamp.png",
     "kind": "image",
-    "caption": "stamp"
+    "caption": "stamp",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/mariam/img-8134.svg",
@@ -320,22 +322,26 @@
    {
     "src": "/work/hand-drawn/nicole/png-fill-dark-img-3708-512.png",
     "kind": "image",
-    "caption": "icon · fill-dark"
+    "caption": "icon · fill-dark",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/nicole/png-fill-light-img-3708-512.png",
     "kind": "image",
-    "caption": "icon · fill-light"
+    "caption": "icon · fill-light",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/nicole/png-line-dark-img-3708-512.png",
     "kind": "image",
-    "caption": "icon · line-dark"
+    "caption": "icon · line-dark",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/nicole/png-line-light-img-3708-512.png",
     "kind": "image",
-    "caption": "icon · line-light"
+    "caption": "icon · line-light",
+    "ink": true
    }
   ]
  },
@@ -370,7 +376,8 @@
    {
     "src": "/work/hand-drawn/radhia/img-9032-ink.png",
     "kind": "image",
-    "caption": "ink"
+    "caption": "ink",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/radhia/img-9033-ink.png",
@@ -380,7 +387,8 @@
    {
     "src": "/work/hand-drawn/radhia/img-9032-stamp.png",
     "kind": "image",
-    "caption": "stamp"
+    "caption": "stamp",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/radhia/img-9033-stamp.png",
@@ -495,12 +503,14 @@
    {
     "src": "/work/hand-drawn/sonia/s-19341314-stamp.png",
     "kind": "image",
-    "caption": "stamp"
+    "caption": "stamp",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/sonia/s-19341315-stamp.png",
     "kind": "image",
-    "caption": "stamp"
+    "caption": "stamp",
+    "ink": true
    },
    {
     "src": "/work/hand-drawn/sonia/screenshot-2026-10-27-at-3-39-14-pm.png",
