@@ -368,25 +368,17 @@ const ALPHABET = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ abcdefghijklmnopqrstuvwxyz'
 /** Each uploaded typeface gets its own family name, loaded from its file. */
 const fontFamily = (src: string) => 'student-' + src.replace(/[^a-z0-9]+/gi, '-')
 
-function Tile({ item, onOpen }: { item: MediaItem; onOpen: () => void }) {
-  return (
-    <figure className="media-tile">
-      <button className="media-tile__frame" onClick={onOpen} aria-label={`open ${item.caption ?? 'image'}`}>
-        {item.kind === 'image' && <img src={item.src} alt={item.caption ?? ''} loading="lazy" />}
-        {item.kind === 'video' && <video src={item.src} muted loop autoPlay playsInline />}
-        {item.kind === 'font' && (
-          <span className="media-tile__font" style={{ fontFamily: fontFamily(item.src) }}>
-            {SPECIMEN}
-          </span>
-        )}
-      </button>
-      {item.caption && <figcaption className="label label--muted">{item.caption}</figcaption>}
-    </figure>
-  )
+/** Exports first, then the drawings, the typeface, and the screenshots last. */
+function rank(i: MediaItem): number {
+  const c = i.caption ?? ''
+  if (i.kind === 'font') return 3
+  if (c === 'in the app') return 4
+  if (c === 'drawing') return 2
+  return 1
 }
 
 function Media({ entries }: { entries: MediaEntry[] }) {
-  const [open, setOpen] = useState<MediaItem | null>(null)
+  const [open, setOpen] = useState<FlowItem | null>(null)
   const all = entries.flatMap((e) => [...e.items, ...(e.solo ?? []).flatMap((s) => s.items)])
   const fonts = all.filter((i) => i.kind === 'font')
 
@@ -397,20 +389,15 @@ function Media({ entries }: { entries: MediaEntry[] }) {
     return () => window.removeEventListener('keydown', onKey)
   }, [open])
 
-  // Images and recordings sit in the grid; a typeface runs as a line of text under them.
-  const grid = (items: MediaItem[]) => (
-    <>
-      <div className="media-tiles">
-        {items.filter((i) => i.kind !== 'font').map((i) => (
-          <Tile key={i.src} item={i} onOpen={() => setOpen(i)} />
-        ))}
-      </div>
-      {items.filter((i) => i.kind === 'font').map((i) => (
-        <button key={i.src} className="media-specimen" style={{ fontFamily: fontFamily(i.src) }} onClick={() => setOpen(i)}>
-          {SPECIMEN}
-        </button>
-      ))}
-    </>
+  // Each person's work packed within their own section, captions on hover.
+  const flow = (items: MediaItem[]) => (
+    <MediaFlow
+      items={[...items].sort((a, b) => rank(a) - rank(b)).map((i) => ({ ...i, who: i.caption ?? '' }))}
+      tile={14}
+      onSelect={setOpen}
+      fontFamily={fontFamily}
+      specimen={SPECIMEN}
+    />
   )
 
   return (
@@ -423,18 +410,21 @@ function Media({ entries }: { entries: MediaEntry[] }) {
             {e.members && <span> · {e.members.join(', ')}</span>}
           </h2>
           {e.note && <p className="label label--muted">{e.note}</p>}
-          {e.items.length > 0 && grid(e.items)}
+          {e.items.length > 0 && flow(e.items)}
           {e.solo?.map((s) => (
             <div key={s.name} className="media-solo">
               <Label className="label--student">{s.name}</Label>
-              {s.items.length > 0 ? grid(s.items) : <p className="label label--muted">nothing turned in yet</p>}
+              {s.items.length > 0 ? flow(s.items) : <p className="label label--muted">nothing turned in yet</p>}
             </div>
           ))}
         </section>
       ))}
       {open && (
         <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
-          {open.kind === 'image' && <img src={open.src} alt={open.caption ?? ''} />}
+          {open.kind === 'image' && open.src.endsWith('.svg') && (
+            <span className="lightbox__svg" style={{ maskImage: `url("${open.src}")`, WebkitMaskImage: `url("${open.src}")` }} />
+          )}
+          {open.kind === 'image' && !open.src.endsWith('.svg') && <img src={open.src} alt={open.caption ?? ''} />}
           {open.kind === 'video' && <video src={open.src} muted loop autoPlay playsInline controls />}
           {open.kind === 'font' && (
             <div className="lightbox__font" style={{ fontFamily: fontFamily(open.src) }}>
