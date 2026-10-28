@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 import Disclose from '../components/Disclose'
 import HomeLink from '../components/HomeLink'
 import Label from '../components/Label'
@@ -377,7 +377,18 @@ function rank(i: MediaItem): number {
   return 1
 }
 
-function Media({ entries }: { entries: MediaEntry[] }) {
+/** A new order on every visit, so no one is always first. */
+function shuffle<T>(list: T[]): T[] {
+  const out = [...list]
+  for (let i = out.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1))
+    ;[out[i], out[j]] = [out[j], out[i]]
+  }
+  return out
+}
+
+function Media({ entries: given }: { entries: MediaEntry[] }) {
+  const entries = useMemo(() => shuffle(given), [given])
   const [open, setOpen] = useState<FlowItem | null>(null)
   const all = entries.flatMap((e) => [...e.items, ...(e.solo ?? []).flatMap((s) => s.items)])
   const fonts = all.filter((i) => i.kind === 'font')
