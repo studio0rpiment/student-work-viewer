@@ -9,22 +9,22 @@
   ],
   "items": [
    {
-    "src": "/work/variable-machine/group-1/heart.jpg",
+    "src": "/work/variable-machine/group-1/heart.png",
     "kind": "image",
     "caption": "heart"
    },
    {
-    "src": "/work/variable-machine/group-1/iloveyou.jpg",
+    "src": "/work/variable-machine/group-1/iloveyou.png",
     "kind": "image",
     "caption": "I love you"
    },
    {
-    "src": "/work/variable-machine/group-1/peace.jpg",
+    "src": "/work/variable-machine/group-1/peace.png",
     "kind": "image",
     "caption": "peace"
    },
    {
-    "src": "/work/variable-machine/group-1/rocknroll.jpg",
+    "src": "/work/variable-machine/group-1/rocknroll.png",
     "kind": "image",
     "caption": "rock 'n' roll"
    }
@@ -40,7 +40,7 @@
   ],
   "items": [
    {
-    "src": "/work/variable-machine/group-2/screenshot-2026-10-27-at-2-24-43-pm.jpg",
+    "src": "/work/variable-machine/group-2/screenshot-2026-10-27-at-2-24-43-pm.png",
     "kind": "image",
     "caption": "Peyton"
    }
@@ -60,17 +60,17 @@
     "name": "Mariam",
     "items": [
      {
-      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-15-pm.jpg",
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-15-pm.png",
       "kind": "image",
       "caption": "screenshot"
      },
      {
-      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-19-pm.jpg",
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-50-19-pm.png",
       "kind": "image",
       "caption": "screenshot"
      },
      {
-      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-53-03-pm.jpg",
+      "src": "/work/variable-machine/mariam/screenshot-2026-10-27-at-2-53-03-pm.png",
       "kind": "image",
       "caption": "screenshot"
      },
@@ -90,12 +90,12 @@
       "caption": "screen recording"
      },
      {
-      "src": "/work/variable-machine/radhia/speech-test-2.jpg",
+      "src": "/work/variable-machine/radhia/speech-test-2.png",
       "kind": "image",
       "caption": "speech test 2"
      },
      {
-      "src": "/work/variable-machine/radhia/speech-test.jpg",
+      "src": "/work/variable-machine/radhia/speech-test.png",
       "kind": "image",
       "caption": "speech test"
      }
@@ -105,12 +105,12 @@
     "name": "Sonia",
     "items": [
      {
-      "src": "/work/variable-machine/sonia/podcast-voice-recording.jpg",
+      "src": "/work/variable-machine/sonia/podcast-voice-recording.png",
       "kind": "image",
       "caption": "podcast voice recording"
      },
      {
-      "src": "/work/variable-machine/sonia/recording-hand-gesture.jpg",
+      "src": "/work/variable-machine/sonia/recording-hand-gesture.png",
       "kind": "image",
       "caption": "recording hand gesture"
      }
