@@ -69,7 +69,7 @@ export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, spec
         return (
           <figure
             key={i.src}
-            className={`tile media-flow__tile ${i.kind === 'font' ? 'media-flow__text' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
+            className={`tile media-flow__tile ${i.kind === 'font' ? 'media-flow__text' : isSvg(i.src) ? 'media-flow__mark' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
             style={rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {}}
           >
             <button type="button" className="tile__pick" onClick={() => onSelect(i)} aria-label={i.who}>

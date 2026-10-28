@@ -595,8 +595,9 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 .media-flow__tile .tile__name { opacity: 0; transition: opacity 0.15s; }
 .media-flow__tile:hover .tile__name, .media-flow__tile:focus-within .tile__name { opacity: 1; }
 .media-flow__svg { background: var(--line); mask: center / contain no-repeat; -webkit-mask: center / contain no-repeat; }
-.media-flow__text::after { border-color: transparent; }
-.media-flow__text:hover::after { border-color: var(--line); }
+/* Text and SVG marks sit on the page; their outline appears on hover. */
+.media-flow__text::after, .media-flow__mark::after { border-color: transparent; }
+.media-flow__text:hover::after, .media-flow__mark:hover::after { border-color: var(--line); }
 .media-flow__specimen {
   position: absolute;
   inset: 0;
