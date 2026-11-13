@@ -10,6 +10,10 @@ export interface DocSection {
   id: string
   heading: string
   body: ReactNode
+  /** Short lines shown small, grey and indented under this section's link in the contents bar. */
+  outline?: string[]
+  /** Sections marked `paired` sit side by side in two columns from 900px up. */
+  paired?: boolean
 }
 
 export interface Doc {
@@ -21,8 +25,6 @@ export interface Doc {
   /** Shown at the top of the contents bar and under the title, e.g. "Tue 17 Nov". */
   due: string
   intro?: ReactNode
-  /** Key dates, repeated small and grey under the contents bar's links. */
-  schedule?: { date: string; text: string }[]
   sections: DocSection[]
 }
 
@@ -55,16 +57,17 @@ const FINAL_PROPOSAL: Doc = {
       semester. You might go further with one of our tools or methods, or combine two of them.
     </p>
   ),
-  schedule: [
-    { date: 'Tue 17 Nov', text: 'Present your idea for crit' },
-    { date: 'Tue 1 Dec', text: 'Revised proposal due (no class)' },
-    { date: 'Tue 8 Dec', text: 'Progress demo and feedback' },
-    { date: 'Tue 15 Dec', text: 'Final project due' },
-  ],
   sections: [
     {
       id: 'schedule',
       heading: 'Schedule',
+      paired: true,
+      outline: [
+        'Tue 17 Nov: present your idea for crit',
+        'Tue 1 Dec: revised proposal due (no class)',
+        'Tue 8 Dec: progress demo and feedback',
+        'Tue 15 Dec: final project due',
+      ],
       body: (
         <ul>
           <li>
@@ -88,8 +91,18 @@ const FINAL_PROPOSAL: Doc = {
       ),
     },
     {
-      id: 'include',
-      heading: 'What to include',
+      id: 'directions',
+      heading: 'Directions',
+      paired: true,
+      outline: [
+        'A working title',
+        'Where it comes from',
+        'What you will make',
+        'The question or idea driving it',
+        'Tools and materials',
+        'Bibliography: 3+ from For Further Investigation',
+        'Deliverables',
+      ],
       body: (
         <ol>
           <li>A working title.</li>

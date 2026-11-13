@@ -3,7 +3,7 @@ import HomeLink from '../components/HomeLink'
 import ThemeToggle from '../components/ThemeToggle'
 import Toolbar from '../components/Toolbar'
 import { APP_NAME, courseForTerm } from '../site'
-import type { Doc } from '../content/docs'
+import type { Doc, DocSection } from '../content/docs'
 import type { ThemeMode } from '../themes'
 
 interface Props {
@@ -35,19 +35,16 @@ export default function DocPage({ doc, navigate, themeMode, onToggleTheme }: Pro
           {doc.sections.map((s) => (
             <li key={s.id}>
               <a href={`#${s.id}`}>{s.heading}</a>
+              {s.outline && (
+                <ul className="doc-toc__outline">
+                  {s.outline.map((line) => (
+                    <li key={line}>{line}</li>
+                  ))}
+                </ul>
+              )}
             </li>
           ))}
         </ol>
-        {doc.schedule && (
-          <dl className="doc-toc__schedule">
-            {doc.schedule.map((d) => (
-              <div key={d.date}>
-                <dt>{d.date}</dt>
-                <dd>{d.text}</dd>
-              </div>
-            ))}
-          </dl>
-        )}
       </nav>
 
       <main className="doc">
@@ -61,13 +58,36 @@ export default function DocPage({ doc, navigate, themeMode, onToggleTheme }: Pro
 
         {doc.intro && <div className="doc__intro doc__prose">{doc.intro}</div>}
 
-        {doc.sections.map((s) => (
-          <section key={s.id} id={s.id} className="doc__section">
-            <h2>{s.heading}</h2>
-            <div className="doc__prose">{s.body}</div>
-          </section>
-        ))}
+        {groupSections(doc.sections).map((group) =>
+          group.length > 1 ? (
+            <div key={group[0].id} className="doc__columns">
+              {group.map(renderSection)}
+            </div>
+          ) : (
+            renderSection(group[0])
+          ),
+        )}
       </main>
     </div>
   )
+}
+
+function renderSection(s: DocSection) {
+  return (
+    <section key={s.id} id={s.id} className="doc__section">
+      <h2>{s.heading}</h2>
+      <div className="doc__prose">{s.body}</div>
+    </section>
+  )
+}
+
+/** Runs of consecutive `paired` sections become one group; every other section is a group of one. */
+function groupSections(sections: DocSection[]): DocSection[][] {
+  const groups: DocSection[][] = []
+  for (const s of sections) {
+    const last = groups[groups.length - 1]
+    if (s.paired && last?.[0].paired) last.push(s)
+    else groups.push([s])
+  }
+  return groups
 }

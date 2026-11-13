@@ -652,17 +652,16 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
     border-bottom: 1px dashed var(--muted);
   }
   .doc-toc__due span:last-child { color: var(--accent); }
-  .doc-toc__schedule {
-    margin: 1rem 0 0;
-    padding-top: 0.75rem;
-    border-top: 1px dashed var(--muted);
+  .doc-toc__outline {
+    list-style: none;
+    margin: 0 0 0.6rem;
+    padding: 0 0 0 1rem;
     font-size: 0.6875rem;
     line-height: 1.4;
     color: var(--muted);
+    opacity: 0.8;
   }
-  .doc-toc__schedule div { margin-bottom: 0.5rem; }
-  .doc-toc__schedule dt { margin: 0; }
-  .doc-toc__schedule dd { margin: 0; opacity: 0.75; }
+  .doc-toc__outline li { margin-bottom: 0.3rem; }
 }
 
 .doc {
@@ -691,6 +690,10 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 .doc__intro { margin: 3rem 0 0; max-width: 40rem; }
 
 .doc__section { margin-top: 4rem; max-width: 40rem; scroll-margin-top: 2rem; }
+.doc__columns { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 2.5rem; }
+@media (min-width: 900px) {
+  .doc__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
 .doc__section > h2 {
   font-size: 0.9rem;
   font-weight: 400;
