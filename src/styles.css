@@ -685,6 +685,7 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
   text-wrap: balance;
 }
 .doc__accent { color: var(--accent); }
+.doc__nowrap { white-space: nowrap; }
 .doc__subtitle { margin: 0; font-size: 0.75rem; letter-spacing: 0.04em; color: var(--muted); }
 
 .doc__intro { margin: 3rem 0 0; max-width: 40rem; }
@@ -703,6 +704,10 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
   margin: 0.5rem 0 0;
   padding: 1rem;
   border: 1px dashed var(--muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 .doc__section > h2 {
   font-size: 0.9rem;
@@ -714,6 +719,8 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
   padding-bottom: 0.75rem;
   border-bottom: 1px dashed var(--muted);
 }
+.doc__section > h2 a { color: inherit; text-decoration: underline dashed; text-underline-offset: 0.2em; }
+.doc__section > h2 a:hover { color: var(--line); text-decoration-style: solid; }
 
 .doc__prose p, .doc__prose ul, .doc__prose ol { margin: 0 0 0.9rem; }
 .doc__prose ul, .doc__prose ol { padding-left: 1.2rem; }

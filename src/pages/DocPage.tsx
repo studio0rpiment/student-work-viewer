@@ -75,7 +75,15 @@ export default function DocPage({ doc, navigate, themeMode, onToggleTheme }: Pro
 function renderSection(s: DocSection) {
   return (
     <section key={s.id} id={s.id} className="doc__section">
-      <h2>{s.heading}</h2>
+      <h2>
+        {s.headingHref ? (
+          <a href={s.headingHref} target="_blank" rel="noreferrer">
+            {s.heading}
+          </a>
+        ) : (
+          s.heading
+        )}
+      </h2>
       <div className="doc__prose">{s.body}</div>
     </section>
   )

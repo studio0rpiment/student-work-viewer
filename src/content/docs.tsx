@@ -9,6 +9,8 @@ export interface DocSection {
   /** Anchor id, also the contents-bar target. */
   id: string
   heading: string
+  /** When set, the section's heading is a link to this address, opened in a new tab. */
+  headingHref?: string
   body: ReactNode
   /** Short lines shown small, grey and indented under this section's link in the contents bar. */
   outline?: string[]
@@ -90,7 +92,9 @@ const FINAL_PROPOSAL: Doc = {
             </li>
           </ul>
           <p className="doc__notice">
-            Projects not turned in by <span className="doc__accent">Dec 15 at 23:59</span> will receive a 0.
+            <span>
+              Projects not turned in by <span className="doc__accent doc__nowrap">Dec 15 at 23:59</span> will receive a 0.
+            </span>
           </p>
         </>
       ),
@@ -166,7 +170,8 @@ const FINAL_PROPOSAL: Doc = {
     },
     {
       id: 'further-investigation',
-      heading: 'For Further Investigation',
+      heading: 'For Further Investigation | Resources',
+      headingHref: FURTHER_INVESTIGATION_URL,
       body: (
         <p>
           <FurtherInvestigation /> is organized by class. Start with the class your project grows out of, and look past
