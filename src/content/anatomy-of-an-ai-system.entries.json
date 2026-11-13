@@ -247,6 +247,28 @@
     "response": null
   },
   {
+    "name": "Sawyer",
+    "title": null,
+    "stops": [
+      {
+        "kind": "computing",
+        "label": "Proprietary Software and Closed Updates",
+        "caption": "Inside the Echo Dot is a Texas Instruments processor, 256 MB of memory, 4 GB of storage and a Qualcomm Wi-Fi chip. It's functioning is effectively it just listening to commands and sending your voice to Amazon's servers. Only Amazon can update its software, and the map calls out planned obsolescence and lack of right to repair. Amazon promises at least four years of security updates, but after that you really shouldn't expect much (especially given the pricepoint). (73)"
+      },
+      {
+        "kind": "labour",
+        "label": "Informal Collectors and Dismantlers",
+        "caption": "Less than a quarter of the world's e-waste gets recycled, so an obsolete Echo Dot often lands in the informal sector. Street collectors will buy it, it's then moved by traders by truck and cargo ship, and \"dismantlers \" will crack it open and pull the board apart by hand for the copper and gold. On the map's wage ladder, the e-waste and landfill worker in India is effectively at the very bottom, just above a miner in Congo."
+      },
+      {
+        "kind": "other",
+        "label": "Toxic Residue, Landfill and Groundwater",
+        "caption": "Whatever that cannot be sold gets burned, soaked in acid or dumped. Burning boards and plastics ultimately releases lead, cadmium, chromium, flame retardants, and other toxic chemicals into the Earth which harms not just the environment but also internal organs and reproductive systems of people (who are almost certainly) working without masks and proper PPE. Recycling really doesn't close the loop, it covers only 1% of rare-earth demand, so new ore is always being mined. The map then ends right back at \"Earth.\""
+      }
+    ],
+    "response": "Before this, I guess I'd moreso have described the Echo as a microphone hooked up to a model of sorts. Similar to any other modern AI product, you talk, it answers, and the \"AI\" lives somewhere in AWS' cloud. I think following the device's full journey helps inform me a bit more as to how the particulars are handled.\n\nSome of it I knew, these computing parts require a lot of rare earth minerals, electricity, and manufacturing time as a means of assembly. What was a little more notable for me was the connection between the computing and waste, and how that's a direct decision made by Amazon. Once Amazon stops updating it, it's effectively useless as it handles very little compute on it's own. That list of issues on the map (the propietary software and planned obsolescence most notably) was again, quite notable for me.\n\nFrom there, the costs continue to \"slide down\" the wage ladder of sorts to the collectors and traders who earn just a tiny fraction of what the engineers who created the firmare make, and finally into the Earth itself via the environmental impacts. The map creates a full loop, ending where it started. \"Processing information\" is the state of just the short stretch in the middle. The Dot is pretty much just it's own infrastructure chain with a very short halflife, where the software upgrades are entirely in the cloud, while the hardware gets taken apart by hand.\n\nJoler, V. & Crawford, K. (2018). Anatomy of an AI System. anatomyof.ai\n\nITU/UNITAR, Global E-waste Monitor 2024."
+  },
+  {
     "name": "Sonia",
     "title": null,
     "stops": [

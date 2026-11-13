@@ -120,19 +120,31 @@
       {
         "level": 1,
         "case": "Hermes creates a video game skin themed around the Matrix",
-        "note": "This user had Hermes create a video game skin themed around the Matrix. This pulls on information and concepts the agent is trained on without relying on any individual memory or context.",
+        "note": "This user had Hermes create a video game skin themed around the Matrix. This pulls on information and concepts the agent is trained on without relying on any individual memory or context.\n\nThis is a level 1 request because it’s not pulling from anything other than the LLM’s existing skills and knowledge.",
         "source": null
       },
       {
         "level": 2,
         "case": "Iterating on new stories",
-        "note": "This user tested Hermes’ ability to iterate on new stories. They tested multiple requests and compared them with each other.",
+        "note": "This user tested Hermes’ ability to iterate on new stories. They tested multiple requests and compared them with each other.\n\nThis is a level 2 request because the LLM is pulling from its past requests and building on its previous answers. This requires the agent to have a log of its chats to build off of.",
+        "source": null
+      },
+      {
+        "level": 3,
+        "case": "A hook that builds on previous code",
+        "note": "This user created a hook to let the agent build off of its previous code and adapt from previous requests. Their goal was to make it more efficient at writing code.\n\nThis is a level 3 request because it requires the LLM to analyze and adapt to the request autonomously. Additionally, it relies on the agent’s profile of the user and what they want from the project.",
         "source": null
       },
       {
         "level": 4,
         "case": "A 9-role agent team",
-        "note": "This user separated their agent into a 9-role team.",
+        "note": "This user separated their agent into a 9-role team. They gave each agent a separate task and skill to allow for quicker development and delegation of tasks.\n\nThis is a level 4 request because it divides the LLM into separate parts with their own capabilities. This allows the agent to operate faster & handle more complex tasks.",
+        "source": null
+      },
+      {
+        "level": 5,
+        "case": "Hermes integrated across their programs",
+        "note": "This user integrated Hermes into a variety of their programs and tasks to speed up their processes. They made the agent into something that operates autonomously based on information presented to it.\n\nThis is a level 5 request because it turns the LLM into a largely self-sustaining program. The agent is able to operate a number of applications across the device and make its own more complex queries.",
         "source": null
       }
     ],
