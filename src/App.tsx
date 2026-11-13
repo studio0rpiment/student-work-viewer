@@ -9,6 +9,8 @@ import { useTheme } from './hooks/useTheme'
 import { findCourse } from './site'
 import { findWriting } from './content'
 import WritingPage from './pages/WritingPage'
+import DocPage from './pages/DocPage'
+import { findDoc } from './content/docs'
 
 export default function App() {
   const { route, navigate } = useRoute()
@@ -22,6 +24,8 @@ export default function App() {
     case 'new':
       return <NewPage navigate={navigate} />
     case 'gallery': {
+      const doc = findDoc(route.slug)
+      if (doc) return <DocPage doc={doc} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />
       const writing = findWriting(route.slug)
       if (writing) return <WritingPage writing={writing} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />
       return <GalleryPage slug={route.slug} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />

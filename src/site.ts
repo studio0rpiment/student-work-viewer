@@ -34,7 +34,10 @@ export const COURSES: Course[] = [
     term: 'F26',
     description:
       'Experimental Tools and Technology is a course that explores and instrumentalizes recent technological advancements, such as Generative AI & Large Language Models, API Integrations, Data, Sensors, GPS, and Computer Vision. Experimental Tools and Technology prepares students to deploy these technologies in response to design prompts with the ultimate goal of problem solving in a design project context. Furthermore, we will contextualize these technologies to better understand how labor, information, technological development, and their social relation affect our ability to imagine different futures and different problem solving approaches.',
-    links: [{ label: 'Midterm', href: '/classes/experimental-tools-f26/midterm', note: '20 november F26' }],
+    links: [
+      { label: 'Final Project Proposal', href: '/classes/experimental-tools-f26/final-proposal', note: '17 november F26' },
+      { label: 'Midterm', href: '/classes/experimental-tools-f26/midterm', note: '20 november F26' },
+    ],
   },
 ]
 
