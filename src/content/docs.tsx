@@ -21,6 +21,8 @@ export interface Doc {
   /** Shown at the top of the contents bar and under the title, e.g. "Tue 17 Nov". */
   due: string
   intro?: ReactNode
+  /** Key dates, repeated small and grey under the contents bar's links. */
+  schedule?: { date: string; text: string }[]
   sections: DocSection[]
 }
 
@@ -53,6 +55,12 @@ const FINAL_PROPOSAL: Doc = {
       semester. You might go further with one of our tools or methods, or combine two of them.
     </p>
   ),
+  schedule: [
+    { date: 'Tue 17 Nov', text: 'Present your idea for crit' },
+    { date: 'Tue 1 Dec', text: 'Revised proposal due (no class)' },
+    { date: 'Tue 8 Dec', text: 'Progress demo and feedback' },
+    { date: 'Tue 15 Dec', text: 'Final project due' },
+  ],
   sections: [
     {
       id: 'schedule',

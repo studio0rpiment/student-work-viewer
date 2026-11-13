@@ -38,6 +38,16 @@ export default function DocPage({ doc, navigate, themeMode, onToggleTheme }: Pro
             </li>
           ))}
         </ol>
+        {doc.schedule && (
+          <dl className="doc-toc__schedule">
+            {doc.schedule.map((d) => (
+              <div key={d.date}>
+                <dt>{d.date}</dt>
+                <dd>{d.text}</dd>
+              </div>
+            ))}
+          </dl>
+        )}
       </nav>
 
       <main className="doc">

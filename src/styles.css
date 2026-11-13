@@ -652,6 +652,17 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
     border-bottom: 1px dashed var(--muted);
   }
   .doc-toc__due span:last-child { color: var(--accent); }
+  .doc-toc__schedule {
+    margin: 1rem 0 0;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--muted);
+    font-size: 0.6875rem;
+    line-height: 1.4;
+    color: var(--muted);
+  }
+  .doc-toc__schedule div { margin-bottom: 0.5rem; }
+  .doc-toc__schedule dt { margin: 0; }
+  .doc-toc__schedule dd { margin: 0; opacity: 0.75; }
 }
 
 .doc {
