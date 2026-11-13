@@ -80,8 +80,26 @@ const FINAL_PROPOSAL: Doc = {
       ),
     },
     {
-      id: 'directions',
-      heading: 'Directions',
+      id: 'include',
+      heading: 'What to include',
+      body: (
+        <ol>
+          <li>A working title.</li>
+          <li>Where it comes from: which class, assignment or tool it builds on.</li>
+          <li>What you will make, in a few sentences.</li>
+          <li>The question or idea driving it. What do you want to find out?</li>
+          <li>Tools and materials.</li>
+          <li>
+            A bibliography of at least three articles from <FurtherInvestigation />, our database of readings and
+            resources. You can add sources from outside it as well. Use the citations in the database’s Citation field.
+          </li>
+          <li>What deliverables will best demonstrate your project’s outcomes?</li>
+        </ol>
+      ),
+    },
+    {
+      id: 'project-ideas',
+      heading: 'Possible Project Ideas',
       body: (
         <ul>
           <li>
@@ -118,24 +136,6 @@ const FINAL_PROPOSAL: Doc = {
             video, data or a person.
           </li>
         </ul>
-      ),
-    },
-    {
-      id: 'include',
-      heading: 'What to include',
-      body: (
-        <ol>
-          <li>A working title.</li>
-          <li>Where it comes from: which class, assignment or tool it builds on.</li>
-          <li>What you will make, in a few sentences.</li>
-          <li>The question or idea driving it. What do you want to find out?</li>
-          <li>Tools and materials.</li>
-          <li>
-            A bibliography of at least three articles from <FurtherInvestigation />, our database of readings and
-            resources. You can add sources from outside it as well. Use the citations in the database’s Citation field.
-          </li>
-          <li>What deliverables will best demonstrate your project’s outcomes?</li>
-        </ol>
       ),
     },
     {
