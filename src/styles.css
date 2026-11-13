@@ -268,6 +268,9 @@ button {
 }
 .home__list li:last-child .home__item { border-bottom: 1px dashed var(--muted); }
 .home__item:hover { border-top-style: solid; }
+/* An item's bottom line is the next item's top line (or the last item's bottom border): make it solid too on hover. */
+.home__list li:last-child > .home__item:hover { border-bottom-style: solid; }
+.home__list li:has(> .home__item:hover) + li > .home__item { border-top-style: solid; }
 .home__item-title { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.08em; }
 
 .slots-picker { display: flex; gap: 0.25rem; }
