@@ -27,8 +27,9 @@ export interface Doc {
 /** Revised proposals go here for Dec 1 (class does not meet that day). */
 const REVISED_PROPOSALS_FOLDER = 'https://drive.google.com/drive/folders/123GG_zA0DWBkvMo8rA9VGYYx3nebaqkH'
 
-/** The published web version of For Further Investigation, card view. Empty until the link is in. */
-const FURTHER_INVESTIGATION_URL = ''
+/** The published web version of For Further Investigation, card view. */
+const FURTHER_INVESTIGATION_URL =
+  'https://sweltering-walk-e46.notion.site/90cbf4cea80f480b85c59305c5751e4c?v=a31f4b9b5e6b454394b67b9d4e94ec86'
 
 function FurtherInvestigation() {
   return FURTHER_INVESTIGATION_URL ? (
