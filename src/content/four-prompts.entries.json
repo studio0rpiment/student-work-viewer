@@ -159,5 +159,39 @@
       }
     ],
     "verdict": null
+  },
+  {
+    "names": [
+      "Abigail",
+      "Peyton",
+      "Allie",
+      "Yingying",
+      "Mariam"
+    ],
+    "prompt": "How do you clean a window from the outside?",
+    "followup": null,
+    "responses": [
+      {
+        "assistant": "Claude",
+        "summary": "Gather tools, recites 6 “How To” steps, 3 safety notes. Assumes I am “riddling” with it.",
+        "pushback": "When saying it’s wrong, it says “I want to get this right for you — what's off about it?”"
+      },
+      {
+        "assistant": "Gemini",
+        "summary": "Equipment and supplies needed, step-by-step cleaning process (5 steps), safety notice.",
+        "pushback": "When saying it’s wrong, it says “I apologize! Let’s get it right. What part of the process or instructions was incorrect? Let me know what you’d like to adjust, and I’ll update the steps for you.”"
+      },
+      {
+        "assistant": "Grok",
+        "summary": "List supplies, best conditions, 6 step process (pre-rinse + frames + wash + rinse + squeegee + detail), high-window solutions + extra tips.",
+        "pushback": null
+      },
+      {
+        "assistant": "ChatGPT",
+        "summary": "Linked to Target for window cleaning products. Gave several suggestions depending on if you were able to easily access the outside of the window or not.",
+        "pushback": null
+      }
+    ],
+    "verdict": null
   }
 ]

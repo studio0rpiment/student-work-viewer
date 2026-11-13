@@ -37,6 +37,43 @@
     "visualize": null
   },
   {
+    "name": "Allie",
+    "levels": [
+      {
+        "level": 1,
+        "case": "I asked it to go through my wife's Amazon account, find saved items, and come up with some gift ideas for her Birthday (did a great job)",
+        "note": null,
+        "source": "https://www.reddit.com/r/hermesagent/comments/1u5dcnj/noncodernonitnonyoutube_things_ive_used_hermes/"
+      },
+      {
+        "level": 2,
+        "case": "ran the searches, found kinks, created the page, SSH into my VPS, uploaded the page, then texted me when it was done",
+        "note": null,
+        "source": "https://x.com/emmagine79/status/2053360898501468362"
+      },
+      {
+        "level": 3,
+        "case": "so i built an AI agent that actually learns it over time",
+        "note": "you tell it things like: “leg day, sore in glutes not quads”, “ate x today”, “low energy” and it starts connecting the dots: training → nutrition → recovery → performance",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1493325531637088429-working-on-a-voice-first-AI-coach-that-learns-your-body-over-time--training---nutrition-feedback.txt"
+      },
+      {
+        "level": 4,
+        "case": "I have a Hermes band manager bot",
+        "note": "It does a weekly crawl of musician websites hunting and triaging a new member we’re looking for. It keeps a list of options updated in Evernote (via MCP) and checks that list for anything I’ve updated (like ruling out individuals, tracking comms etc.). It then prompts me to follow up and for the stuff I can’t get Hermes to do. It generates and updates Deezer playlists (to practise to) and a PDF of the setlist for upcoming gigs from a text prompt. Also in Deezer i had it analyse all my favourite tracks (1000s) and suggest and create themed playlists. I’ve got it checking for cheap flights for a trip I’m planning. Astronomy planning (checks weather daily at 4pm and gives me a list of targets). Today I got it finding and suggesting individual podcasts episodes related to a specific topic I’m researching. It gives me 5x new podcast episodes a week, in a checklist in Evernote, with direct links to play them in Apple podcasts.",
+        "source": "https://www.reddit.com/r/hermesagent/comments/1x9xec6/comment/phr8vpu/"
+      },
+      {
+        "level": 5,
+        "case": "Hermes Agent installed Home Assistant on its MacMini then used a Zigbee radio USB to build my Grandfather a local home security system",
+        "note": "my @NousResearch Hermes Agent installed @home_assistant on its MacMini then used a Zigbee radio USB to build my Grandfather a local home security system with tablet control, voice feedback, security, and wellness with panic buttons at bottom of stairs and bedroom. Hermes coded it all and even made a custom easy to read dashboard for him.",
+        "source": "https://x.com/AlexanderMann/status/2107189008442728730"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
     "name": "Ava",
     "levels": [
       {
@@ -79,7 +116,26 @@
   },
   {
     "name": "Jet",
-    "levels": [],
+    "levels": [
+      {
+        "level": 1,
+        "case": "Hermes creates a video game skin themed around the Matrix",
+        "note": "This user had Hermes create a video game skin themed around the Matrix. This pulls on information and concepts the agent is trained on without relying on any individual memory or context.",
+        "source": null
+      },
+      {
+        "level": 2,
+        "case": "Iterating on new stories",
+        "note": "This user tested Hermes’ ability to iterate on new stories. They tested multiple requests and compared them with each other.",
+        "source": null
+      },
+      {
+        "level": 4,
+        "case": "A 9-role agent team",
+        "note": "This user separated their agent into a 9-role team.",
+        "source": null
+      }
+    ],
     "product": null,
     "visualize": null
   },
@@ -159,6 +215,43 @@
       "level": null,
       "text": "Manus, Devin and Hermes all promise agent teams where a lead agent hands work to other agents. They borrow familiar productivity ideas like managers, to-do lists and status reports. What's new is that the workers are copies that run at the same time and can be created in seconds.\n\nTrace One Agent (Manus Wide Research)\n\nYou type one prompt, a lead agent splits it into many small tasks, separate agents work on them at the same time, and the lead merges everything into one report. The user only sees the prompt and the final answer, not the work in between."
     },
+    "visualize": null
+  },
+  {
+    "name": "Nicole",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Had the agent whip me up a Matrix-inspired skin",
+        "note": "This user had the agent create a skin with the classic black and green color scheme, so for this case study, it would fall under the agent with tools since it receives a task, edits, and runs the code to produce the output. It doesn’t save any previous sessions since it only responds to the user’s prompt of wanting a Matrix-inspired skin.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/plugins-skills-and-skins/1496977719429169404-Enter-the-Matrix-skin.txt"
+      },
+      {
+        "level": 2,
+        "case": "Hermes reads HackerNews and emails me a daily summary",
+        "note": "Hermes uses HackerNews to read the file and print a summary of what information looks important. It receives the task and then uses coding tools to write an email summary, which means that it uses storage and knowledge to know what action to produce, how often to produce it, and stores the info to then use to write the summary.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1502519565144428605-Hermes-to-read-the-internet-for-me.txt"
+      },
+      {
+        "level": 3,
+        "case": "Voice-first fitness coach that learns my body over time",
+        "note": "For this model, the voice-first AI coach stores memory and uses it to learn the user’s body over time to train better and increase performance. It's a learning machine that knows to remember what is important towards the user’s fitness journey and uses agentic memory to build the user’s profile as they continue training.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1493325531637088429-working-on-a-voice-first-AI-coach-that-learns-your-body-over-time--training---nutrition-feedback.txt"
+      },
+      {
+        "level": 4,
+        "case": "One agent builds, another audits, overnight and unattended",
+        "note": "This model splits the work between two different agents, Hermes agent and Claude code. Together, they work as an autonomous cross-agent workflow that split up the responsibilities.",
+        "source": "https://x.com/IBuzovskyi/status/2070171401919631812"
+      },
+      {
+        "level": 5,
+        "case": "Connected my M5 Cardputer to Hermes via the API",
+        "note": "For this case study, the user uses a MiniMax to connect an M5 cardputer to Hermes agent through its API. This would allow for producing databases and tracing.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/community-projects-showcase/1494518737116729394-Hermes-x-Cardputer.txt"
+      }
+    ],
+    "product": null,
     "visualize": null
   },
   {
