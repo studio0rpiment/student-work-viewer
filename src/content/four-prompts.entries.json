@@ -97,7 +97,10 @@
   },
   {
     "names": [
-      "Makda"
+      "Makda",
+      "Jet",
+      "Arisha",
+      "Ava"
     ],
     "prompt": "What's the best movie ever?",
     "followup": "No, this is wrong.",
@@ -121,6 +124,38 @@
         "assistant": "Grok",
         "summary": "Pasted: \"There’s no single objective “best” movie ever—it depends on whether you prioritize critical consensus, audience popularity, cultural impact, innovation, personal emotional response, or something else. ... [IMDb, Rotten Tomatoes, AFI rankings] ... if forced to pick one that satisfies the broadest range of people and lists, The Godfather is the safest “best ever” answer for many. ... The real best movie is whatever resonates most with you.\"",
         "pushback": "Pasted: \"Got it — thanks for the pushback. What specifically do you think is wrong? ... Tell me which part and I’ll correct or dig deeper.\""
+      }
+    ],
+    "verdict": null
+  },
+  {
+    "names": [
+      "Daon",
+      "Radhia",
+      "Sonia"
+    ],
+    "prompt": "Please write me a setup code to begin building my website",
+    "followup": null,
+    "responses": [
+      {
+        "assistant": "Copilot",
+        "summary": "Copilot gave me a clean, modern starter setup I can use to begin building my website. It gives me a solid foundation with HTML, CSS, and JavaScript already connected, plus a simple project structure I can expand as I go. What it assumed without asking: it assumed I needed a clean, modern starter setup to begin building my website.",
+        "pushback": null
+      },
+      {
+        "assistant": "Gemini",
+        "summary": "It includes extra information with web building based on its memory about me. It corrected itself following my input (prompts) and added helpful extra explanations. The response was thorough and included code ready to copy and paste, making it simple to implement.",
+        "pushback": null
+      },
+      {
+        "assistant": "Claude",
+        "summary": "Claude asked automatically if i want to expand on a site I already have built or if I wanted to create something completely new. It did assume though that I was expanding on my portfolio because that was the first option on its list. It did not refuse anything but did hedge other projects I’ve worked on before.",
+        "pushback": null
+      },
+      {
+        "assistant": "ChatGPT",
+        "summary": "ChatGPT gave me some directions to choose at the end of the first response, so it can be customized to build the next version with a more specific visual design and functionality instead of leaving me with a generic template. Pasted: \"Absolutely! Since you're building a website, let's start with a clean, responsive foundation that you can customize as your project develops. I'd recommend starting with HTML, CSS, and JavaScript. ... [index.html, style.css, script.js] ... You can host this static website for free using GitHub Pages. ... The code above is a starting template. We can adapt the structure, styling, and functionality to your specific idea.\"",
+        "pushback": null
       }
     ],
     "verdict": null
