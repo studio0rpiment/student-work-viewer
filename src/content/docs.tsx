@@ -9,6 +9,8 @@ export interface DocSection {
   /** Anchor id, also the contents-bar target. */
   id: string
   heading: string
+  /** Shorter label for the contents bar; defaults to the heading. */
+  tocLabel?: string
   /** When set, the section's heading is a link to this address, opened in a new tab. */
   headingHref?: string
   body: ReactNode
@@ -171,6 +173,7 @@ const FINAL_PROPOSAL: Doc = {
     {
       id: 'further-investigation',
       heading: 'For Further Investigation | Resources',
+      tocLabel: 'For Further Investigation',
       headingHref: FURTHER_INVESTIGATION_URL,
       body: (
         <p>

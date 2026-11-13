@@ -34,7 +34,7 @@ export default function DocPage({ doc, navigate, themeMode, onToggleTheme }: Pro
         <ol>
           {doc.sections.map((s) => (
             <li key={s.id}>
-              <a href={`#${s.id}`}>{s.heading}</a>
+              <a href={`#${s.id}`}>{s.tocLabel ?? s.heading}</a>
               {s.outline && (
                 <ul className="doc-toc__outline">
                   {s.outline.map((line) => (
