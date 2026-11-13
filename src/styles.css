@@ -561,9 +561,10 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 /* Model output the students pasted in: their sources, not their words. */
 .pasted { display: flex; flex-direction: column; gap: 0.35rem; padding-left: 0.75rem; border-left: 1px dashed var(--muted); color: var(--muted); font-size: 0.75rem; }
 .pasted p { margin: 0; }
-/* Writing pages are long reads: the course link and toolbar scroll away with the page. */
-.writing-page { position: relative; }
-.writing-page .home-link, .writing-page .toolbar { position: absolute; }
+/* Writing pages and course documents are long reads: the course link and toolbar scroll away with the page. */
+.writing-page, .doc-layout { position: relative; }
+.writing-page .home-link, .writing-page .toolbar,
+.doc-layout .home-link, .doc-layout .toolbar { position: absolute; }
 
 /* Media showcases: tiles of drawings, marks, typefaces and recordings. */
 .media-entry .writing__h2 .label--student { color: var(--line); }
