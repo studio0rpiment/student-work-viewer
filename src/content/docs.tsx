@@ -52,7 +52,7 @@ const FINAL_PROPOSAL: Doc = {
   term: 'F26',
   title: 'Final Project Proposal',
   subtitle: 'CIXD/CDES 3110/6110 Experimental Tools and Technology, Fall 2026.',
-  due: 'Tue 17 Nov',
+  due: 'Tue 17 Nov, 13:00',
   intro: (
     <p>
       The final project is open. You choose the topic, but it has to grow out of something we’ve done in class this
