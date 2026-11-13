@@ -693,6 +693,16 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
 .doc__columns { display: grid; grid-template-columns: minmax(0, 1fr); column-gap: 2.5rem; }
 @media (min-width: 900px) {
   .doc__columns { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  /* Each column stretches to the taller one; a notice at the end fills the leftover height. */
+  .doc__columns > .doc__section { display: flex; flex-direction: column; }
+  .doc__columns > .doc__section > .doc__prose { flex: 1; display: flex; flex-direction: column; }
+  /* Bottom margin matches the list's trailing margins (ol 0.9rem + li 0.6rem), so the box ends level with the last item. */
+  .doc__columns .doc__prose .doc__notice { flex: 1; margin-bottom: 1.5rem; }
+}
+.doc__prose .doc__notice {
+  margin: 0.5rem 0 0;
+  padding: 1rem;
+  border: 1px dashed var(--muted);
 }
 .doc__section > h2 {
   font-size: 0.9rem;

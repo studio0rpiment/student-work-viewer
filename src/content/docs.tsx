@@ -69,25 +69,28 @@ const FINAL_PROPOSAL: Doc = {
         'Tue 15 Dec: final project due',
       ],
       body: (
-        <ul>
-          <li>
-            <strong>Tuesday, Nov 17:</strong> present your idea in class for crit.
-          </li>
-          <li>
-            <strong>Tuesday, Dec 1:</strong> turn in a revised proposal that responds to the crit. Class doesn’t meet
-            that day. Upload it to the{' '}
-            <a href={REVISED_PROPOSALS_FOLDER} target="_blank" rel="noreferrer">
-              Final Project Revised Proposals
-            </a>{' '}
-            folder.
-          </li>
-          <li>
-            <strong>Tuesday, Dec 8:</strong> demonstrate your progress in class and get feedback.
-          </li>
-          <li>
-            <strong>Tuesday, Dec 15:</strong> final project due.
-          </li>
-        </ul>
+        <>
+          <ul>
+            <li>
+              <strong>Tuesday, Nov 17:</strong> present your idea in class for crit.
+            </li>
+            <li>
+              <strong>Tuesday, Dec 1:</strong> turn in a revised proposal that responds to the crit. Class doesn’t meet
+              that day. Upload it to the{' '}
+              <a href={REVISED_PROPOSALS_FOLDER} target="_blank" rel="noreferrer">
+                Final Project Revised Proposals
+              </a>{' '}
+              folder.
+            </li>
+            <li>
+              <strong>Tuesday, Dec 8:</strong> demonstrate your progress in class and get feedback.
+            </li>
+            <li>
+              <strong>Tuesday, Dec 15:</strong> final project due.
+            </li>
+          </ul>
+          <p className="doc__notice">Projects not turned in by Dec 15 at 23:59 will receive a 0.</p>
+        </>
       ),
     },
     {
