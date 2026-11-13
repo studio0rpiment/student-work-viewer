@@ -89,7 +89,9 @@ const FINAL_PROPOSAL: Doc = {
               <strong>Tuesday, Dec 15:</strong> final project due.
             </li>
           </ul>
-          <p className="doc__notice">Projects not turned in by Dec 15 at 23:59 will receive a 0.</p>
+          <p className="doc__notice">
+            Projects not turned in by <span className="doc__accent">Dec 15 at 23:59</span> will receive a 0.
+          </p>
         </>
       ),
     },
