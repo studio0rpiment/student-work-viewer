@@ -175,6 +175,7 @@ const FINAL_PROPOSAL: Doc = {
     {
       id: 'format',
       heading: 'Format',
+      outline: ['1 page + sketch'],
       body: (
         <p>
           Keep it to about a page, plus a sketch, diagram or screenshot if it helps. Bring it to class on Tuesday,
