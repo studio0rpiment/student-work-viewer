@@ -126,6 +126,24 @@
     "closing": "The video simplified explanations of some things for the sake of time. With my own time and ability to mess with the TensorFlow Playground, I was actually able to see and test things like more neurons meant the network reached confident classification faster. The Playground made the relationship between network size speed something I could learn visually, not just understand through explanation."
   },
   {
+    "name": "Mariam",
+    "networks": "I changed the first hidden layer from 8 neurons to 3 neurons. The output boundary became less detailed and had a harder time separating the orange and blue points. When I increased the number of neurons again, the boundary became more complex and adjusted more closely to the points.",
+    "tokens": "I changed the sentence “A command line can connect tools.” to “A command line can connect creative tools.” The tokenizer separated some of the words into smaller segments and assigned different token IDs. It was interesting to see how adding just one word changed the way the entire sentence was broken down.",
+    "embeddings": {
+      "word": "Architecture",
+      "near": [
+        "Building",
+        "Structure"
+      ],
+      "far": [
+        "Ocean",
+        "Guitar"
+      ],
+      "relationship": "Architecture and music both involve structure, rhythm, and patterns, even though they belong to very different disciplines."
+    },
+    "closing": "The TensorFlow Playground made the training process more tangible because I could actually change the network and watch it learn. When I increased the number of neurons, I noticed the output boundary becoming more detailed as it tried to classify the points. The video explained how neural networks work, but the Playground helped me understand how changing their structure affects their learning in real time."
+  },
+  {
     "name": "Nicole",
     "networks": "When I changed the noise to 10, the output boundary produced a network current prediction that has six negative value dots within the blue positive value gradient.",
     "tokens": "I changed the sentence “A command line can connect tools!” by adding “WOW,” at the beginning of the sentence. The tokenizer changed the colors of the word WOW by splitting the W as purple and OW as green.",

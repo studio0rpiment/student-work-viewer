@@ -181,6 +181,28 @@
     "response": "Before I traced the green line, I would have described the Amazon Echo as a voice assistant, contained within the technical software required to make it function. Identifying the hardware life helped me trace past where I thought the system ended: from how it is used, to how it is abandoned, sorted, and disposed of. It traces its path, its subsequent effects, and more. Identifying the particulate that’s released in the air in incineration and the people sorting through waste bins examples how the physical infrastructure of the device creates a network past AWS. This network is made up of interconnected people, places, and processes that extend the product far past its listed lifecycle. Tracing helps make tangible the real life people behind our devices."
   },
   {
+    "name": "Mariam",
+    "title": "Echo → submarine cables → Amazon data centre → data labelling",
+    "stops": [
+      {
+        "kind": "material",
+        "label": "Submarine cables",
+        "caption": "Glass fibre in a steel and plastic jacket lies on the seabed. Ships lay it and crews on ships repair it. About 99% of data between continents travels through cables like this. Around 150 to 200 break each year, mostly from anchors and fishing nets, and one repair can cost $1–3 million."
+      },
+      {
+        "kind": "computing",
+        "label": "Amazon data centre",
+        "caption": "After the wake word, the Echo sends your voice to Amazon's servers. They turn it into text, work out what you meant and send back a reply. The servers sit in warehouses full of chips and cooling, kept running by network engineers and technicians. Data centres worldwide used about 415 TWh of electricity in 2024, around 1.5% of the world's total."
+      },
+      {
+        "kind": "labour",
+        "label": "Data labelling",
+        "caption": "People listen to a sample of recordings, type what was said and mark what the speaker meant. That feeds back into training. Bloomberg reported in 2019 that thousands of Amazon staff and contractors did this in places like Boston, Costa Rica, India and Romania, with up to 1,000 clips in a nine-hour shift. Some of what they hear is private."
+      }
+    ],
+    "response": null
+  },
+  {
     "name": "Nicole",
     "title": null,
     "stops": [
