@@ -43,7 +43,7 @@ export default function WritingPage({ writing, navigate, themeMode, onToggleThem
         {writing.layout === 'prompts' && <Prompts entries={writing.entries} />}
         {writing.layout === 'levels' && <Levels entries={writing.entries} />}
         {writing.layout === 'media' && <Media entries={writing.entries} />}
-        {writing.layout === 'packed' && <Packed entries={writing.entries} />}
+        {writing.layout === 'packed' && <Packed entries={writing.entries} shuffled={writing.shuffled} draggable={writing.draggable} />}
       </main>
     </div>
   )
@@ -455,15 +455,18 @@ function Media({ entries: given }: { entries: MediaEntry[] }) {
 
 /* ---------- Packed: everything together at its own shape, who on hover ---------- */
 
-function Packed({ entries }: { entries: MediaEntry[] }) {
+function Packed({ entries, shuffled, draggable }: { entries: MediaEntry[]; shuffled?: boolean; draggable?: boolean }) {
   const [open, setOpen] = useState<FlowItem | null>(null)
-  const items: FlowItem[] = entries.flatMap((e) => {
-    const group = e.members ? `${e.name} · ${e.members.join(', ')}` : e.name
-    return [
-      ...e.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: group })),
-      ...(e.solo ?? []).flatMap((s) => s.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: s.name }))),
-    ]
-  })
+  const items: FlowItem[] = useMemo(() => {
+    const all = entries.flatMap((e) => {
+      const group = e.members ? `${e.name} · ${e.members.join(', ')}` : e.name
+      return [
+        ...e.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: group })),
+        ...(e.solo ?? []).flatMap((s) => s.items.filter((i) => i.kind !== 'font').map((i) => ({ ...i, who: s.name }))),
+      ]
+    })
+    return shuffled ? shuffle(all) : all
+  }, [entries, shuffled])
 
   useEffect(() => {
     if (!open) return
@@ -474,7 +477,7 @@ function Packed({ entries }: { entries: MediaEntry[] }) {
 
   return (
     <>
-      <MediaFlow items={items} onSelect={setOpen} />
+      <MediaFlow items={items} onSelect={setOpen} draggable={draggable} />
       {open && (
         <div className="lightbox" role="dialog" aria-modal="true" onClick={() => setOpen(null)}>
           {open.kind === 'video' ? (

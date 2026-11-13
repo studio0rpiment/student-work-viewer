@@ -1,4 +1,4 @@
-import { useCallback, useLayoutEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useLayoutEffect, useMemo, useRef, useState, type PointerEvent } from 'react'
 import Label from './Label'
 import { packSkyline, type Rect } from '../lib/skyline'
 import type { MediaItem } from '../content/types'
@@ -16,7 +16,12 @@ interface Props {
   /** For typefaces: the family to set the sentence in, and the sentence. */
   fontFamily?: (src: string) => string
   specimen?: string
+  /** Tiles can be dragged anywhere on the page; a click without a drag still selects. */
+  draggable?: boolean
 }
+
+/** How far the pointer moves before a press becomes a drag, in px. */
+const DRAG_START = 4
 
 /** A typeface runs as a line of text: twice a tile wide, a short band tall. */
 const TEXT_RATIO = 3.2
@@ -32,7 +37,7 @@ const GAP_REM = 0.3125 // 5px, as on the image showcases
  * Videos play muted on a loop. SVGs and transparent exports are drawn in the text colour.
  * A typeface is a line of text packed with the rest. The `who` shows on hover.
  */
-export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, specimen }: Props) {
+export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, specimen, draggable }: Props) {
   const host = useRef<HTMLDivElement>(null)
   const [width, setWidth] = useState(0)
   const [ratios, setRatios] = useState<Record<string, number>>({})
@@ -44,6 +49,36 @@ export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, spec
     ro.observe(el)
     return () => ro.disconnect()
   }, [])
+
+  // Where each dragged tile has moved from its packed place, and the stacking order (last dragged on top).
+  const [moved, setMoved] = useState<Record<string, { x: number; y: number }>>({})
+  const [stack, setStack] = useState<string[]>([])
+  const drag = useRef<{ src: string; id: number; x0: number; y0: number; dx: number; dy: number; on: boolean } | null>(null)
+  const dragged = useRef(false)
+
+  const down = (src: string) => (e: PointerEvent<HTMLElement>) => {
+    if (!draggable || e.button !== 0) return
+    const m = moved[src] ?? { x: 0, y: 0 }
+    drag.current = { src, id: e.pointerId, x0: e.clientX, y0: e.clientY, dx: m.x, dy: m.y, on: false }
+    dragged.current = false
+  }
+  const move = (e: PointerEvent<HTMLElement>) => {
+    const d = drag.current
+    if (!d || d.id !== e.pointerId) return
+    const x = e.clientX - d.x0
+    const y = e.clientY - d.y0
+    if (!d.on) {
+      if (Math.hypot(x, y) < DRAG_START) return
+      d.on = true
+      dragged.current = true
+      e.currentTarget.setPointerCapture(e.pointerId)
+      setStack((s) => [...s.filter((v) => v !== d.src), d.src])
+    }
+    setMoved((m) => ({ ...m, [d.src]: { x: d.dx + x, y: d.dy + y } }))
+  }
+  const up = (e: PointerEvent<HTMLElement>) => {
+    if (drag.current?.id === e.pointerId) drag.current = null
+  }
 
   const measure = useCallback((src: string, w: number, h: number) => {
     if (!w || !h) return
@@ -70,10 +105,30 @@ export default function MediaFlow({ items, tile = 20, onSelect, fontFamily, spec
         return (
           <figure
             key={i.src}
-            className={`tile media-flow__tile ${i.kind === 'font' ? 'media-flow__text' : isMark(i) ? 'media-flow__mark' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
-            style={rect ? { left: rect.x, top: rect.y, width: rect.w, height: rect.h } : {}}
+            className={`tile media-flow__tile ${draggable ? 'media-flow__drag' : ''} ${i.kind === 'font' ? 'media-flow__text' : isMark(i) ? 'media-flow__mark' : ''} ${measured ? '' : 'is-unmeasured'}`.replace(/\s+/g, ' ').trim()}
+            style={
+              rect
+                ? {
+                    left: rect.x,
+                    top: rect.y,
+                    width: rect.w,
+                    height: rect.h,
+                    ...(moved[i.src] && { transform: `translate(${moved[i.src].x}px, ${moved[i.src].y}px)` }),
+                    ...(stack.includes(i.src) && { zIndex: 1 + stack.indexOf(i.src) }),
+                  }
+                : {}
+            }
+            onPointerDown={down(i.src)}
+            onPointerMove={move}
+            onPointerUp={up}
+            onPointerCancel={up}
           >
-            <button type="button" className="tile__pick" onClick={() => onSelect(i)} aria-label={i.who}>
+            <button
+              type="button"
+              className="tile__pick"
+              onClick={() => (dragged.current ? (dragged.current = false) : onSelect(i))}
+              aria-label={i.who}
+            >
               {i.kind === 'font' ? (
                 <span className="media-flow__specimen" style={{ fontFamily: fontFamily?.(i.src) }}>
                   {specimen}

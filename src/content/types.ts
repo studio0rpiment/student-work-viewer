@@ -82,4 +82,11 @@ export type Writing =
   | (WritingBase & { layout: 'levels'; entries: LevelsEntry[] })
   | (WritingBase & { layout: 'media'; entries: MediaEntry[] })
   /** Same data as media, but everything packed together at its own shape, like the knolling page. */
-  | (WritingBase & { layout: 'packed'; entries: MediaEntry[] })
+  | (WritingBase & {
+      layout: 'packed'
+      entries: MediaEntry[]
+      /** A new order on every visit. */
+      shuffled?: boolean
+      /** Tiles can be dragged around the page; a click without a drag still opens one. */
+      draggable?: boolean
+    })

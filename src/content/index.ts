@@ -4,6 +4,7 @@ import fourPrompts from './four-prompts.entries.json'
 import fiveLevels from './five-levels.entries.json'
 import handDrawn from './hand-drawn.entries.json'
 import variableMachine from './variable-machine.entries.json'
+import greasePencil from './grease-pencil.entries.json'
 import type { LevelsEntry, MediaEntry, PathEntry, PromptsEntry, QuestionsEntry, Writing } from './types'
 
 /**
@@ -106,6 +107,20 @@ export const WRITINGS: Writing[] = [
       { p: 'Make either a logo set or an alphabet.' },
     ],
     entries: handDrawn as MediaEntry[],
+  },
+  {
+    slug: 'grease-pencil',
+    title: 'Grease Pencil: Flipbook Animation',
+    term: 'F26',
+    due_date: '2026-11-10',
+    summary: 'A short animation drawn frame by frame with Grease Pencil in Blender.',
+    layout: 'packed',
+    shuffled: true,
+    draggable: true,
+    brief: [
+      { p: 'Draw a short flipbook animation in Blender with Grease Pencil, frame by frame, and export it as a video.' },
+    ],
+    entries: greasePencil as MediaEntry[],
   },
 ]
 

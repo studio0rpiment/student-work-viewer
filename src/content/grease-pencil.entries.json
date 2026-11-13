@@ -1,0 +1,122 @@
+[
+ {
+  "name": "Abigail",
+  "items": [
+   {
+    "src": "/work/grease-pencil/abigail/traced.mp4",
+    "kind": "video",
+    "caption": "traced"
+   },
+   {
+    "src": "/work/grease-pencil/abigail/drawing.mp4",
+    "kind": "video",
+    "caption": "drawn"
+   }
+  ]
+ },
+ {
+  "name": "Allie",
+  "items": [
+   {
+    "src": "/work/grease-pencil/allie/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Arisha",
+  "items": [
+   {
+    "src": "/work/grease-pencil/arisha/dino.mp4",
+    "kind": "video",
+    "caption": "dino"
+   }
+  ]
+ },
+ {
+  "name": "Ava",
+  "items": [
+   {
+    "src": "/work/grease-pencil/ava/fire.mp4",
+    "kind": "video",
+    "caption": "fire"
+   }
+  ]
+ },
+ {
+  "name": "Daon",
+  "items": [
+   {
+    "src": "/work/grease-pencil/daon/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Jet",
+  "items": [
+   {
+    "src": "/work/grease-pencil/jet/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Nicole",
+  "items": [
+   {
+    "src": "/work/grease-pencil/nicole/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Radhia",
+  "items": [
+   {
+    "src": "/work/grease-pencil/radhia/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Sawyer",
+  "items": [
+   {
+    "src": "/work/grease-pencil/sawyer/dvd.mp4",
+    "kind": "video",
+    "caption": "DVD"
+   },
+   {
+    "src": "/work/grease-pencil/sawyer/assignment.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Sonia",
+  "items": [
+   {
+    "src": "/work/grease-pencil/sonia/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ },
+ {
+  "name": "Yingying",
+  "items": [
+   {
+    "src": "/work/grease-pencil/yingying/animation.mp4",
+    "kind": "video",
+    "caption": "animation"
+   }
+  ]
+ }
+]

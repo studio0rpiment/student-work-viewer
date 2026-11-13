@@ -609,6 +609,10 @@ input[type="date"]::-webkit-calendar-picker-indicator { opacity: 0.5; cursor: po
   overflow: hidden;
   overflow-wrap: anywhere;
 }
+/* Draggable packed media (Grease Pencil): tiles move with the pointer, no page scroll on touch. */
+.media-flow__drag { cursor: grab; touch-action: none; user-select: none; -webkit-user-select: none; }
+.media-flow__drag:active { cursor: grabbing; }
+.media-flow__drag .tile__img { pointer-events: none; -webkit-user-drag: none; }
 /* Hand Drawn: each person's work packed inside their own section. */
 .media-entry .media-flow { margin: 1.25rem 0 0; }
 .lightbox__svg { width: min(80vw, 60rem); height: 75vh; background: var(--line); mask: center / contain no-repeat; -webkit-mask: center / contain no-repeat; }
