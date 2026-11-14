@@ -137,7 +137,7 @@ const FINAL_PROPOSAL: Doc = {
           <li>
             <strong>An essay on the ethics of a technology we’ve studied</strong> (Classes 1–3: Surveillance
             Capitalism, Futures Past, Labor and the Self, along with the readings and conversations that carried these
-            questions through the rest of the semester). It should be about 6,000 words, with a clear question, real
+            questions through the rest of the semester). It should be about 4,000 words, with a clear question, real
             research and sources, and close attention to how the technology works.
           </li>
           <li>
