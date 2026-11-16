@@ -74,6 +74,43 @@
     "visualize": null
   },
   {
+    "name": "Arisha",
+    "levels": [
+      {
+        "level": 1,
+        "case": "A Matrix skin from a one-off response",
+        "note": "User asked agent to create a matrix skin from a one-off response. The response and file it whips up would be based on only the information that the model is trained on, and nothing else.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/plugins-skills-and-skins/1496977719429169404-Enter-the-Matrix-skin.txt"
+      },
+      {
+        "level": 2,
+        "case": "Diagnosing machines from product manuals and service guides",
+        "note": "Based on the documentation of product manuals and service guides, Hermes is able to store that knowledge and use it to diagnose machines with problems.",
+        "source": "https://www.reddit.com/r/hermesagent/comments/1x9xec6/comment/phs3r0w/"
+      },
+      {
+        "level": 3,
+        "case": "Learning from previous sessions",
+        "note": "An explicit example of Hermes being trained to actively learn from previous sessions by saving information between uses. The most recent interaction will likely be better because it's iterative on the previous ones.",
+        "source": "https://github.com/teknium1/nous-discord-archive/blob/main/archives/hermes-agent.txt"
+      },
+      {
+        "level": 4,
+        "case": "A startup run by multiple Hermes assistants",
+        "note": "With multiple Hermes assistants, this guy was able to distribute tasks within his startup. For example, there’s a different agent to track the growth of his business, act as a product manager, and monitor issues.",
+        "source": "https://www.linkedin.com/posts/theanimeshs_i-was-exhausted-running-my-startup-alone-activity-7493737755131301889-Ni2y"
+      },
+      {
+        "level": 5,
+        "case": "A personalized agent for every employee at Razorpay",
+        "note": "Scales up levels 1-4 and runs a fully functioning production to the degree that each employee at Razorpay has access to a personalized agent (the system also includes encrypted storage, and an outline fo security policies)",
+        "source": "https://engineering.razorpay.com/running-hermes-at-razorpay-a-network-isolated-self-improving-second-brain-for-every-employee-f91d56bea3f1"
+      }
+    ],
+    "product": null,
+    "visualize": null
+  },
+  {
     "name": "Ava",
     "levels": [
       {
@@ -113,6 +150,43 @@
       "text": "Manus (manus.im) is a commercial product that explicitly markets \"agentic teams\" — it calls this feature Wide Research: a main orchestrator agent that spins up many independent sub-agents in parallel, each with its own VM, tools, and full context window.\n\nPrompt\n\nResearch 50 competitors in the project-management software space and give me a comparison report.\n\nTested up to 250 parallel items; traditional single-agent chat degrades in quality after ~8–10 items due to context-window saturation, while Wide Research scales to hundreds \"in minutes regardless of scale.\"\n\nNovel point on Manus\n\nThe one genuinely distinctive design choice is the hard no-communication rule between sub-agents, stated as a product guarantee, not just an implementation detail: \"Sub-agents never talk to each other. This prevents context pollution and reduces hallucinations.\" Manus treats agent-to-agent silence as a feature for quality control at scale, rather than a limitation to work around — whereas frameworks like Hermes Swarm (from the user-stories research) go the opposite direction and treat peer-to-peer agent messaging as the feature."
     },
     "visualize": "Swarm Radar / Spatial Map View\n\nConcept: Treat each agent as a moving dot in a 2D space (like Flightradar24 or a live subway map), not a row in a table.\n\n- Movement: Agents physically travel between \"zones\" representing phases — Research Zone → Writing Zone → Review Zone → Done. Movement is animated, not instant; speed can even reflect how much work remains.\n- Time: A live clock plus trailing \"breadcrumb\" trails showing where each agent has been in the last N minutes — like a comet tail.\n- Novel aspect: Spatial proximity could represent shared context — agents working on related sub-tasks cluster near each other; fully isolated agents (Manus-style, no inter-agent talk) sit far apart with no connecting lines at all, visually reinforcing the \"no communication\" architecture.\n- Useful data: agent_id, current_phase, timestamp_entered_phase, parent/child relationship."
+  },
+  {
+    "name": "Jack",
+    "levels": [
+      {
+        "level": 1,
+        "case": "Turning photos and spoken measurements into a parametric CAD model",
+        "note": "The user utilized Hermes and FreeCAD to turn photos and spoken measurements into a CAD drawing and 3D model. This is Level 1 because the agent uses external tools to complete tasks instead of just generating text. It doesn't require memory or learning.",
+        "source": "https://x.com/Gsabin86/status/2078106180933521468"
+      },
+      {
+        "level": 2,
+        "case": "Keeping school, tutoring, and family plans connected",
+        "note": "This user gives Hermes access to school emails, calendars, tutoring sessions, and family schedules. It stores this information and uses it to coordinate between school, home, and the tutor. It also tracks sessions and notices patterns in parent notes. This is Level 2 because the agent uses stored knowledge and past information to help with future tasks.",
+        "source": "https://www.reddit.com/r/hermesagent/comments/1wra98z/comment/pcd7m8m/"
+      },
+      {
+        "level": 3,
+        "case": "Autonomous mushroom cultivation with lessons from previous grow cycles",
+        "note": "A community member created a Hermes skill that manages mushroom growing using sensors, a Raspberry Pi, and automated controls. It monitors temperature, humidity, and CO2, then adjusts equipment every 30 minutes. After two Lion's Mane growing cycles, the project collected 21 lessons to improve future results. This is Level 3 because the system learns from past experience and uses that knowledge in future operations.",
+        "source": "https://github.com/setasoma/mycodo-hermes-skill"
+      },
+      {
+        "level": 4,
+        "case": "A solo founder runs a startup using seven specialized Hermes assistants",
+        "note": "The founder created a team of seven specialized Hermes assistants to manage different areas of a startup. These include a growth analyst that monitors website traffic and conversions, an SRE agent that monitors application health, and a Chief of Staff agent that coordinates work through Linear. Each assistant handles a different responsibility while contributing to the overall operation of the business. This fits Level 4 because work is distributed across multiple specialized agents instead of being handled by one individual agent.",
+        "source": "https://www.linkedin.com/posts/theanimeshs_i-was-exhausted-running-my-startup-alone-activity-7493737755131301889-Ni2y"
+      },
+      {
+        "level": 5,
+        "case": "Razorpay deploys always-on Hermes agents for more than 220 employees",
+        "note": "Razorpay deployed individual Hermes agents for more than 200 employees, with each agent running in its own isolated Kubernetes environment. Each deployment has its own encrypted storage, cloud identity, and network permissions. The system also includes centralized monitoring, security policies, model routing, and infrastructure for provisioning and maintaining agents. This fits Level 5 because Hermes is no longer simply an individual assistant; it operates as an organizational production system with infrastructure designed for reliability, security, and large-scale deployment.",
+        "source": "https://engineering.razorpay.com/running-hermes-at-razorpay-a-network-isolated-self-improving-second-brain-for-every-employee-f91d56bea3f1"
+      }
+    ],
+    "product": null,
+    "visualize": null
   },
   {
     "name": "Jet",

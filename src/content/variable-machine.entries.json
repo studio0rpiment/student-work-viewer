@@ -162,5 +162,55 @@
     "caption": "screenshot"
    }
   ]
+ },
+ {
+  "name": "Jack",
+  "items": [
+   {
+    "src": "/work/variable-machine/jack/screenshot-2026-11-13-at-3-53-48-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/jack/screenshot-2026-11-13-at-3-53-52-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/jack/screenshot-2026-11-13-at-3-54-01-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/jack/screenshot-2026-11-13-at-3-54-06-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   }
+  ]
+ },
+ {
+  "name": "Yingying",
+  "items": [
+   {
+    "src": "/work/variable-machine/yingying/screenshot-2026-11-13-at-3-15-02-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/yingying/screenshot-2026-11-13-at-3-15-08-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/yingying/screenshot-2026-11-13-at-3-18-46-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   },
+   {
+    "src": "/work/variable-machine/yingying/screenshot-2026-11-13-at-3-18-50-pm.png",
+    "kind": "image",
+    "caption": "screenshot"
+   }
+  ]
  }
 ]

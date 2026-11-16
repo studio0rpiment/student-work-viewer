@@ -36,6 +36,24 @@
     "closing": "The network is automated to have a set output depending on. Easily able to adjust the nodes in without breaking the system (TensorFlow). Automatically on a set system."
   },
   {
+    "name": "Arisha",
+    "networks": "When I changed the number of neurons in the first layer to be greater, the output boundary appears more round (as opposed to a previously triangular shape).",
+    "tokens": "Each word = 1 token? A complete word. Part of a word. A punctuation mark. A space combined with nearby text. A recurring text pattern.\nNumeric ID for each token = [32, 3290, 1584, 649, 4667, 7526, 13]\n“-” counts as a character the same way a space does.\nCapitalizaiton doesn’t affect tokens or characters.\nMore characters = more tokens.\nAlthough spaces count as one character, you can have an increased number of spaces before it takes up another whole token. If you contrast that with something like a symbol “#”, it takes up more capacity in using a token.",
+    "embeddings": {
+      "word": "movies",
+      "near": [
+        "Episodes",
+        "Scenes"
+      ],
+      "far": [
+        "Myanmar",
+        "Genocide"
+      ],
+      "relationship": "I guess I’m confused where these two terms came from in relation to the first word being movies (perhaps through means of documentary content?). Them flashing right next to each other was fascinating, as the relationship between these two words is apparent, with Myanmar’s ongoing atrocities against the Rohingya"
+    },
+    "closing": null
+  },
+  {
     "name": "Ava",
     "networks": "When I changed how many neurons there were in the first hidden layer by taking away one, the output boundary shape shifted and became uneven.",
     "tokens": "I changed how many periods there was after the sentence. The tokenizer changed the token ID, instead of adding on new repeating IDs.",
