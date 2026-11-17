@@ -32,7 +32,10 @@ export interface Doc {
   sections: DocSection[]
 }
 
-/** Revised proposals go here for Dec 1 (class does not meet that day). */
+/** Proposals for the Nov 17 crit go here. */
+const PROPOSALS_FOLDER = 'https://drive.google.com/drive/folders/1G6hKieEtjEojJDwMYxO-Xuzu0ts0y5pv'
+
+/** Revised proposals go here for Dec 1. */
 const REVISED_PROPOSALS_FOLDER = 'https://drive.google.com/drive/folders/123GG_zA0DWBkvMo8rA9VGYYx3nebaqkH'
 
 /** The published web version of For Further Investigation, card view. */
@@ -76,7 +79,11 @@ const FINAL_PROPOSAL: Doc = {
         <>
           <ul>
             <li>
-              <strong>Tuesday, Nov 17:</strong> present your idea in class for crit.
+              <strong>Tuesday, Nov 17:</strong> present your idea in class for crit. Upload your proposal to the{' '}
+              <a href={PROPOSALS_FOLDER} target="_blank" rel="noreferrer">
+                Final Project Proposals
+              </a>{' '}
+              folder.
             </li>
             <li>
               <strong>Tuesday, Dec 1:</strong> turn in a revised proposal that responds to the crit. Class doesn’t meet
@@ -188,8 +195,11 @@ const FINAL_PROPOSAL: Doc = {
       outline: ['1 page + sketch'],
       body: (
         <p>
-          Keep it to about a page, plus a sketch, diagram or screenshot if it helps. Bring it to class on Tuesday,
-          November 17, for crit.
+          Keep it to about a page, plus a sketch, diagram or screenshot if it helps. Upload it to the{' '}
+          <a href={PROPOSALS_FOLDER} target="_blank" rel="noreferrer">
+            Final Project Proposals
+          </a>{' '}
+          folder and bring it to class on Tuesday, November 17, for crit.
         </p>
       ),
     },
