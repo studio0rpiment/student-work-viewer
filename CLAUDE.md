@@ -9,7 +9,7 @@ Live at https://gwdesign.kevinpatton.site (Vercel project `student-work-viewer`,
 - `/`, `/classes`: the list of classes (no app title, just "classes")
 - `/classes/<course>`: the course page, with code · term, title + term, a collapsible course description, showcases by due date, then links (e.g. the midterm)
 - `/classes/<course>/<showcase>`: a gallery
-- `/edit`: the admin (unlinked, emailed one-time code)
+- `/edit`: the admin (unlinked, emailed one-time sign-in link)
 
 Courses are defined in `src/site.ts` (slug, code, title, term, description, links). A showcase belongs to a course by its `term` in Supabase; add a `course` column if two courses ever share a term.
 

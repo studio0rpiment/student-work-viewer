@@ -32,7 +32,7 @@ The anon key is safe in the browser — Row Level Security is what protects writ
 
 ## Editing
 
-Open `/edit`, click **email me a code**, and type in the code from the email (the link in the email also signs you in), then pick a showcase. The account is fixed to `ADMIN_EMAIL` in `src/components/SignIn.tsx`. For the email to show the code, Supabase → Authentication → Emails → Magic Link must include `{{ .Token }}`. Every field saves when you leave it (blur) or press Enter; Escape reverts. Rows have ↑ ↓ to reorder and × to remove; **+ add** appends a blank row. The header lists other showcases and **+ new showcase**. At the bottom, **delete this showcase** removes it and all its rows after an inline confirmation (uploaded images stay in the bucket). Only emails in the `admins` table can write — add a row there to let a TA in.
+Open `/edit`, click **email me a sign-in link**, and open the link in the email; it brings you back signed in. Then pick a showcase. The account is fixed to `ADMIN_EMAIL` in `src/components/SignIn.tsx`. Supabase → Authentication → URL Configuration has Site URL `https://gwdesign.kevinpatton.site` and allows `https://gwdesign.kevinpatton.site/**`; without that the link lands on localhost. (The free plan can't edit email templates, so there's no typed code.) Every field saves when you leave it (blur) or press Enter; Escape reverts. Rows have ↑ ↓ to reorder and × to remove; **+ add** appends a blank row. The header lists other showcases and **+ new showcase**. At the bottom, **delete this showcase** removes it and all its rows after an inline confirmation (uploaded images stay in the bucket). Only emails in the `admins` table can write — add a row there to let a TA in.
 
 ## Reusing for another assignment
 

@@ -6,66 +6,44 @@ import { supabase } from '../lib/supabase'
 const ADMIN_EMAIL = 'kevin@orpiment.studio'
 
 /**
- * Sign in for the single admin with a one-time code emailed to ADMIN_EMAIL.
- * The email also carries a sign-in link, which works too. No password.
+ * Sign in for the single admin with a one-time link emailed to ADMIN_EMAIL.
+ * No password. The link returns to this page (Supabase → Authentication →
+ * URL Configuration must allow https://gwdesign.kevinpatton.site/**).
  */
 export default function SignIn() {
   const [sent, setSent] = useState(false)
-  const [code, setCode] = useState('')
   const [busy, setBusy] = useState(false)
   const [message, setMessage] = useState('')
 
-  const send = async () => {
+  const send = async (e?: FormEvent) => {
+    e?.preventDefault()
     if (!supabase) return
     setBusy(true)
     setMessage('')
     const { error } = await supabase.auth.signInWithOtp({
       email: ADMIN_EMAIL,
-      options: { shouldCreateUser: false, emailRedirectTo: location.href },
+      options: { shouldCreateUser: false, emailRedirectTo: location.origin + location.pathname },
     })
     setBusy(false)
     if (error) setMessage(error.message)
     else setSent(true)
   }
 
-  const verify = async (e: FormEvent) => {
-    e.preventDefault()
-    if (!supabase) return
-    if (!sent) return send()
-    setBusy(true)
-    const { error } = await supabase.auth.verifyOtp({ email: ADMIN_EMAIL, token: code.trim(), type: 'email' })
-    setBusy(false)
-    if (error) setMessage(error.message)
-    // on success the auth state event re-renders the page
-  }
-
   return (
     <main className="notice">
-      <form className="signin" onSubmit={verify}>
+      <form className="signin" onSubmit={send}>
         <Label className="label--student">sign in</Label>
         <Label className="label--muted">{ADMIN_EMAIL}</Label>
         {sent ? (
           <>
-            <input
-              type="text"
-              inputMode="numeric"
-              value={code}
-              placeholder="code from the email"
-              autoFocus
-              required
-              autoComplete="one-time-code"
-              onChange={(e) => setCode(e.target.value)}
-            />
-            <button type="submit" className="text-button" disabled={busy || !code.trim()}>
-              sign in
-            </button>
-            <button type="button" className="label label--link text-button" disabled={busy} onClick={send}>
-              send a new code
+            <Label>check your email and open the sign-in link</Label>
+            <button type="submit" className="label label--link text-button" disabled={busy}>
+              send a new link
             </button>
           </>
         ) : (
           <button type="submit" className="text-button" disabled={busy}>
-            {busy ? 'sending…' : 'email me a code'}
+            {busy ? 'sending…' : 'email me a sign-in link'}
           </button>
         )}
         {message && <Label className="label--muted">{message}</Label>}
