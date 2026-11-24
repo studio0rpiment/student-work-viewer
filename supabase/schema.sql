@@ -107,6 +107,21 @@ alter table releases enable row level security;
 
 create index if not exists releases_created on releases (created_at desc);
 
+-- Checked in the database too, not only in the form.
+alter table releases drop constraint if exists releases_gwu_email;
+alter table releases add constraint releases_gwu_email check (email ~* '^[^[:space:]@]+@gwu\.edu$');
+alter table releases drop constraint if exists releases_lengths;
+alter table releases add constraint releases_lengths check (
+  char_length(email) <= 254 and char_length(name) between 1 and 200
+  and char_length(agreed_name) between 1 and 200
+  and char_length(course) <= 40 and char_length(term) <= 10);
+
+-- Visitors may fill in only the form's own columns: no forged dates, ids or withdrawals.
+revoke insert, update, delete on releases from anon;
+revoke insert on releases from authenticated;
+grant insert (course, term, name, email, choice, show_on_viewer, show_in_program, agreed_name)
+  on releases to anon, authenticated;
+
 drop policy if exists "anyone submits releases" on releases;
 create policy "anyone submits releases" on releases for insert
   to anon, authenticated
