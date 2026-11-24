@@ -8,6 +8,8 @@ import { useCallback, useEffect, useState } from 'react'
  *   /:slug                      a showcase (older links)
  *   /edit                       admin index (URL only, sign in required)
  *   /edit/new                   create a showcase
+ *   /edit/releases              students' releases (sign in required)
+ *   /release                    the release form (URL only, signed out)
  *   /edit/:slug                 edit a showcase
  * Course segments are matched lowercase, so /classes/experimental-tools-F26 works too.
  */
@@ -18,6 +20,8 @@ export type Route =
   | { page: 'admin' }
   | { page: 'new' }
   | { page: 'edit'; slug: string }
+  | { page: 'release' }
+  | { page: 'releases' }
 
 export function parse(pathname: string): Route {
   const [a, b, c] = pathname.split('/').filter(Boolean)
@@ -30,8 +34,10 @@ export function parse(pathname: string): Route {
   if (a === 'edit') {
     if (!b) return { page: 'admin' }
     if (b === 'new') return { page: 'new' }
+    if (b === 'releases') return { page: 'releases' }
     return { page: 'edit', slug: b }
   }
+  if (a === 'release' && !b) return { page: 'release' }
   return { page: 'gallery', slug: a }
 }
 

@@ -82,6 +82,43 @@ create policy "admins write entries" on entries for all
 drop policy if exists "admins read admins" on admins;
 create policy "admins read admins" on admins for select using (is_admin());
 
+-- ---------- releases: students' written permission to show their work ----------
+-- Submitted from /release (signed out). Holds student emails, so this is the one
+-- table with no public read: anyone may insert, only admins may read or change.
+
+create table if not exists releases (
+  id uuid primary key default gen_random_uuid(),
+  created_at timestamptz not null default now(),
+  course text not null,              -- e.g. 'CIXD 3110/6110'
+  term text not null,                -- e.g. 'F26'
+  name text not null,
+  email text not null,
+  choice text not null check (choice in ('full','first','anonymous','none')),
+  show_on_viewer boolean not null default false,
+  show_in_program boolean not null default false,
+  agreed_name text not null,
+  agreed_on date not null default current_date,
+  withdrawn_at timestamptz,
+  -- "No, don't show my work" stores both places as false.
+  constraint releases_none_shows_nothing
+    check (choice <> 'none' or (not show_on_viewer and not show_in_program))
+);
+alter table releases enable row level security;
+
+create index if not exists releases_created on releases (created_at desc);
+
+drop policy if exists "anyone submits releases" on releases;
+create policy "anyone submits releases" on releases for insert
+  to anon, authenticated
+  with check (withdrawn_at is null);   -- a new release can't arrive already withdrawn
+drop policy if exists "admins read releases" on releases;
+create policy "admins read releases" on releases for select using (is_admin());
+drop policy if exists "admins update releases" on releases;
+create policy "admins update releases" on releases for update
+  using (is_admin()) with check (is_admin());
+drop policy if exists "admins delete releases" on releases;
+create policy "admins delete releases" on releases for delete using (is_admin());
+
 -- ---------- seed ----------
 
 insert into admins (email) values ('el.kevo@gmail.com'), ('kevin@orpiment.studio')

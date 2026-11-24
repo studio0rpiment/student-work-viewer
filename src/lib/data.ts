@@ -1,6 +1,6 @@
 import { supabase } from './supabase'
 import students from '../data/students.json'
-import type { Entry, Showcase } from '../types'
+import type { Entry, Release, ReleaseInput, Showcase } from '../types'
 
 export interface Loaded {
   showcase: Showcase
@@ -112,6 +112,34 @@ export async function addEntry(showcase_id: string, sort: number) {
 export async function removeEntry(id: string) {
   const { error } = await db().from('entries').delete().eq('id', id)
   if (error) throw error
+}
+
+// ---- releases (students' permission to show their work) ----
+// Anyone may insert; only an admin may read or change (RLS in schema.sql).
+
+/**
+ * Submit a release. No `.select()` after the insert: a signed-out student may
+ * insert but not read the row back, so asking for it would fail.
+ */
+export async function submitRelease(input: ReleaseInput) {
+  const row = input.choice === 'none' ? { ...input, show_on_viewer: false, show_in_program: false } : input
+  const { error } = await db().from('releases').insert(row)
+  if (error) throw error
+}
+
+/** Every release, newest first. Admin only. */
+export async function listReleases(): Promise<Release[]> {
+  const { data, error } = await db().from('releases').select('*').order('created_at', { ascending: false })
+  if (error) throw error
+  return (data ?? []) as Release[]
+}
+
+/** Mark a release withdrawn now; returns the timestamp that was stored. Admin only. */
+export async function withdrawRelease(id: string): Promise<string> {
+  const withdrawn_at = new Date().toISOString()
+  const { error } = await db().from('releases').update({ withdrawn_at }).eq('id', id)
+  if (error) throw error
+  return withdrawn_at
 }
 
 /** Persist a new order: sort = index. */

@@ -39,6 +39,7 @@ export default function AdminPage({ navigate }: Props) {
         <nav className="editor__nav">
           <a className="label label--link" href="/" onClick={go('/')}>front page ↗</a>
           <a className="label label--link" href="/edit/new" onClick={go('/edit/new')}>+ new showcase</a>
+          <a className="label label--link" href="/edit/releases" onClick={go('/edit/releases')}>releases</a>
           <Label className="label--muted">{session.user.email}</Label>
           <button type="button" className="label label--link text-button" onClick={signOut}>sign out</button>
         </nav>

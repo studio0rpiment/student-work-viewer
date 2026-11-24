@@ -79,3 +79,26 @@ export function toSlides(showcase: Showcase, entries: Entry[]): Slide[] {
     }),
   )
 }
+
+/** A student's permission to show their work: one row of `releases`. */
+export interface Release {
+  id: string
+  created_at: string
+  course: string
+  term: string
+  name: string
+  email: string
+  choice: 'full' | 'first' | 'anonymous' | 'none'
+  show_on_viewer: boolean
+  show_in_program: boolean
+  agreed_name: string
+  /** YYYY-MM-DD, set by the database on insert. */
+  agreed_on: string
+  withdrawn_at: string | null
+}
+
+/** What the form sends; the database fills in id, dates and withdrawn_at. */
+export type ReleaseInput = Pick<
+  Release,
+  'course' | 'term' | 'name' | 'email' | 'choice' | 'show_on_viewer' | 'show_in_program' | 'agreed_name'
+>

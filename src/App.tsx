@@ -4,6 +4,8 @@ import GalleryPage from './pages/GalleryPage'
 import AdminPage from './pages/AdminPage'
 import EditPage from './pages/EditPage'
 import NewPage from './pages/NewPage'
+import ReleasePage from './pages/ReleasePage'
+import ReleasesPage from './pages/ReleasesPage'
 import { useRoute } from './hooks/useRoute'
 import { useTheme } from './hooks/useTheme'
 import { findCourse } from './site'
@@ -23,6 +25,10 @@ export default function App() {
       return <EditPage slug={route.slug} navigate={navigate} />
     case 'new':
       return <NewPage navigate={navigate} />
+    case 'release':
+      return <ReleasePage themeMode={theme.mode} onToggleTheme={toggle} />
+    case 'releases':
+      return <ReleasesPage navigate={navigate} />
     case 'gallery': {
       const doc = findDoc(route.slug)
       if (doc) return <DocPage doc={doc} navigate={navigate} themeMode={theme.mode} onToggleTheme={toggle} />
