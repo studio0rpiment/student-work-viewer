@@ -29,7 +29,7 @@ export interface Course {
 export const COURSES: Course[] = [
   {
     slug: 'experimental-tools-f26',
-    code: 'CDES 3110/6110',
+    code: 'CIXD 3110/6110',
     title: 'Experimental Tools and Technology',
     term: 'F26',
     description:
