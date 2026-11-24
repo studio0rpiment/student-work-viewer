@@ -109,7 +109,8 @@ create index if not exists releases_created on releases (created_at desc);
 
 -- Checked in the database too, not only in the form.
 alter table releases drop constraint if exists releases_gwu_email;
-alter table releases add constraint releases_gwu_email check (email ~* '^[^[:space:]@]+@gwu\.edu$');
+alter table releases add constraint releases_gwu_email
+  check (email ~* '^[^[:space:]@]+@(gwmail\.)?gwu\.edu$');
 alter table releases drop constraint if exists releases_lengths;
 alter table releases add constraint releases_lengths check (
   char_length(email) <= 254 and char_length(name) between 1 and 200
@@ -122,10 +123,45 @@ revoke insert on releases from authenticated;
 grant insert (course, term, name, email, choice, show_on_viewer, show_in_program, agreed_name)
   on releases to anon, authenticated;
 
+-- Only students on the class roster can submit. The roster lives in the
+-- private schema, which the public API doesn't expose and visitors can't read.
+-- A student's GWU id (before the @) matches at either @gwu.edu or @gwmail.gwu.edu.
+create schema if not exists private;
+revoke all on schema private from public;
+grant usage on schema private to anon, authenticated;
+
+create table if not exists private.roster (
+  email text primary key,            -- lowercase
+  added_at timestamptz not null default now()
+);
+revoke all on private.roster from public, anon, authenticated;
+
+-- First fill: the emails the midterm codes went to. Add students later with
+--   insert into private.roster (email) values ('netid@gwu.edu');
+do $$ begin
+  if to_regclass('public.form_codes') is not null then
+    insert into private.roster (email)
+      select distinct lower(email) from public.form_codes where form = 'midterm'
+      on conflict do nothing;
+  end if;
+end $$;
+
+create or replace function private.on_roster(e text) returns boolean
+  language sql stable security definer set search_path = private as $$
+  select exists (
+    select 1 from private.roster
+    where split_part(email, '@', 1) = split_part(lower(e), '@', 1)
+      and split_part(email, '@', 2) in ('gwu.edu', 'gwmail.gwu.edu'))
+$$;
+revoke all on function private.on_roster(text) from public;
+grant execute on function private.on_roster(text) to anon, authenticated;
+
 drop policy if exists "anyone submits releases" on releases;
-create policy "anyone submits releases" on releases for insert
+drop policy if exists "students submit releases" on releases;
+create policy "students submit releases" on releases for insert
   to anon, authenticated
-  with check (withdrawn_at is null);   -- a new release can't arrive already withdrawn
+  -- a new release can't arrive already withdrawn; admins can always add one
+  with check (withdrawn_at is null and (private.on_roster(email) or is_admin()));
 drop policy if exists "admins read releases" on releases;
 create policy "admins read releases" on releases for select using (is_admin());
 drop policy if exists "admins update releases" on releases;

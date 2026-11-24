@@ -14,7 +14,7 @@ interface Props {
 
 type FieldName = 'name' | 'email' | 'agreedName'
 
-const isGwuEmail = (s: string) => /^[^\s@]+@gwu\.edu$/i.test(s.trim())
+const isGwuEmail = (s: string) => /^[^\s@]+@(gwmail\.)?gwu\.edu$/i.test(s.trim())
 
 /** Today as the student sees it, e.g. 24 November 2026. */
 const today = () => new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
@@ -32,7 +32,7 @@ export default function ReleaseForm({ course, term, onSubmit }: Props) {
   const [agreedName, setAgreedName] = useState('')
   const [touched, setTouched] = useState<Record<FieldName, boolean>>({ name: false, email: false, agreedName: false })
   const [sending, setSending] = useState(false)
-  const [failed, setFailed] = useState(false)
+  const [failed, setFailed] = useState<string | null>(null)
 
   const problems: Record<FieldName, string | undefined> = {
     name: name.trim() ? undefined : ERRORS.name,
@@ -46,7 +46,7 @@ export default function ReleaseForm({ course, term, onSubmit }: Props) {
   const send = async () => {
     if (!ready || sending || choice === null) return
     setSending(true)
-    setFailed(false)
+    setFailed(null)
     const yes = choice !== 'none'
     try {
       await onSubmit({
@@ -59,8 +59,9 @@ export default function ReleaseForm({ course, term, onSubmit }: Props) {
         show_in_program: yes && places.includes('program'),
         agreed_name: agreedName.trim(),
       })
-    } catch {
-      setFailed(true)
+    } catch (e) {
+      // 42501: the database's row rule refused it, i.e. the email isn't on the roster.
+      setFailed((e as { code?: string })?.code === '42501' ? ERRORS.notOnList : ERRORS.failed)
       setSending(false)
     }
   }
@@ -172,7 +173,7 @@ export default function ReleaseForm({ course, term, onSubmit }: Props) {
         <button type="submit" className="text-button release__button" disabled={!ready || sending}>
           {sending ? Q.sending : Q.submit}
         </button>
-        {failed && <Label className="field__error">{ERRORS.failed}</Label>}
+        {failed && <Label className="field__error">{failed}</Label>}
       </div>
     </form>
   )

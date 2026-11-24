@@ -59,7 +59,8 @@ export const Q = {
 /** Shown on a field the student has touched and left invalid. */
 export const ERRORS = {
   name: 'your name is needed',
-  email: 'use your @gwu.edu email',
+  email: 'use your GWU email (@gwu.edu or @gwmail.gwu.edu)',
+  notOnList: "That email isn't on the class list. Use the GWU email your midterm code was sent to.",
   agreedName: 'type your full name to agree',
   failed: "That didn't go through. Check your connection and submit again.",
 }
