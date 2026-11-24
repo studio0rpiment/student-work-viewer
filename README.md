@@ -32,7 +32,15 @@ The anon key is safe in the browser — Row Level Security is what protects writ
 
 ## Editing
 
-Open `/edit`, click **email me a sign-in link**, and open the link in the email; it brings you back signed in. Then pick a showcase. The account is fixed to `ADMIN_EMAIL` in `src/components/SignIn.tsx`. Supabase → Authentication → URL Configuration has Site URL `https://gwdesign.kevinpatton.site` and allows `https://gwdesign.kevinpatton.site/**`; without that the link lands on localhost. (The free plan can't edit email templates, so there's no typed code.) Every field saves when you leave it (blur) or press Enter; Escape reverts. Rows have ↑ ↓ to reorder and × to remove; **+ add** appends a blank row. The header lists other showcases and **+ new showcase**. At the bottom, **delete this showcase** removes it and all its rows after an inline confirmation (uploaded images stay in the bucket). Only emails in the `admins` table can write — add a row there to let a TA in.
+Open `/edit`, type the admin code and press **sign in**, then pick a showcase. The account is fixed to `ADMIN_EMAIL` in `src/components/SignIn.tsx`; the code is that account's Supabase password. To set or change it, run in the Supabase SQL Editor (then delete the query so the code isn't kept in its history):
+
+```sql
+update auth.users
+set encrypted_password = extensions.crypt('NEW-CODE', extensions.gen_salt('bf'))
+where email = 'kevin@orpiment.studio';
+```
+
+Backup: **or email me a sign-in link** sends a one-time link to that address that brings you back signed in. Supabase → Authentication → URL Configuration has Site URL `https://gwdesign.kevinpatton.site` and allows `https://gwdesign.kevinpatton.site/**`; without that the link lands on localhost. Every field saves when you leave it (blur) or press Enter; Escape reverts. Rows have ↑ ↓ to reorder and × to remove; **+ add** appends a blank row. The header lists other showcases and **+ new showcase**. At the bottom, **delete this showcase** removes it and all its rows after an inline confirmation (uploaded images stay in the bucket). Only emails in the `admins` table can write — add a row there to let a TA in.
 
 ## Reusing for another assignment
 
